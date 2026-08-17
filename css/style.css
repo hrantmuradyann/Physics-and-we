@@ -106,3 +106,33 @@ footer {
     gap: 0.8rem;
   }
 }
+nav a {
+  display: inline-block;
+  transition: transform 0.25s ease, font-size 0.25s ease;
+}
+
+nav a.current {
+  font-size: 1.1rem;
+  transform: scale(1.08);
+  font-weight: bold;
+}
+.lang-switcher {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.lang-switcher button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.lang-switcher button.active-lang {
+  background-color: white;
+  color: var(--color-primary);
+  font-weight: bold;
+}
