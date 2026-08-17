@@ -248,7 +248,7 @@ If vim ever opens and you're unsure what state you're in, `Esc` then `:q!` then 
 git clone https://github.com/hrantmuradyann/Physics-and-we.git
 cd Physics-and-we
 ```
-(You need to be added as a collaborator first — ask Hrant to add your GitHub username.)
+(You need to be added as a collaborator first.)
 
 ### Every time you start working
 ```bash
