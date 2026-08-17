@@ -164,7 +164,7 @@ If vim ever opens and you're unsure, `Esc` then `:q!` then Enter always gets you
 git clone https://github.com/hrantmuradyann/Physics-and-we.git
 cd Physics-and-we
 ```
-(You need to be added as a collaborator first — ask Hrant to add your GitHub username.)
+(You need to be added as a collaborator first.)
 
 ### Every time you start working
 ```bash
