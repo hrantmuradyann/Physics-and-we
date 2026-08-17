@@ -246,6 +246,7 @@ If vim ever opens and you're unsure what state you're in, `Esc` then `:q!` then 
 ### First time (cloning the repo)
 ```bash
 git clone https://github.com/hrantmuradyann/Physics-and-we.git
+(git clone creates a brand new folder on that person's computer, named after the repo (Physics-and-we), and downloads the entire project into it: all files, plus the full commit history and all branches that exist on GitHub.)
 cd Physics-and-we
 ```
 (You need to be added as a collaborator first.)
