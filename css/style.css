@@ -17,11 +17,21 @@
   --max-width: 1100px;
 }
 
+/* Sticky footer setup: make body fill the full screen height and
+   stack header/main/footer vertically, so footer stays pinned to
+   the bottom even on short pages (see "main" below for the other half) */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-main);
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -59,7 +69,8 @@ nav a {
   font-size: 0.95rem;
   color: white;
   opacity: 0.9;
-  transition: opacity 0.2s ease;
+  display: inline-block;
+  transition: opacity 0.2s ease, transform 0.25s ease, font-size 0.25s ease;
 }
 
 nav a:hover {
@@ -67,12 +78,44 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Active page's nav link grows slightly instead of just underlining */
+nav a.current {
+  font-size: 1.1rem;
+  transform: scale(1.08);
+  font-weight: bold;
+}
+
+/* ---------- Language switcher ---------- */
+.lang-switcher {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.lang-switcher button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.lang-switcher button.active-lang {
+  background-color: white;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
 /* ---------- Main content ---------- */
 main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
-  min-height: 60vh;
+  width: 100%;
+  /* flex: 1 makes main grow to fill leftover space, pushing footer
+     down to the bottom of the screen on short pages */
+  flex: 1;
 }
 
 main h1 {
@@ -105,34 +148,4 @@ footer {
   nav ul {
     gap: 0.8rem;
   }
-}
-nav a {
-  display: inline-block;
-  transition: transform 0.25s ease, font-size 0.25s ease;
-}
-
-nav a.current {
-  font-size: 1.1rem;
-  transform: scale(1.08);
-  font-weight: bold;
-}
-.lang-switcher {
-  display: flex;
-  gap: 0.4rem;
-}
-
-.lang-switcher button {
-  background: none;
-  border: 1px solid white;
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.85rem;
-}
-
-.lang-switcher button.active-lang {
-  background-color: white;
-  color: var(--color-primary);
-  font-weight: bold;
 }

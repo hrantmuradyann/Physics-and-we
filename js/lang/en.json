@@ -1,11 +1,24 @@
 {
   "nav_home": "Home",
-  "nav_about": "About YSO & Outreach",
   "nav_camp": "Summer Camp",
   "nav_research": "Research & Studies",
   "nav_labs": "Interactive Labs",
   "nav_news": "News & Events",
+  "nav_partners": "Partners",
   "home_title": "Home",
   "home_welcome": "Welcome to Physics and We.",
-  "footer_text": "© 2026 Physics and We"
+  "about_placeholder": "Content goes here.",
+  "camp_title": "Summer Camp",
+  "camp_placeholder": "Content goes here.",
+  "research_title": "Research & Studies",
+  "research_placeholder": "Content goes here.",
+  "labs_title": "Interactive Labs",
+  "labs_placeholder": "Content goes here.",
+  "news_placeholder": "Content goes here.",
+  "footer_text": "© 2026 Physics and We",
+  "partners_title": "Partners",
+  "partners_placeholder": "Content goes here.",
+  "nav_faq": "FAQ",
+  "faq_title": "FAQ",
+  "faq_placeholder": "Content goes here."
 }
