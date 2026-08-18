@@ -1,8 +1,6 @@
 # Physics and We
 
-Website for YSO (Young Scientists Organization) — public site, summer camp registration, research hub, interactive physics labs, student portal, and admin panel.
-
-This README is written for collaborators who are new to Git/Terminal. Read it before you start.
+This README is written for collaborators. Read it before you start.
 
 ---
 
@@ -10,7 +8,7 @@ This README is written for collaborators who are new to Git/Terminal. Read it be
 
 The **site shell** is done and merged (or about to be merged) into `main`. This means:
 
-- 6 pages exist: `index.html` (Home), `about.html`, `camp.html`, `research.html`, `labs.html`, `news.html`
+- 6 pages exist: `index.html` (Home), `faq.html`, `camp.html`, `research.html`, `labs.html`, `partners.html`
 - Every page shares the same header, navigation bar, and footer — but you won't see that HTML written out in each file. Instead:
   - Each page has two **empty** placeholders: `<header id="site-header"></header>` and `<footer id="site-footer"></footer>`
   - `js/main.js` fills those in automatically when the page loads, using JavaScript
@@ -30,11 +28,11 @@ The **site shell** is done and merged (or about to be merged) into `main`. This 
 ```
 Physics_and_we/
 ├── index.html          → Home page
-├── about.html           → About YSO & Outreach
-├── camp.html            → Summer Camp
-├── research.html        → Research & Studies
-├── labs.html             → Interactive Labs
-├── news.html             → News & Events
+├── faq.html            → Frequently asked questions
+├── camp.html           → Summer Camp
+├── research.html       → Research & Studies
+├── labs.html           → Interactive Labs
+├── partners.html       → Partners
 ├── css/
 │   └── style.css        → ALL styling for the whole site lives here (for now)
 ├── js/
@@ -59,16 +57,50 @@ This file runs on every page. It currently handles:
 
 **Don't dump unrelated feature logic into this file.** If you're building the camp registration form, create `js/registration.js` and link it in `camp.html` with its own `<script>` tag. Keep `main.js` about shared, sitewide behavior only.
 
-### About `js/lang/*.json`
-Every visible piece of text on the site should be translatable. **This is a rule, not a suggestion**:
+### What is `data-i18n` and how does it actually work?
 
-- Never hardcode visible text directly in HTML without a `data-i18n` tag, and never hardcode it only in one language.
-- **Every time you add new text to a page**, you must:
-  1. Add a `data-i18n="your_key_name"` attribute to that HTML element
-  2. Add the matching `"your_key_name": "..."` entry to **all three** files: `en.json`, `hy.json`, `ru.json`
-  3. If you don't have the Armenian/Russian translation yet, ask before merging — don't leave it in English "temporarily," since it's easy to forget later
+`data-i18n` is a **custom HTML attribute** ("i18n" is a common abbreviation for "internationalization" — the 18 counts the letters between the "i" and the "n"). It attaches invisibly to an element and doesn't do anything by itself — it's just a label our own JavaScript reads.
 
-Example:
+Here's the full chain, step by step:
+
+1. You write a `data-i18n` attribute on any element with visible text, and give it a unique **key name**:
+   ```html
+   <h1 data-i18n="camp_title">Summer Camp</h1>
+   ```
+   The text inside the tag ("Summer Camp") is just a **fallback** shown only if something goes wrong loading the translations. It is not what visitors normally see.
+
+2. When any page loads, `main.js`'s `loadLanguage()` function:
+   - Downloads the correct JSON file (`en.json`, `hy.json`, or `ru.json` depending on the selected language)
+   - Finds **every** element on the page that has a `data-i18n` attribute
+   - Reads that element's key (`"camp_title"`)
+   - Looks up that same key inside the JSON file
+   - Replaces the element's visible text with whatever string is stored under that key
+
+3. So the JSON file needs a matching entry:
+   ```json
+   "camp_title": "Summer Camp"
+   ```
+
+If the key doesn't exist in the JSON, or the attribute is missing entirely, the text just stays as whatever fallback is hardcoded in the HTML — which means it won't translate when someone switches languages. That's the bug to avoid.
+
+### The actual rule for adding new text to the site
+
+**Every single piece of visible text you write in ANY HTML file must have a `data-i18n` attribute.** No exceptions — headings, paragraphs, button labels, form labels, everything a visitor would read.
+
+Your workflow when adding new text:
+
+1. In the HTML, add the text with a `data-i18n="some_key_name"` attribute — pick a clear, unique key name (usually `pagename_whatitis`, e.g. `camp_curriculum_intro`)
+   ```html
+   <p data-i18n="camp_curriculum_intro">Our curriculum covers optics, electronics, and photonics.</p>
+   ```
+2. Add that same key to **`js/lang/en.json`** with the real English text as the value:
+   ```json
+   "camp_curriculum_intro": "Our curriculum covers optics, electronics, and photonics."
+   ```
+3. **That's it — you're done. You do NOT need to fill in `hy.json` or `ru.json` yourself.** Someone else on the team will handle the Armenian and Russian translations for the keys you added. Just make sure your key exists (even with a placeholder/empty value) in `hy.json` and `ru.json` too, so the site doesn't error out — but the actual translated text is not your job unless you're the one doing translations.
+4. If you edit the raw text directly in the HTML instead of in `en.json`, **it will not show up** — `loadLanguage()` overwrites the HTML's fallback text with whatever is in the JSON every time the page loads. This trips people up constantly. **Always make your actual text edits in `en.json`, not in the HTML file itself**, once a page already has `data-i18n` wired up.
+
+Example, together:
 ```html
 <h1 data-i18n="camp_title">Summer Camp</h1>
 ```
@@ -76,11 +108,11 @@ Example:
 // en.json
 "camp_title": "Summer Camp"
 
-// hy.json
-"camp_title": "Ամառային ճամբար"
+// hy.json — someone else fills this in later
+"camp_title": ""
 
-// ru.json
-"camp_title": "Летний лагерь"
+// ru.json — someone else fills this in later
+"camp_title": ""
 ```
 
 ---
@@ -248,7 +280,9 @@ If vim ever opens and you're unsure what state you're in, `Esc` then `:q!` then 
 git clone https://github.com/hrantmuradyann/Physics-and-we.git
 cd Physics-and-we
 ```
-(You need to be added as a collaborator first — ask Hrant to add your GitHub username.)
+
+**What `git clone` actually does:** it creates a brand new folder on your computer, named after the repo (`Physics-and-we`), in whatever directory you ran the command from. Inside that new folder, it downloads the entire project — every file, plus the complete commit history and every branch that exists on GitHub. You only need to run `clone` **once ever**, on each computer you work from. After that, you use `git pull` to get updates into that same folder — running `clone` again would try to create the folder a second time and fail (or duplicate it) since it already exists.
+
 
 ### Every time you start working
 ```bash
@@ -263,6 +297,16 @@ git checkout -b feature/your-task-name
 ```
 Example: `feature/camp-registration`, `feature/about-page`. Never work directly on `main`.
 
+**What actually happens when you create a branch:** `git checkout -b` takes a full snapshot of whatever branch you're currently on (`main`, if you just ran `git checkout main && git pull`) and creates a brand new, independent copy of it under a new name. So your new branch starts out **identical** to `main` — every file, all the content — nothing is missing and nothing needs to be re-downloaded. From that moment on, the new branch and `main` are separate: any changes you make and commit only exist on your new branch, and `main` stays exactly as it was until you merge your branch back into it later.
+
+Think of it like duplicating a folder on your computer, renaming the copy, and only working inside the copy — the original stays untouched until you deliberately copy your changes back into it (which is what merging does).
+
+**Why do we use branches instead of just editing files directly?**
+1. **Isolation** — if you're mid-way through building something and it's broken, `main` (the "real," working version of the site) is never affected, since your changes only exist on your own branch until merged.
+2. **Parallel work** — multiple people can build totally different features at the same time without their half-finished work colliding.
+3. **Review before it counts** — a Pull Request lets someone look over your changes before they become part of `main`, catching mistakes early.
+4. **Clean history** — you can always look back and see exactly which branch/PR introduced any given feature.
+
 ### Preview the site locally
 ```bash
 python3 -m http.server 8000
@@ -274,6 +318,23 @@ http://localhost:8000
 **Important:** don't just double-click `index.html` or use `open index.html` — the language switcher uses `fetch()`, which browsers block on files opened directly (`file://...`). It only works when served through `http://localhost`.
 
 Stop the server anytime with `Ctrl + C` in that terminal window.
+
+### You don't have to edit files in the terminal — VS Code (or any editor) works fine
+
+Terminal is only needed for the **Git commands** — `clone`, `pull`, `checkout`, `add`, `commit`, `push` — not for actually writing or editing your HTML/CSS/JS. Most people do their real editing in a proper code editor like **VS Code**, and only switch to Terminal for the Git steps. A normal working session looks like this:
+
+1. Open your project folder in VS Code: `File → Open Folder` → select `Physics_and_we`
+2. Make sure you've already pulled the latest `main` and created your branch (Terminal, as above)
+3. Edit your files in VS Code — full syntax highlighting, autocomplete, much easier to read/write than editing directly in Terminal
+4. Save normally (`Cmd + S` / `Ctrl + S`)
+5. Switch back to Terminal (or use VS Code's **built-in terminal** — press `` Ctrl + ` `` or go to `Terminal → New Terminal`, so you don't even need to leave the app) and commit/push as usual:
+   ```bash
+   git add .
+   git commit -m "your message"
+   git push
+   ```
+
+VS Code also has a **Source Control tab** (branch-shaped icon in the left sidebar) that shows which files changed and lets you stage/commit by clicking instead of typing — works exactly the same as typing the commands, just a visual alternative if you prefer it.
 
 ### Save your changes
 ```bash
@@ -304,7 +365,7 @@ git pull
 git checkout -b feature/camp-registration
 ```
 
-**Step 3 — Now you edit.** You might open `camp.html` and add the curriculum section, create a brand-new file `js/registration.js` for the form logic, add new CSS rules to `css/style.css`, and add new `data-i18n` keys to all three JSON files. All of this happens on `feature/camp-registration`, not `main`.
+**Step 3 — Now you edit.** You might open `camp.html` and add the curriculum section, create a brand-new file `js/registration.js` for the form logic, add new CSS rules to `css/style.css`, and add new `data-i18n` keys plus their English text in `en.json`. All of this happens on `feature/camp-registration`, not `main`.
 
 **Step 4 — Commit, push, PR, merge** — same cycle as always (see sections 6 and 8).
 
@@ -314,8 +375,8 @@ Nothing links automatically — every connection is something you write explicit
 
 - **A new JS file** (e.g. `js/registration.js`) → you manually add a `<script src="js/registration.js"></script>` tag inside whichever HTML page needs it (e.g. `camp.html`), right before `</body>`, the same way `main.js` is already linked in every page.
 - **New CSS rules** → just typed into the existing `css/style.css`. No linking needed — every page already has `<link rel="stylesheet" href="css/style.css">` in its `<head>`, so any new rule you add applies immediately across the whole site.
-- **New translation keys** → added to all three files in `js/lang/` (`en.json`, `hy.json`, `ru.json`), then referenced in HTML with `data-i18n="your_key"`. You don't need to touch `main.js` for this — its `loadLanguage()` function already loops through every element with a `data-i18n` attribute on the page and fills in the right text automatically.
-- **A brand-new page** (e.g. a student login page you haven't built yet) → create the `.html` file following the same skeleton as the existing 6 pages (empty `<header id="site-header">` and `<footer id="site-footer">`, a `<link>` to `style.css`, a `<script>` for `main.js`), then add a new `<li><a href="...">...</a></li>` entry inside the `insertHeader()` function in `main.js` so it shows up in the nav bar on every page.
+- **New translation keys** → add `data-i18n="your_key"` in the HTML, then add that key with real English text to `en.json` (see the `data-i18n` section above — Armenian/Russian get filled in later by whoever's handling translations). You don't need to touch `main.js` for this — its `loadLanguage()` function already loops through every element with a `data-i18n` attribute on the page and fills in the right text automatically.
+- **A brand-new page** (e.g. a student login page you haven't built yet) → create the `.html` file following the same skeleton as the existing pages (empty `<header id="site-header">` and `<footer id="site-footer">`, a `<link>` to `style.css`, a `<script>` for `main.js`), then add a new `<li><a href="...">...</a></li>` entry inside the `insertHeader()` function in `main.js` so it shows up in the nav bar on every page.
 
 In short: `main.js`, `style.css`, and the `js/lang/*.json` files are the **shared glue** that every page already plugs into. New work almost always means *adding to* these shared files, plus creating focused new files (new HTML pages, new feature-specific JS files) rather than duplicating shared logic.
 
@@ -372,13 +433,13 @@ If you're genuinely the only person who will ever touch a specific branch and yo
 
 ---
 
-## 9. What is `feature/site-shell`?
+## 9. What is `feature/site-shell`, and how do branches really work?
 
-This is the name of the Git **branch** where the site's foundation (layout, nav, footer, base styles, language switching) was built. You can view its exact state on GitHub here:
+`feature/site-shell` is the name of the Git **branch** where the site's foundation (layout, nav, footer, base styles, language switching) was built. You can view its exact state on GitHub here:
 
 https://github.com/hrantmuradyann/Physics-and-we/tree/feature/site-shell
 
-A **branch** is basically a parallel, isolated copy of the project where you can make changes without affecting `main` until you're ready to merge them in. Every new feature (registration, submissions, labs, student portal, admin panel) will live on its own branch, following the same pattern:
+A **branch** is a full, independent copy of the project at a specific point in time — created from whatever branch you were on when you ran `git checkout -b`. Every new feature (registration, submissions, labs, student portal, admin panel) will live on its own branch, following the same pattern:
 
 ```
 feature/camp-registration
@@ -405,7 +466,7 @@ A common confusion: **"if I need to change `index.html`, do I always work on `fe
   ```
   Edit `index.html` there, commit, push, open a PR, merge, then delete that branch too.
 
-So the same file (`index.html`, `style.css`, whatever) will be edited on many different branches over the life of the project — once per task, not once per file. The branch name should describe **what you're doing**, not **which file you're touching**: `feature/home-hero-banner` is a better name than `feature/index-html`, since one task might touch several files (HTML + CSS + a JSON translation file) at once.
+So the same file (`index.html`, `style.css`, whatever) will be edited on many different branches over the life of the project — once per task, not once per file. The branch name should describe **what you're doing**, not **which file you're touching**: `feature/home-hero-banner` is a better name than `feature/index-html`, since one task might touch several files (HTML + CSS + a JSON translation key) at once.
 
 **Rule of thumb:** one branch = one task = merge it = delete it = move on to the next branch for the next task.
 

@@ -14,11 +14,11 @@ function insertHeader() {
     <nav>
       <ul>
         <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav_about">About YSO & Outreach</a></li>
         <li><a href="camp.html" data-i18n="nav_camp">Summer Camp</a></li>
-        <li><a href="research.html" data-i18n="nav_research">Research & Studies</a></li>
         <li><a href="labs.html" data-i18n="nav_labs">Interactive Labs</a></li>
-        <li><a href="news.html" data-i18n="nav_news">News & Events</a></li>
+        <li><a href="research.html" data-i18n="nav_research">Research & Studies</a></li>
+        <li><a href="partners.html" data-i18n="nav_partners">Partners</a></li>
+        <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
       </ul>
     </nav>
     <div class="lang-switcher">
@@ -54,11 +54,11 @@ function highlightActiveNavLink() {
 
 async function loadLanguage(lang) {
   try {
-    const res = await fetch(`js/lang/${lang}.json`);
+    const res = await fetch(`js/lang/${lang}.json?t=${Date.now()}`);
     const translations = await res.json();
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (translations[key]) {
+      if (translations.hasOwnProperty(key)) {
         el.textContent = translations[key];
       }
     });
