@@ -1,0 +1,191 @@
+{
+  "_readme": "LABS PAGE TEXT. Two different lists live here: \"simulations\" are the interactive labs that run in the browser, \"cards\" are the hands-on labs we bring to a school. To add either one, copy a whole { ... } block and change the words. Icons: atom, orbit, chart, people, flask, bulb, telescope, wave, magnet, calendar.",
+
+  "page": {
+    "eyebrow": { "hy": "Ձեռքի փորձեր", "en": "Hands-on experiments", "ru": "Практические опыты" },
+    "title": {
+      "hy": "Ինտերակտիվ լաբորատորիաներ",
+      "en": "Interactive Labs",
+      "ru": "Интерактивные лаборатории"
+    },
+    "lead": {
+      "hy": "Յուրաքանչյուր լաբորատորիա մեկ գաղափար է՝ բացատրված ձեռքով։ Սովորողն ինքն է հավաքում, չափում և եզրակացնում։",
+      "en": "Every lab is one idea, explained by hand. Students build it, measure it and draw the conclusion themselves.",
+      "ru": "Каждая лаборатория — одна идея, объяснённая руками. Ученик сам собирает, измеряет и делает вывод."
+    }
+  },
+
+  "simulations": {
+    "_readme": "THE LABS THAT RUN IN THE BROWSER. 'slug' is the address of the lab: it must match a file in js/labs/ and one in data/labs/ with the same name. An entry with no slug is simply not shown. See Instructions/LABS-GUIDE.md.",
+
+    "eyebrow": { "hy": "Փորձի՛ր հենց հիմա", "en": "Try it right now", "ru": "Попробуйте прямо сейчас" },
+    "title": {
+      "hy": "Ինտերակտիվ սիմուլյացիաներ",
+      "en": "Simulations you can play with",
+      "ru": "Интерактивные симуляции"
+    },
+    "lead": {
+      "hy": "Այս փորձերն աշխատում են ուղիղ բրաուզերում՝ առանց որևէ սարքավորման։ Շարժե՛ք սահիչները և տեսե՛ք, թե ինչ է փոխվում։",
+      "en": "These run right here in the browser, with no equipment at all. Move the sliders and see what changes.",
+      "ru": "Эти опыты работают прямо в браузере, без всякого оборудования. Двигайте ползунки и смотрите, что меняется."
+    },
+
+    "items": [
+      {
+        "slug": "pendulum",
+        "icon": "orbit",
+        "title": {
+          "hy": "Մաթեմատիկական ճոճանակ",
+          "en": "The Simple Pendulum",
+          "ru": "Математический маятник"
+        },
+        "text": {
+          "hy": "Ինչի՞ց է կախված ճոճանակի պարբերությունը՝ երկարությունի՞ց, զանգվածի՞ց, թե՞ ամպլիտուդից։ Ստուգե՛ք ինքներդ։",
+          "en": "What does the period of a pendulum depend on — its length, its mass, or how far you pull it? Find out for yourself.",
+          "ru": "От чего зависит период маятника — от длины, от массы или от размаха? Проверьте сами."
+        },
+        "meta": { "hy": "Մեխանիկա · 7–11 դասարան", "en": "Mechanics · grades 7–11", "ru": "Механика · 7–11 класс" }
+      }
+    ]
+  },
+
+  "classroom": {
+    "_readme": "The heading above the labs we bring to a school in person — the ones below are not simulations.",
+    "eyebrow": { "hy": "Դպրոցում", "en": "In the classroom", "ru": "В классе" },
+    "title": {
+      "hy": "Ձեռքի լաբորատորիաներ՝ ձեր դասարանում",
+      "en": "Hands-on labs we bring to your classroom",
+      "ru": "Практические лаборатории у вас в классе"
+    }
+  },
+
+  "cards": [
+    {
+      "icon": "bulb",
+      "title": { "hy": "Օպտիկա", "en": "Optics", "ru": "Оптика" },
+      "text": {
+        "hy": "Լույսի բեկում, անդրադարձում և գույների տրոհում՝ իրական ոսպնյակների, հայելիների և պրիզմաների միջոցով։",
+        "en": "Refraction, reflection and the splitting of colour, using real lenses, mirrors and prisms.",
+        "ru": "Преломление, отражение и разложение цвета с помощью настоящих линз, зеркал и призм."
+      },
+      "meta": { "hy": "45 րոպե · 7–12 դասարան", "en": "45 min · grades 7–12", "ru": "45 мин · 7–12 класс" }
+    },
+    {
+      "icon": "magnet",
+      "title": { "hy": "Էլեկտրականություն և մագնիսականություն", "en": "Electricity & Magnetism", "ru": "Электричество и магнетизм" },
+      "text": {
+        "hy": "Կառուցում ենք պարզ շղթաներ և էլեկտրաշարժիչ՝ տեսնելու, թե ինչպես է հոսանքը ծնում մագնիսական դաշտ։",
+        "en": "We build simple circuits and a working electric motor to see how current creates a magnetic field.",
+        "ru": "Собираем простые цепи и рабочий электродвигатель, чтобы увидеть, как ток создаёт магнитное поле."
+      },
+      "meta": { "hy": "60 րոպե · 8–12 դասարան", "en": "60 min · grades 8–12", "ru": "60 мин · 8–12 класс" }
+    },
+    {
+      "icon": "wave",
+      "title": { "hy": "Ալիքներ և ձայն", "en": "Waves & Sound", "ru": "Волны и звук" },
+      "text": {
+        "hy": "Չափում ենք հաճախականությունն ու ռեզոնանսը՝ լարերի, խողովակների և ջրի ալիքների վրա։",
+        "en": "We measure frequency and resonance on strings, tubes and water waves.",
+        "ru": "Измеряем частоту и резонанс на струнах, трубах и водяных волнах."
+      },
+      "meta": { "hy": "45 րոպե · 7–12 դասարան", "en": "45 min · grades 7–12", "ru": "45 мин · 7–12 класс" }
+    },
+    {
+      "icon": "atom",
+      "title": { "hy": "Մեխանիկա", "en": "Mechanics", "ru": "Механика" },
+      "text": {
+        "hy": "Ազատ անկում, հարվածի իմպուլս և ճոճանակի պարբերություն՝ վայրկյանաչափով և տեսախցիկով չափված։",
+        "en": "Free fall, momentum in a collision and the period of a pendulum — measured with a stopwatch and a camera.",
+        "ru": "Свободное падение, импульс при столкновении и период маятника — измеренные секундомером и камерой."
+      },
+      "meta": { "hy": "50 րոպե · 7–11 դասարան", "en": "50 min · grades 7–11", "ru": "50 мин · 7–11 класс" }
+    },
+    {
+      "icon": "flask",
+      "title": { "hy": "Ջերմություն և գազեր", "en": "Heat & Gases", "ru": "Теплота и газы" },
+      "text": {
+        "hy": "Ջերմափոխանակում, գոլորշիացում և գազի օրենքները՝ ցուցադրված ամենօրյա նյութերով։",
+        "en": "Heat transfer, evaporation and the gas laws, demonstrated with everyday materials.",
+        "ru": "Теплообмен, испарение и газовые законы, показанные на повседневных материалах."
+      },
+      "meta": { "hy": "40 րոպե · 8–12 դասարան", "en": "40 min · grades 8–12", "ru": "40 мин · 8–12 класс" }
+    },
+    {
+      "icon": "telescope",
+      "title": { "hy": "Աստղագիտություն", "en": "Astronomy", "ru": "Астрономия" },
+      "text": {
+        "hy": "Երեկոյան դիտում աստղադիտակով՝ Լուսնի խառնարաններ, Յուպիտերի արբանյակներ և Սատուրնի օղակը։",
+        "en": "An evening at the telescope: craters on the Moon, the moons of Jupiter and the ring of Saturn.",
+        "ru": "Вечер у телескопа: кратеры Луны, спутники Юпитера и кольцо Сатурна."
+      },
+      "meta": { "hy": "90 րոպե · բոլոր տարիքի", "en": "90 min · all ages", "ru": "90 мин · для всех возрастов" }
+    }
+  ],
+
+  "steps": {
+    "eyebrow": { "hy": "Ինչպես է անցնում", "en": "How it works", "ru": "Как это проходит" },
+    "title": {
+      "hy": "Մեկ լաբորատորիա՝ չորս քայլով",
+      "en": "One lab, four steps",
+      "ru": "Одна лаборатория — четыре шага"
+    },
+    "items": [
+      {
+        "title": { "hy": "Հարց", "en": "The question", "ru": "Вопрос" },
+        "text": {
+          "hy": "Սկսում ենք մի հարցից, որի պատասխանը դեռ ոչ ոք չգիտի սենյակում։",
+          "en": "We start from a question nobody in the room can answer yet.",
+          "ru": "Начинаем с вопроса, на который в аудитории пока никто не знает ответа."
+        }
+      },
+      {
+        "title": { "hy": "Կառուցում", "en": "Build it", "ru": "Сборка" },
+        "text": {
+          "hy": "Խմբերով հավաքում ենք փորձարկումը՝ պարզ, հասանելի նյութերից։",
+          "en": "In small groups we assemble the setup from simple, available materials.",
+          "ru": "Небольшими группами собираем установку из простых доступных материалов."
+        }
+      },
+      {
+        "title": { "hy": "Չափում", "en": "Measure it", "ru": "Измерение" },
+        "text": {
+          "hy": "Գրանցում ենք թվերը և կառուցում գրաֆիկը՝ առանց պատրաստի պատասխանի։",
+          "en": "We record the numbers and plot the graph — with no ready-made answer.",
+          "ru": "Записываем числа и строим график — без готового ответа."
+        }
+      },
+      {
+        "title": { "hy": "Եզրակացություն", "en": "Conclude", "ru": "Вывод" },
+        "text": {
+          "hy": "Համեմատում ենք արդյունքը տեսության հետ և քննարկում շեղումների պատճառը։",
+          "en": "We compare the result with the theory and discuss why they differ.",
+          "ru": "Сравниваем результат с теорией и обсуждаем, почему они расходятся."
+        }
+      }
+    ]
+  },
+
+  "cta": {
+    "title": {
+      "hy": "Ուզո՞ւմ եք լաբորատորիա ձեր դպրոցում։",
+      "en": "Want a lab at your school?",
+      "ru": "Хотите лабораторию в вашей школе?"
+    },
+    "text": {
+      "hy": "Մենք գալիս ենք ձեր դասարան՝ ամբողջ սարքավորումով։ Գրե՛ք մեզ, և կհամաձայնեցնենք օրը։",
+      "en": "We come to your classroom with all the equipment. Write to us and we will agree on a date.",
+      "ru": "Мы приезжаем в ваш класс со всем оборудованием. Напишите нам, и мы согласуем дату."
+    },
+    "button": {
+      "route": "partners",
+      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch", "ru": "Связаться с нами" }
+    }
+  },
+
+  "photo": {
+    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
+    "image": "images/history2.jpg",
+    "alt": { "hy": "Սովորողները լազերով և հայելիներով օպտիկական սեղանի մոտ՝ պաշտպանիչ ակնոցներով", "en": "Students at an optical bench with a laser and mirrors, wearing safety goggles", "ru": "Ученики у оптического стола с лазером и зеркалами, в защитных очках" },
+    "caption": { "hy": "Օպտիկական սեղան՝ լազեր, հայելիներ և ճառագայթի պատկերը էկրանին", "en": "An optical bench: laser, mirrors, and the beam profile on the screen", "ru": "Оптический стол: лазер, зеркала и профиль луча на экране" }
+  }
+}

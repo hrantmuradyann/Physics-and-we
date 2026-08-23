@@ -2,118 +2,323 @@
 
 This README is written for collaborators. Read it before you start.
 
+Other guides live in the **`Instructions/`** folder:
+
+| If you are here to… | Read |
+|---|---|
+| write or translate **content** (no programming) | `Instructions/EDITING-GUIDE.md` |
+| build an **interactive lab** (a simulation) | `Instructions/LABS-GUIDE.md` |
+| touch the **HTML or CSS** | `Instructions/HTML-CLASSES.md` (in Russian) |
+| run the **admin panel** | `Instructions/ADMIN-SETUP.md` |
+| put the site **online** | `Instructions/SECURITY.md` — read before deploying |
+
 ---
 
 ## 1. What's built so far
 
-The **site shell** is done and merged (or about to be merged) into `main`. This means:
+The whole public site works: home, summer camp, interactive labs, research,
+news, partners, FAQ and about — in **three languages** (Armenian, English,
+Russian), with a shared header, footer and design.
 
-- 6 pages exist: `index.html` (Home), `faq.html`, `camp.html`, `research.html`, `labs.html`, `partners.html`
-- Every page shares the same header, navigation bar, and footer — but you won't see that HTML written out in each file. Instead:
-  - Each page has two **empty** placeholders: `<header id="site-header"></header>` and `<footer id="site-footer"></footer>`
-  - `js/main.js` fills those in automatically when the page loads, using JavaScript
-  - **Why:** if we ever need to change the nav (add a link, rename something), we edit it in ONE place (`main.js`) instead of 6+ files
-- The site supports **3 languages**: English, Armenian (Հայերեն), Russian (Русский)
-  - A language switcher (EN / ՀՅ / РУ) sits in the header
-  - All translatable text lives in JSON files: `js/lang/en.json`, `js/lang/hy.json`, `js/lang/ru.json`
-  - Clicking a language button swaps the visible text without reloading the page
-- Base styling (colors, fonts, spacing, responsive nav) lives in `css/style.css`
+The important thing to understand is **how it is put together**, because it is
+not the usual "one HTML file per page with the text typed into it".
 
-**Nothing else is built yet** — camp registration, submissions, labs, student portal, and admin panel are all still placeholder pages with just a heading. That's next.
+### One page, swapped in and out
+
+`index.html` is the only real web page in the project. It holds **no content at
+all** — just the CSS and JS links, and three empty slots:
+
+```html
+<header id="site-header"></header>   <!-- built by js/main.js -->
+<main   id="app"></main>             <!-- pages are swapped in here -->
+<footer id="site-footer"></footer>   <!-- built by js/main.js -->
+```
+
+The files in `sections/` are **not** web pages. They have no `<!DOCTYPE>`, no
+`<head>`, no `<body>` — they are fragments that get dropped inside `#app`. You
+cannot open one in a browser on its own.
+
+When a visitor clicks a menu item, `js/router.js` catches the click, cancels the
+browser's normal navigation, fetches that section, and shows it. **The browser
+never reloads.** That is why the header, the language choice and the news
+already fetched all survive as you move around the site.
+
+### Layout and words are separate
+
+Every page is two files that never mix:
+
+```
+sections/faq.html    the SHAPE   — empty boxes, no text
+data/faq.json        the WORDS   — hy / en / ru, no markup
+```
+
+`js/content.js` pours the second into the first.
+
+**Why it is done this way:** the people writing the content never open HTML,
+never need to know what a `<div>` is, and cannot break the layout. They open one
+JSON file, change the words in three languages, and that is it. Several people
+can work on different pages at the same time without touching the same file.
+
+### How a page actually appears, step by step
+
+1. The browser loads `index.html` — the only time it ever does.
+2. `js/main.js` reads `data/site.json` and builds the menu and the footer.
+3. `js/router.js` reads the address, then fetches `sections/<page>.html` and
+   `data/<page>.json`.
+4. It wraps the markup in `<section class="view" id="view-<page>">` inside
+   `#app`, and `js/content.js` fills in the text.
+5. `js/anim.js` starts the fade-ins and the counting numbers.
+6. In the background the router quietly pre-loads every other page, so the menu
+   feels instant.
+
+After a few clicks, `#app` contains **every page at once** — CSS shows one:
+`.view { display: none }` / `.view.active { display: block }`.
+
+Two consequences worth knowing:
+
+- A `<script>` inside a `sections/*.html` file **will never run**. Markup added
+  with `innerHTML` never executes scripts. All JavaScript lives in `js/` and
+  hooks in through the `section:ready` event.
+- Every `id` must be unique across the **whole site**, not just one page,
+  because all the pages share one document.
+
+> **Note:** because the site loads its content from files, it will not work when
+> you open `index.html` by double-clicking it. Start a local server instead —
+> see section 6, "Preview the site locally".
+
+### News
+
+News items are a special case: they are written through the admin panel at
+`/admin/`, which saves `news.json` for you — see `Instructions/ADMIN-SETUP.md`.
+Each item gets **its own page** at `?view=post&id=<address>`; the news page
+itself is a feed of cards leading to them.
+
+Careful — there are two files called `news.json` and they are unrelated:
+
+| | |
+|---|---|
+| `news.json` (main folder) | the news items. Written by the admin panel. **Never edit by hand.** |
+| `data/news.json` | only the heading of the news page. Edited by you. |
+
+The panel is behind a username and password, checked on the server before the
+page is ever sent. **`Instructions/SECURITY.md` lists what must be changed
+before the site goes online** — read it before deploying.
+
+### Interactive labs
+
+A lab is a physics simulation that runs on its own page at
+`?view=lab&id=<address>`, for example `?view=lab&id=pendulum`.
+
+Labs follow the same split as everything else — code and words apart:
+
+```
+js/labs/pendulum.js       the physics   (a programmer writes this)
+data/labs/pendulum.json   the words     (a translator writes this)
+```
+
+`js/labs.js` is the shell they all run inside. It draws the page around the
+simulation — title, sliders, readings, Play and Reset, the explanation — gives
+the lab a canvas that is always the right size and sharp on a retina screen,
+runs its drawing loop, and **stops that loop the moment the lab leaves the
+screen** so a laptop fan never spins for a page nobody is looking at.
+
+So writing a lab means writing physics and words. Nothing else.
+`js/labs/pendulum.js` is written to be copied — see
+`Instructions/LABS-GUIDE.md`.
 
 ---
 
 ## 2. Project structure
 
 ```
-Physics_and_we/
-├── index.html          → Home page
-├── faq.html            → Frequently asked questions
-├── camp.html           → Summer Camp
-├── research.html       → Research & Studies
-├── labs.html           → Interactive Labs
-├── partners.html       → Partners
+Physics-and-we/
+├── index.html           → the shell. Loads css + js, contains no text
+├── README.md            → this file
+├── news.json            → the news items (written by /admin/, not by hand)
+├── .gitignore           → keeps passwords and tokens out of the repository
+├── .dev.vars.example    → template for local settings; copy to .dev.vars
+│
+├── Instructions/        → the guides for humans
+│   ├── EDITING-GUIDE.md     → how to change content (written for non-coders)
+│   ├── LABS-GUIDE.md        → how to write an interactive lab
+│   ├── HTML-CLASSES.md      → every CSS class in the markup, explained (RU)
+│   ├── ADMIN-SETUP.md       → running the admin panel, locally and deployed
+│   └── SECURITY.md          → what protects /admin/ — READ BEFORE DEPLOYING
+│
+├── images/
+│   ├── mainphoto.jpg    → the picture on the home page
+│   ├── history*.jpg     → the photographs on the inner pages
+│   ├── logo-light.png   → the logo on the dark public pages
+│   ├── logo-dark.png    → the logo on the light admin pages
+│   ├── logo-mark.png    → the browser-tab icon
+│   └── news/            → the main photo of each news item
+│
+├── sections/            → ONE FILE PER PAGE — layout only, no text
+│   ├── home.html
+│   ├── camp.html
+│   ├── labs.html        → the list of labs (both kinds)
+│   ├── lab.html         → ONE interactive lab, on its own page
+│   ├── research.html
+│   ├── news.html        → the news feed
+│   ├── post.html        → ONE news item, on its own page
+│   ├── partners.html
+│   ├── faq.html
+│   └── about.html
+│
+├── data/                → ONE FILE PER PAGE — text only, all 3 languages
+│   ├── site.json        → the menu, the footer, words shared by every page
+│   ├── home.json
+│   ├── camp.json
+│   ├── labs.json        → the labs page: "simulations" + "cards"
+│   ├── lab.json         → almost empty on purpose (see the note inside)
+│   ├── labs/            → ONE FILE PER LAB — the words of that lab
+│   │   └── pendulum.json
+│   ├── research.json
+│   ├── news.json        → only the heading of the news page
+│   ├── partners.json
+│   ├── faq.json
+│   └── about.json
+│
 ├── css/
-│   └── style.css        → ALL styling for the whole site lives here (for now)
+│   ├── style.css        → reset, colours, header, footer (shared with /admin/)
+│   ├── site.css         → the look of every public page — the design system
+│   ├── home.css         → only the big opening screen of the home page
+│   ├── labs.css         → only the page of one interactive lab
+│   └── admin.css        → only the admin page
+│
 ├── js/
-│   ├── main.js           → Shared logic: header/footer injection, nav highlighting, language switching
-│   └── lang/
-│       ├── en.json       → English text
-│       ├── hy.json       → Armenian text
-│       └── ru.json       → Russian text
-└── README.md             → You are here
+│   ├── content.js       → puts data/*.json into sections/*.html
+│   ├── main.js          → language switching, header and footer
+│   ├── router.js        → shows one page at a time, loads sections on demand
+│   ├── anim.js          → fade-in on scroll, numbers counting up
+│   ├── home.js          → the moving constellation on the home page
+│   ├── news.js          → the news feed and the page of one news item
+│   ├── labs.js          → the shell every interactive lab runs inside
+│   ├── labs/            → ONE FILE PER LAB — the physics of that lab
+│   │   └── pendulum.js
+│   ├── admin.js         → the admin panel (not loaded by the public site)
+│   └── admin-login.js   → the login screen
+│
+├── admin/
+│   ├── index.html       → the admin panel  (behind the login)
+│   └── login.html       → the login screen (the only page that is not)
+│
+└── functions/           → the server side, run by Cloudflare
+    └── admin/
+        ├── _middleware.js      → the lock: checks every /admin request
+        └── api/
+            ├── session.js      → log in / log out + the shared security code
+            ├── publish.js      → writes news.json to GitHub
+            └── upload.js       → stores one photo
 ```
 
-As new features get built (registration form, uploads, labs simulations, admin panel), they'll mostly get **their own JS files** (e.g. `js/registration.js`) instead of being piled into `main.js`, so each file stays focused and easy to read. New HTML pages will also get added (login, signup, dashboards, etc.).
+### The three folders that matter
 
-### About `css/style.css`
-This one file controls the look of every page — colors, fonts, header/nav styling, spacing, responsive behavior. At the top there's a `:root { }` block with CSS variables like `--color-primary` — reuse these instead of hardcoding new colors, so the site stays visually consistent. If this file gets too large as we add more sections, we may split it into multiple files later (e.g. `camp.css`, `admin.css`) — but for now, everything goes here.
+**`data/` — the text.** One file per page. Every piece of text is an object with
+the three languages side by side:
 
-### About `js/main.js`
-This file runs on every page. It currently handles:
-- Injecting the header/nav and footer into the empty placeholders
-- Highlighting the current page's nav link
-- Loading the correct language JSON and swapping text on the page
-
-**Don't dump unrelated feature logic into this file.** If you're building the camp registration form, create `js/registration.js` and link it in `camp.html` with its own `<script>` tag. Keep `main.js` about shared, sitewide behavior only.
-
-### What is `data-i18n` and how does it actually work?
-
-`data-i18n` is a **custom HTML attribute** ("i18n" is a common abbreviation for "internationalization" — the 18 counts the letters between the "i" and the "n"). It attaches invisibly to an element and doesn't do anything by itself — it's just a label our own JavaScript reads.
-
-Here's the full chain, step by step:
-
-1. You write a `data-i18n` attribute on any element with visible text, and give it a unique **key name**:
-   ```html
-   <h1 data-i18n="camp_title">Summer Camp</h1>
-   ```
-   The text inside the tag ("Summer Camp") is just a **fallback** shown only if something goes wrong loading the translations. It is not what visitors normally see.
-
-2. When any page loads, `main.js`'s `loadLanguage()` function:
-   - Downloads the correct JSON file (`en.json`, `hy.json`, or `ru.json` depending on the selected language)
-   - Finds **every** element on the page that has a `data-i18n` attribute
-   - Reads that element's key (`"camp_title"`)
-   - Looks up that same key inside the JSON file
-   - Replaces the element's visible text with whatever string is stored under that key
-
-3. So the JSON file needs a matching entry:
-   ```json
-   "camp_title": "Summer Camp"
-   ```
-
-If the key doesn't exist in the JSON, or the attribute is missing entirely, the text just stays as whatever fallback is hardcoded in the HTML — which means it won't translate when someone switches languages. That's the bug to avoid.
-
-### The actual rule for adding new text to the site
-
-**Every single piece of visible text you write in ANY HTML file must have a `data-i18n` attribute.** No exceptions — headings, paragraphs, button labels, form labels, everything a visitor would read.
-
-Your workflow when adding new text:
-
-1. In the HTML, add the text with a `data-i18n="some_key_name"` attribute — pick a clear, unique key name (usually `pagename_whatitis`, e.g. `camp_curriculum_intro`)
-   ```html
-   <p data-i18n="camp_curriculum_intro">Our curriculum covers optics, electronics, and photonics.</p>
-   ```
-2. Add that same key to **`js/lang/en.json`** with the real English text as the value:
-   ```json
-   "camp_curriculum_intro": "Our curriculum covers optics, electronics, and photonics."
-   ```
-3. **That's it — you're done. You do NOT need to fill in `hy.json` or `ru.json` yourself.** Someone else on the team will handle the Armenian and Russian translations for the keys you added. Just make sure your key exists (even with a placeholder/empty value) in `hy.json` and `ru.json` too, so the site doesn't error out — but the actual translated text is not your job unless you're the one doing translations.
-4. If you edit the raw text directly in the HTML instead of in `en.json`, **it will not show up** — `loadLanguage()` overwrites the HTML's fallback text with whatever is in the JSON every time the page loads. This trips people up constantly. **Always make your actual text edits in `en.json`, not in the HTML file itself**, once a page already has `data-i18n` wired up.
-
-Example, together:
-```html
-<h1 data-i18n="camp_title">Summer Camp</h1>
-```
 ```json
-// en.json
-"camp_title": "Summer Camp"
-
-// hy.json — someone else fills this in later
-"camp_title": ""
-
-// ru.json — someone else fills this in later
-"camp_title": ""
+"title": {
+  "hy": "Ինտերակտիվ լաբորատորիաներ",
+  "en": "Interactive Labs",
+  "ru": "Интерактивные лаборатории"
+}
 ```
+
+There is no separate `en.json` / `hy.json` / `ru.json`, and no
+`translations.json`. A translator opens the page they are translating and sees
+the original right next to the empty line they need to fill. A value that is
+missing is **hidden** on the site rather than shown as an empty box, so a
+half-finished translation never looks broken.
+
+**`sections/` — the layout.** Plain HTML with class names and no text. Where a
+text goes, the element carries a `data-text` attribute naming the value it wants
+out of that page's JSON:
+
+```html
+<h1 class="page-head__title" data-text="page.title"></h1>
+```
+
+Repeating things (cards, questions, days) use a `<template>` that is copied once
+per item in the JSON list:
+
+```html
+<div class="grid grid--cards" data-list="cards">
+  <template>
+    <article class="card">
+      <span class="card__icon" data-icon="icon"></span>
+      <h3 class="card__title" data-text="title"></h3>
+      <p  class="card__text"  data-text="text"></p>
+    </article>
+  </template>
+</div>
+```
+
+So adding a lab card means adding a block to `data/labs.json` — the HTML never
+changes. The whole set of attributes:
+
+| Attribute | What it does |
+|---|---|
+| `data-text="hero.title"` | plain text |
+| `data-rich="story.text"` | same, but a blank line starts a paragraph, `**word**` is bold, `[word](url)` is a link |
+| `data-list="cards"` | repeat the inner `<template>` once per item |
+| `data-icon="icon"` | draw the icon whose **name** is in the JSON |
+| `data-image` / `data-alt` | a picture and its description |
+| `data-route="button.route"` | make it a link to another page |
+| `data-route-id="slug"` | …to **one thing** on that page, e.g. one lab |
+| `data-number="number"` | a number that counts up when scrolled to |
+| `data-ui="learnMore"` | a word shared by all pages (`data/site.json`) |
+
+The full explanation is at the top of `js/content.js`; there is nothing else to
+learn.
+
+**`css/` — the look.** `css/site.css` is the design system: a handful of blocks
+(`.page-head`, `.band`, `.grid--cards`, `.card`, `.steps`, `.timeline`, `.faq`,
+`.cta`, `.showcase`, `.post-card`, `.reveal`) that every page is built from.
+Because all pages use the same blocks, a new page looks right without any new
+CSS. Colours and sizes are CSS variables in the `:root { }` block of
+`css/style.css` — reuse them instead of hardcoding new values.
+
+Keep CSS in the CSS files: no `style="..."` attributes in the HTML, and no
+`<style>` blocks inside pages.
+
+### Adding a new page
+
+1. Add an entry to `"nav"` in `data/site.json`:
+   ```json
+   { "route": "library", "label": { "hy": "Գրադարան", "en": "Library", "ru": "Библиотека" } }
+   ```
+2. Create `sections/library.html` — copy an existing page as a starting point.
+3. Create `data/library.json` with the text.
+
+No JavaScript changes are needed; the router picks it up from the nav entry.
+A page that should exist but not appear in the menu gets `"hidden": true` — that
+is how `about`, `post` and `lab` work.
+
+### Adding a new interactive lab
+
+Four steps, and the fastest way is to copy the pendulum:
+
+```bash
+cp js/labs/pendulum.js    js/labs/optics.js
+cp data/labs/pendulum.json data/labs/optics.json
+```
+
+1. In `js/labs/optics.js`, change `Labs.register("pendulum", …)` to
+   `Labs.register("optics", …)` and replace the physics.
+2. In `data/labs/optics.json`, replace the words.
+3. In `data/labs.json`, copy a block inside `"simulations"` → `"items"` and set
+   `"slug": "optics"`.
+4. In `index.html`, add one line next to the others:
+   ```html
+   <script src="js/labs/optics.js"></script>
+   ```
+
+The name must match in all four places — it is also the address,
+`?view=lab&id=optics`. Use lowercase letters, digits and hyphens only.
+
+Full reference, including everything the shell hands your lab:
+**`Instructions/LABS-GUIDE.md`**.
 
 ---
 
@@ -156,7 +361,7 @@ Mac's terminal app is literally called **Terminal**. Open it via Spotlight: pres
 
 You'll see a prompt like:
 ```
-(base) Hrants-MacBook-Pro:Physics_and_we hrant$
+(base) Hrants-MacBook-Pro:Physics-and-we hrant$
 ```
 That's just: `(base)` = a Python environment indicator (from Anaconda, ignore it), your computer's name, your **current folder**, your username, then `$` marks where you type.
 
@@ -166,7 +371,7 @@ Windows' built-in terminals (Command Prompt, PowerShell) use different commands 
 
 Open it via the Start menu: type `Git Bash`, press Enter. You'll see a similar prompt:
 ```
-hrant@DESKTOP-XXXX MINGW64 ~/Desktop/Physics_and_we
+hrant@DESKTOP-XXXX MINGW64 ~/Desktop/Physics-and-we
 $
 ```
 Same idea — type commands, press Enter, `$` marks where you type. Every command in this README works the same way in Git Bash as it does in Mac Terminal.
@@ -200,11 +405,11 @@ Same idea — type commands, press Enter, `$` marks where you type. Every comman
 
 **Getting into the project folder:** wherever you saved/cloned it, use `cd` to navigate there. On Mac, if it's on your Desktop:
 ```bash
-cd Desktop/Physics_and_we
+cd Desktop/Physics-and-we
 ```
 On Windows Git Bash, your Desktop is usually reached the same way:
 ```bash
-cd Desktop/Physics_and_we
+cd Desktop/Physics-and-we
 ```
 If `cd` says "No such file or directory," run `ls` first to see what's actually in your current folder, and navigate step by step until you find it.
 
@@ -315,7 +520,7 @@ Then open your browser to:
 ```
 http://localhost:8000
 ```
-**Important:** don't just double-click `index.html` or use `open index.html` — the language switcher uses `fetch()`, which browsers block on files opened directly (`file://...`). It only works when served through `http://localhost`.
+**Important:** don't just double-click `index.html` or use `open index.html` — you will get a blank page. Every page's layout and text is loaded with `fetch()`, which browsers block on files opened directly (`file://...`). It only works when served through `http://localhost`.
 
 Stop the server anytime with `Ctrl + C` in that terminal window.
 
@@ -323,7 +528,7 @@ Stop the server anytime with `Ctrl + C` in that terminal window.
 
 Terminal is only needed for the **Git commands** — `clone`, `pull`, `checkout`, `add`, `commit`, `push` — not for actually writing or editing your HTML/CSS/JS. Most people do their real editing in a proper code editor like **VS Code**, and only switch to Terminal for the Git steps. A normal working session looks like this:
 
-1. Open your project folder in VS Code: `File → Open Folder` → select `Physics_and_we`
+1. Open your project folder in VS Code: `File → Open Folder` → select `Physics-and-we`
 2. Make sure you've already pulled the latest `main` and created your branch (Terminal, as above)
 3. Edit your files in VS Code — full syntax highlighting, autocomplete, much easier to read/write than editing directly in Terminal
 4. Save normally (`Cmd + S` / `Ctrl + S`)
@@ -365,7 +570,7 @@ git pull
 git checkout -b feature/camp-registration
 ```
 
-**Step 3 — Now you edit.** You might open `camp.html` and add the curriculum section, create a brand-new file `js/registration.js` for the form logic, add new CSS rules to `css/style.css`, and add new `data-i18n` keys plus their English text in `en.json`. All of this happens on `feature/camp-registration`, not `main`.
+**Step 3 — Now you edit.** You might add a curriculum block to `sections/camp.html` and its text to `data/camp.json`, create a brand-new file `js/registration.js` for the form logic, and add new CSS rules to `css/site.css`. All of this happens on `feature/camp-registration`, not `main`.
 
 **Step 4 — Commit, push, PR, merge** — same cycle as always (see sections 6 and 8).
 
@@ -373,12 +578,13 @@ git checkout -b feature/camp-registration
 
 Nothing links automatically — every connection is something you write explicitly. Here's how each type of new addition plugs into what already exists:
 
-- **A new JS file** (e.g. `js/registration.js`) → you manually add a `<script src="js/registration.js"></script>` tag inside whichever HTML page needs it (e.g. `camp.html`), right before `</body>`, the same way `main.js` is already linked in every page.
-- **New CSS rules** → just typed into the existing `css/style.css`. No linking needed — every page already has `<link rel="stylesheet" href="css/style.css">` in its `<head>`, so any new rule you add applies immediately across the whole site.
-- **New translation keys** → add `data-i18n="your_key"` in the HTML, then add that key with real English text to `en.json` (see the `data-i18n` section above — Armenian/Russian get filled in later by whoever's handling translations). You don't need to touch `main.js` for this — its `loadLanguage()` function already loops through every element with a `data-i18n` attribute on the page and fills in the right text automatically.
-- **A brand-new page** (e.g. a student login page you haven't built yet) → create the `.html` file following the same skeleton as the existing pages (empty `<header id="site-header">` and `<footer id="site-footer">`, a `<link>` to `style.css`, a `<script>` for `main.js`), then add a new `<li><a href="...">...</a></li>` entry inside the `insertHeader()` function in `main.js` so it shows up in the nav bar on every page.
+- **A new JS file** (e.g. `js/registration.js`) → add one `<script src="js/registration.js"></script>` tag at the bottom of `index.html`, next to the others. There is only one HTML shell, so you do this once. Have it listen for the `section:ready` event (see `js/news.js` for the pattern) so it runs when its page is put on screen. **A `<script>` written inside a `sections/*.html` file will never run** — that is a browser rule, not a project one.
+- **A new interactive lab** → two files (`js/labs/<name>.js` and `data/labs/<name>.json`), one block in `data/labs.json`, one `<script>` line. See `Instructions/LABS-GUIDE.md`.
+- **New CSS rules** → typed into `css/site.css`. No linking needed — `index.html` already loads it, so the rule applies across the whole site immediately. Reuse the existing blocks (`.card`, `.band`, `.grid--cards`, …) before inventing new ones.
+- **New text** → add it to that page's file in `data/`, as an object with `hy`, `en` and `ru`. Then reference it from the layout with `data-text="your.key"`. If you only speak one of the languages, fill in the one you know and leave the others as empty strings — an empty value is hidden on the site, and whoever handles translations fills it in later.
+- **A brand-new page** → three small steps, no JavaScript: an entry in `"nav"` in `data/site.json`, a `sections/<route>.html` layout (copy an existing one), and a `data/<route>.json` with the text. It appears in the menu and matches the site's design automatically.
 
-In short: `main.js`, `style.css`, and the `js/lang/*.json` files are the **shared glue** that every page already plugs into. New work almost always means *adding to* these shared files, plus creating focused new files (new HTML pages, new feature-specific JS files) rather than duplicating shared logic.
+In short: `index.html`, `data/site.json` and `css/site.css` are the **shared glue** that every page already plugs into. New work almost always means *adding to* these shared files, plus creating focused new files (a new section, a new data file, a new lab) rather than duplicating shared logic.
 
 ### What actually happens to `main` and the old branch after a merge
 

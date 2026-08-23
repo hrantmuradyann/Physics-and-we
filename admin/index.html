@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+  The admin panel.
+
+  You cannot reach this page without signing in: functions/admin/_middleware.js
+  checks the session on the server before the file is ever sent. Typing the URL
+  directly just bounces you to /admin/login.html.
+-->
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin — Physics and We</title>
+  <link rel="icon" href="/images/logo-mark.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/" class="logo__link"><img class="logo__img" src="/images/logo-light.png" alt="Physics and We"></a></div>
+    <nav>
+      <ul>
+        <li><a href="/?view=news">← Դեպի նորությունները</a></li>
+      </ul>
+    </nav>
+    <div class="admin-session">
+      <span id="admin-user" class="admin-user">…</span>
+      <button type="button" id="admin-logout" class="admin-logout">Դուրս գալ</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Նորությունների կառավարում</h1>
+    <p class="admin-intro">
+      Ամեն նորություն ունի իր առանձին էջը՝ գլխավոր լուսանկարով։ Լրացրե՛ք
+      դաշտերը, ընտրե՛ք լուսանկար և սեղմե՛ք «Պահպանել»։
+    </p>
+
+    <div id="admin-status" class="admin-status" role="status" aria-live="polite"></div>
+
+    <form id="admin-form" class="admin-form">
+      <!-- ░░ WHICH LANGUAGE AM I TYPING? ░░ -->
+      <div class="admin-langs" role="group" aria-label="Լեզու">
+        <button type="button" class="admin-lang is-active" data-lang="hy">ՀՅ</button>
+        <button type="button" class="admin-lang" data-lang="en">EN</button>
+        <button type="button" class="admin-lang" data-lang="ru">РУ</button>
+        <span class="admin-langs__hint">Երեք լեզուն էլ պահվում է միասին</span>
+      </div>
+
+      <!-- ░░ THE MAIN PHOTO ░░ -->
+      <div class="admin-field">
+        <label for="admin-photo">Գլխավոր լուսանկար</label>
+        <div class="admin-photo">
+          <div class="admin-photo__preview" id="admin-photo-preview">
+            <span class="admin-photo__empty">Լուսանկար չկա</span>
+          </div>
+          <div class="admin-photo__controls">
+            <input type="file" id="admin-photo" accept="image/jpeg,image/png,image/webp,image/gif,image/avif">
+            <input type="text" id="admin-image-path" placeholder="կամ ուղի՝ images/news/photo.jpg"
+                   autocomplete="off" spellcheck="false">
+            <button type="button" id="admin-photo-clear" class="admin-photo__clear">Հեռացնել</button>
+            <p class="admin-photo__note">JPEG, PNG, WebP, GIF կամ AVIF։ Առավելագույնը 5 ՄԲ։</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-field">
+        <label for="admin-image-alt">Լուսանկարի նկարագրություն <span class="admin-field__lang" data-lang-label></span></label>
+        <input id="admin-image-alt" type="text" autocomplete="off"
+               placeholder="Ի՞նչ է երևում լուսանկարում (կույրերի ընթերցիչի համար)">
+      </div>
+
+      <!-- ░░ THE TEXT ░░ -->
+      <div class="admin-field">
+        <label for="admin-title">Վերնագիր <span class="admin-field__lang" data-lang-label></span></label>
+        <input id="admin-title" type="text" autocomplete="off" required>
+      </div>
+
+      <div class="admin-field">
+        <label for="admin-excerpt">Կարճ նկարագրություն <span class="admin-field__lang" data-lang-label></span></label>
+        <textarea id="admin-excerpt" rows="2"
+                  placeholder="Մեկ-երկու նախադասություն՝ ցուցակում երևալու համար"></textarea>
+      </div>
+
+      <div class="admin-field">
+        <label for="admin-content">Ամբողջ տեքստը <span class="admin-field__lang" data-lang-label></span></label>
+        <textarea id="admin-content" rows="9" required></textarea>
+      </div>
+
+      <!-- ░░ DATE AND ADDRESS ░░ -->
+      <div class="admin-row">
+        <div class="admin-field">
+          <label for="admin-date">Ամսաթիվ</label>
+          <input id="admin-date" type="date" required>
+        </div>
+        <div class="admin-field">
+          <label for="admin-slug">Էջի հասցե</label>
+          <input id="admin-slug" type="text" autocomplete="off" spellcheck="false"
+                 pattern="[a-z0-9][a-z0-9-]*" placeholder="ինքնաշխատ">
+          <p class="admin-field__hint" id="admin-slug-preview">/?view=post&amp;id=…</p>
+        </div>
+      </div>
+
+      <div class="admin-actions">
+        <button type="submit" id="admin-save" class="btn-admin">Պահպանել և հրապարակել</button>
+        <button type="button" id="admin-cancel" class="btn-admin btn-admin--ghost admin-hidden">Չեղարկել խմբագրումը</button>
+        <button type="button" id="admin-download" class="btn-admin btn-admin--ghost">Ներբեռնել news.json</button>
+      </div>
+    </form>
+
+    <h2 class="admin-existing">Առկա նորությունները <span id="admin-count" class="admin-count"></span></h2>
+    <div id="admin-news-list" class="admin-news-list"></div>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

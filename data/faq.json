@@ -1,0 +1,89 @@
+{
+  "_readme": "FAQ PAGE TEXT. To add a question, copy one whole { ... } block inside \"questions\". The answer may contain several paragraphs — separate them with a blank line inside the same line of text using \n\n.",
+
+  "page": {
+    "eyebrow": { "hy": "Հարց ու պատասխան", "en": "Questions and answers", "ru": "Вопросы и ответы" },
+    "title": { "hy": "Հաճախակի հարցեր", "en": "Frequently Asked Questions", "ru": "Часто задаваемые вопросы" },
+    "lead": {
+      "hy": "Ամենից հաճախ տրվող հարցերը ծնողներից, ուսուցիչներից և սովորողներից։",
+      "en": "The questions parents, teachers and students ask us most often.",
+      "ru": "Вопросы, которые чаще всего задают родители, учителя и ученики."
+    }
+  },
+
+  "questions": [
+    {
+      "q": {
+        "hy": "Որքա՞ն արժե մասնակցությունը",
+        "en": "How much does it cost to take part?",
+        "ru": "Сколько стоит участие?"
+      },
+      "a": {
+        "hy": "Դպրոցներում անցկացվող լաբորատորիաներն անվճար են։ Ամառային ճամբարն ունի մասնակցության վճար, սակայն կան կրթաթոշակային տեղեր. դրանց մասին տեղեկությունը հրապարակվում է Նորություններում գրանցումից առաջ։",
+        "en": "Labs run inside schools are free. The summer camp has a participation fee, but scholarship places are available — details are published in the News section before registration opens.",
+        "ru": "Лаборатории, которые проходят в школах, бесплатны. У летнего лагеря есть взнос за участие, но есть и стипендиальные места — информация публикуется в разделе «Новости» перед началом регистрации."
+      }
+    },
+    {
+      "q": {
+        "hy": "Պե՞տք է նախապես լավ իմանալ ֆիզիկա",
+        "en": "Do I need to be good at physics already?",
+        "ru": "Нужно ли уже хорошо знать физику?"
+      },
+      "a": {
+        "hy": "Ոչ։ Բոլոր ծրագրերը կառուցված են այնպես, որ սկսվեն զրոյից։ Անհրաժեշտ է միայն հետաքրքրասիրություն և պատրաստակամություն՝ սխալվելու և նորից փորձելու։",
+        "en": "No. Every programme is built to start from zero. All you need is curiosity and a willingness to get it wrong and try again.",
+        "ru": "Нет. Все программы построены так, чтобы начинать с нуля. Нужны только любопытство и готовность ошибаться и пробовать снова."
+      }
+    },
+    {
+      "q": {
+        "hy": "Ի՞նչ տարիքի սովորողների համար է",
+        "en": "What ages is this for?",
+        "ru": "Для какого возраста это?"
+      },
+      "a": {
+        "hy": "Լաբորատորիաների մեծ մասը նախատեսված է 7–12 դասարանների համար։ Աստղադիտման երեկոները բաց են բոլոր տարիքի համար՝ ներառյալ ընտանիքները։",
+        "en": "Most labs are designed for grades 7–12. Stargazing evenings are open to all ages, families included.",
+        "ru": "Большинство лабораторий рассчитано на 7–12 классы. Вечера наблюдений открыты для всех возрастов, включая семьи."
+      }
+    },
+    {
+      "q": {
+        "hy": "Ինչպե՞ս հրավիրել ձեզ մեր դպրոց",
+        "en": "How do we invite you to our school?",
+        "ru": "Как пригласить вас в нашу школу?"
+      },
+      "a": {
+        "hy": "Գրեք մեզ Գործընկերներ բաժնում նշված հասցեով՝ նշելով դպրոցի անունը, դասարանը և ցանկալի ամսաթիվը։ Սովորաբար պատասխանում ենք մի քանի օրվա ընթացքում։",
+        "en": "Write to the address listed in the Partners section, telling us the school, the grade and a preferred date. We usually reply within a few days.",
+        "ru": "Напишите на адрес, указанный в разделе «Партнёры», сообщив школу, класс и желаемую дату. Обычно мы отвечаем в течение нескольких дней."
+      }
+    },
+    {
+      "q": {
+        "hy": "Կարո՞ղ եմ միանալ որպես կամավոր կամ մենթոր",
+        "en": "Can I join as a volunteer or mentor?",
+        "ru": "Могу ли я присоединиться как волонтёр или наставник?"
+      },
+      "a": {
+        "hy": "Այո։ Փնտրում ենք ուսանողների և մասնագետների, ովքեր պատրաստ են վարել լաբորատորիա կամ ուղեկցել հետազոտական նախագիծ։ Գրեք մեզ՝ նշելով, թե որ ուղղությունն է ձեզ մոտ։",
+        "en": "Yes. We are looking for students and professionals ready to run a lab or guide a research project. Write to us and tell us which direction is closest to you.",
+        "ru": "Да. Мы ищем студентов и специалистов, готовых провести лабораторию или курировать исследовательский проект. Напишите нам, указав, какое направление вам ближе."
+      }
+    }
+  ],
+
+  "cta": {
+    "title": { "hy": "Չգտա՞ք պատասխանը", "en": "Didn't find your answer?", "ru": "Не нашли ответ?" },
+    "text": {
+      "hy": "Ուղարկեք ձեր հարցը, և մենք կավելացնենք այն այս ցանկում։",
+      "en": "Send us your question and we will add it to this list.",
+      "ru": "Пришлите свой вопрос, и мы добавим его в этот список."
+    },
+    "button": {
+      "route": "about",
+      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch", "ru": "Связаться с нами" }
+    }
+  }
+}

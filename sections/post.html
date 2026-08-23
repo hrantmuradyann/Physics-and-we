@@ -1,0 +1,22 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  ONE NEWS ITEM — layout only.
+
+  This is the page a visitor lands on after clicking a news card:
+      ?view=post&id=<the address of the item>
+
+  There is nothing to edit here, and no text to translate. The whole article —
+  photo, date, title and body — is written into the empty <div> below by
+  js/news.js, from news.json (which the admin panel at /admin/ writes).
+
+  The few words that are NOT part of an article ("All news", "More news")
+  live in  data/site.json  under "ui".
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ THE ARTICLE (filled in automatically) ░░ -->
+<section class="band band--article">
+  <div class="container container--reading">
+    <div id="news-post" class="news-post"></div>
+  </div>
+</section>

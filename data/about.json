@@ -1,0 +1,90 @@
+{
+  "_readme": "ABOUT PAGE TEXT. In \"story\" and other long texts you can use \n\n to start a new paragraph, **bold** to make words bold, and [text](https://link) to make a link.",
+
+  "page": {
+    "eyebrow": { "hy": "Ովքեր ենք մենք", "en": "Who we are", "ru": "Кто мы" },
+    "title": { "hy": "Մեր մասին", "en": "About Us", "ru": "О нас" },
+    "lead": {
+      "hy": "Ֆիզիկան ՈՒ Մենք-ը կրթական նախաձեռնություն է, որը ֆիզիկան հանում է դասագրքից և դնում սովորողի ձեռքը։",
+      "en": "Physics and We is an education initiative that takes physics out of the textbook and puts it into students' hands.",
+      "ru": "«Физика и Мы» — образовательная инициатива, которая выносит физику из учебника и вкладывает её в руки учеников."
+    }
+  },
+
+  "story": {
+    "eyebrow": { "hy": "Պատմությունը", "en": "Our story", "ru": "Наша история" },
+    "title": { "hy": "Սկսվեց մեկ դասարանից", "en": "It started with one classroom", "ru": "Всё началось с одного класса" },
+    "text": {
+      "hy": "Սկսվեց պարզ դիտարկումից՝ սովորողները բանաձևերն անգիր անում էին, բայց չէին տեսնում, թե որտեղ են դրանք աշխատում։ Առաջին լաբորատորիան անցկացրինք մեկ դասարանում, պարզ նյութերով և մեկ աստղադիտակով։\n\nԱյսօր աշխատում ենք տասնյակ դպրոցների հետ, վարում ամառային ճամբար և ուղեկցում ուսանողական հետազոտություններ։ Սկզբունքը մնացել է նույնը՝ **նախ փորձը, հետո բանաձևը**։",
+      "en": "It started with a simple observation: students were memorising formulas without ever seeing where they apply. We ran our first lab in a single classroom, with simple materials and one telescope.\n\nToday we work with dozens of schools, run a summer camp and supervise student research. The principle has not changed: **the experiment first, the formula second**.",
+      "ru": "Всё началось с простого наблюдения: ученики заучивали формулы, но не видели, где они работают. Первую лабораторию мы провели в одном классе, с простыми материалами и одним телескопом.\n\nСегодня мы работаем с десятками школ, проводим летний лагерь и курируем ученические исследования. Принцип остался прежним: **сначала опыт, потом формула**."
+    }
+  },
+
+  "values": {
+    "eyebrow": { "hy": "Սկզբունքներ", "en": "Principles", "ru": "Принципы" },
+    "title": { "hy": "Ինչին ենք հավատում", "en": "What we believe", "ru": "Во что мы верим" },
+    "items": [
+      {
+        "icon": "flask",
+        "title": { "hy": "Նախ՝ փորձը", "en": "Experiment first", "ru": "Сначала опыт" },
+        "text": {
+          "hy": "Բանաձևը հասկանալի է դառնում այն բանից հետո, երբ սովորողն ինքն է տեսել երևույթը։",
+          "en": "A formula makes sense only after a student has seen the phenomenon for themselves.",
+          "ru": "Формула становится понятной только после того, как ученик сам увидел явление."
+        }
+      },
+      {
+        "icon": "bulb",
+        "title": { "hy": "Սխալվելը մասն է", "en": "Getting it wrong is part of it", "ru": "Ошибаться — часть процесса" },
+        "text": {
+          "hy": "Անհաջող չափումը սովորեցնում է ավելին, քան ճիշտ պատասխանը՝ գրատախտակին։",
+          "en": "A failed measurement teaches more than a correct answer on the blackboard.",
+          "ru": "Неудачное измерение учит большему, чем правильный ответ на доске."
+        }
+      },
+      {
+        "icon": "people",
+        "title": { "hy": "Բաց բոլորի համար", "en": "Open to everyone", "ru": "Открыто для всех" },
+        "text": {
+          "hy": "Դպրոցական լաբորատորիաներն անվճար են, իսկ ճամբարն ունի կրթաթոշակային տեղեր։",
+          "en": "School labs are free, and the camp offers scholarship places.",
+          "ru": "Школьные лаборатории бесплатны, а в лагере есть стипендиальные места."
+        }
+      }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": { "hy": "Կապ", "en": "Contact", "ru": "Контакты" },
+    "title": { "hy": "Գրեք մեզ", "en": "Write to us", "ru": "Напишите нам" },
+    "items": [
+      {
+        "icon": "people",
+        "title": { "hy": "Էլ. փոստ", "en": "Email", "ru": "Эл. почта" },
+        "text": { "hy": "hello@physicsandwe.am", "en": "hello@physicsandwe.am", "ru": "hello@physicsandwe.am" }
+      },
+      {
+        "icon": "calendar",
+        "title": { "hy": "Աշխատանքային ժամեր", "en": "Office hours", "ru": "Часы работы" },
+        "text": {
+          "hy": "Երկուշաբթի–ուրբաթ, 10:00–18:00",
+          "en": "Monday to Friday, 10:00–18:00",
+          "ru": "Понедельник–пятница, 10:00–18:00"
+        }
+      },
+      {
+        "icon": "telescope",
+        "title": { "hy": "Հասցե", "en": "Address", "ru": "Адрес" },
+        "text": { "hy": "Երևան, Հայաստան", "en": "Yerevan, Armenia", "ru": "Ереван, Армения" }
+      }
+    ]
+  },
+
+  "photo": {
+    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
+    "image": "images/history4.jpg",
+    "alt": { "hy": "Կազմակերպիչները «Ֆիզիկան ՈՒ Մենք»-ի պաստառի կողքին, որի վրա նշված են ծրագրի տարիները", "en": "Organisers beside the “Physics and We” banner showing the years of the programme", "ru": "Организаторы рядом с баннером «Физика и Мы», на котором отмечены годы программы" },
+    "caption": { "hy": "Ծրագրի ճանապարհը՝ 2016-ից մինչև այսօր", "en": "The programme’s road, from 2016 to today", "ru": "Путь программы — с 2016 года до сегодняшнего дня" }
+  }
+}

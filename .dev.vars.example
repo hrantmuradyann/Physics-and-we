@@ -1,0 +1,63 @@
+# ============================================================================
+#  .dev.vars.example  →  copy to  .dev.vars  before running the site locally
+#
+#      cp .dev.vars.example .dev.vars        (Mac / Linux / Git Bash)
+#      copy .dev.vars.example .dev.vars      (Windows cmd)
+#
+#  .dev.vars is READ BY `npx wrangler pages dev .` and is listed in
+#  .gitignore, so it never reaches GitHub. THIS file (.dev.vars.example) IS
+#  committed — so never put a real secret in it.
+#
+#  In production you do NOT use this file. You set the same names in
+#  Cloudflare → Workers & Pages → your project → Settings → Environment
+#  variables, and mark the secret ones as "Encrypt".
+# ============================================================================
+
+# ---------------------------------------------------------------- LOGIN -----
+# The username typed on the /admin/ login screen.
+ADMIN_USERNAME=password
+
+# The password, stored as a PBKDF2-SHA256 hash — never as plain text.
+# The hash below is for the password:  admin
+#
+# To change the password, generate a new hash (never type a plain password
+# here). With Python installed:
+#
+#   python -c "import hashlib,base64,os;s=os.urandom(16);d=hashlib.pbkdf2_hmac('sha256',b'YOUR-NEW-PASSWORD',s,310000,32);print('pbkdf2$sha256$310000$'+base64.b64encode(s).decode()+'$'+base64.b64encode(d).decode())"
+#
+ADMIN_PASSWORD_HASH=pbkdf2$sha256$310000$H/mMpkarxzu3YkN/SmvUvQ==$tV5N+0AnZjnQyzBHopiiNob0Mk9vNWCIESo+eTy9VM4=
+
+# Key used to sign the login cookie. If someone learns this value they can
+# forge a login, so treat it exactly like a password.
+# GENERATE YOUR OWN before deploying:
+#   python -c "import base64,os;print(base64.b64encode(os.urandom(32)).decode())"
+SESSION_SECRET=CHANGE-ME-generate-your-own-32-random-bytes-base64
+
+# How long a login lasts, in seconds (default 43200 = 12 hours).
+SESSION_TTL=43200
+
+# ------------------------------------------------------------- PUBLISHING ---
+# Only needed if you want the admin panel to commit straight to GitHub.
+# Leave these out to work offline — the panel then offers a "download
+# news.json" button instead, and you commit the file yourself.
+#
+# GITHUB_TOKEN must be a FINE-GRAINED token, limited to this one repository,
+# with only  Contents: Read and write.  Nothing else.
+#GITHUB_TOKEN=github_pat_xxxxxxxxxxxxxxxxxxxxxxxx
+#GITHUB_OWNER=your-github-username
+#GITHUB_REPO=physics-and-we
+#GITHUB_BRANCH=main
+#GITHUB_PATH=news.json
+#GITHUB_IMAGE_DIR=images/news
+
+# --------------------------------------------------- CLOUDFLARE ACCESS ------
+# Optional second lock in front of the password login, for the deployed site.
+# See Instructions/ADMIN-SETUP.md. If you set the team domain, you MUST also set the AUD.
+#CF_ACCESS_TEAM_DOMAIN=yourteam.cloudflareaccess.com
+#CF_ACCESS_AUD=the-long-application-audience-tag
+#ADMIN_EMAILS=you@example.com,colleague@example.com
+
+# ------------------------------------------------------------ ENVIRONMENT ---
+# Set to "production" on the deployed site. Any value other than "development"
+# turns off the localhost-only convenience defaults.
+ENVIRONMENT=development

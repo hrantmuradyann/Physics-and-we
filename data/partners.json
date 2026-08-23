@@ -1,0 +1,151 @@
+{
+  "_readme": "PARTNERS PAGE TEXT. \"partners\" is the list of organisations — copy a { ... } block to add one. \"name\" is written the same way in every language, so it is one plain line, not hy/en/ru. The list below was read off the programme banner in images/history4.jpg — please check every line and correct anything that is wrong.",
+
+  "page": {
+    "eyebrow": { "hy": "Միասին", "en": "Together", "ru": "Вместе" },
+    "title": { "hy": "Կազմակերպիչներ և հովանավորներ", "en": "Organisers & sponsors", "ru": "Организаторы и спонсоры" },
+    "lead": {
+      "hy": "Ծրագիրը կյանքի է կոչվում ուսանողական խմբերի, համալսարանի և մեզ աջակցող կազմակերպությունների ջանքերով։",
+      "en": "The programme is run by student chapters, with the university and the organisations that support us.",
+      "ru": "Программа держится на студенческих отделениях, университете и организациях, которые нас поддерживают."
+    }
+  },
+
+  "partners": [
+    {
+      "name": "YSU SPIE & OPTICA Student Chapter",
+      "role": { "hy": "Կազմակերպիչ", "en": "Organiser", "ru": "Организатор" },
+      "text": {
+        "hy": "Երևանի պետական համալսարանի ուսանողական մասնաճյուղը, որը կազմակերպում է ծրագիրը։",
+        "en": "The student chapter at Yerevan State University that runs the programme.",
+        "ru": "Студенческое отделение Ереванского государственного университета, которое проводит программу."
+      }
+    },
+    {
+      "name": "OPTICA IPR Armenia Student Chapter",
+      "role": { "hy": "Կազմակերպիչ", "en": "Organiser", "ru": "Организатор" },
+      "text": {
+        "hy": "OPTICA-ի հայաստանյան ուսանողական մասնաճյուղը՝ ծրագրի համակազմակերպիչ։",
+        "en": "The Armenian OPTICA student chapter, co-organiser of the programme.",
+        "ru": "Армянское студенческое отделение OPTICA — соорганизатор программы."
+      }
+    },
+    {
+      "name": "Yerevan State University",
+      "role": { "hy": "Համալսարան", "en": "University", "ru": "Университет" },
+      "text": {
+        "hy": "Ճամբարն անցկացվում է ԵՊՀ Ծաղկաձորի ուսումնաարտադրական բազայում։",
+        "en": "The camp is held at the university’s training base in Tsaghkadzor.",
+        "ru": "Лагерь проходит на учебной базе университета в Цахкадзоре."
+      }
+    },
+    {
+      "name": "OPTICA",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Օպտիկայի և ֆոտոնիկայի միջազգային ընկերությունը։",
+        "en": "The international society for optics and photonics.",
+        "ru": "Международное общество оптики и фотоники."
+      }
+    },
+    {
+      "name": "SPIE",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Օպտիկայի և ֆոտոնիկայի միջազգային ընկերությունը։",
+        "en": "The international society for optics and photonics.",
+        "ru": "Международное общество оптики и фотоники."
+      }
+    },
+    {
+      "name": "Thorlabs",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Օպտիկական և ֆոտոնիկ սարքավորումների արտադրող։",
+        "en": "A manufacturer of optical and photonic equipment.",
+        "ru": "Производитель оптического и фотонного оборудования."
+      }
+    },
+    {
+      "name": "ARCS.ai",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Ծրագրին աջակցող կազմակերպություն։",
+        "en": "An organisation supporting the programme.",
+        "ru": "Организация, поддерживающая программу."
+      }
+    },
+    {
+      "name": "Photonics & Artificial Intelligence Laboratories",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Ծրագրին աջակցող լաբորատորիաներ։",
+        "en": "Laboratories supporting the programme.",
+        "ru": "Лаборатории, поддерживающие программу."
+      }
+    },
+    {
+      "name": "Advanced Technologies Group",
+      "role": { "hy": "Հովանավոր", "en": "Sponsor", "ru": "Спонсор" },
+      "text": {
+        "hy": "Ծրագրին աջակցող կազմակերպություն։",
+        "en": "An organisation supporting the programme.",
+        "ru": "Организация, поддерживающая программу."
+      }
+    }
+  ],
+
+  "become": {
+    "eyebrow": { "hy": "Միանալ", "en": "Join in", "ru": "Присоединиться" },
+    "title": { "hy": "Դարձեք գործընկեր", "en": "Become a partner", "ru": "Станьте партнёром" },
+    "items": [
+      {
+        "icon": "people",
+        "title": { "hy": "Դպրոցներ", "en": "Schools", "ru": "Школы" },
+        "text": {
+          "hy": "Հրավիրեք մեզ ձեր դասարան։ Մենք բերում ենք սարքավորումը և վարում լաբորատորիան։",
+          "en": "Invite us into your classroom. We bring the equipment and run the lab.",
+          "ru": "Пригласите нас в свой класс. Мы привозим оборудование и проводим лабораторию."
+        }
+      },
+      {
+        "icon": "chart",
+        "title": { "hy": "Համալսարաններ", "en": "Universities", "ru": "Университеты" },
+        "text": {
+          "hy": "Առաջարկեք մենթորություն կամ լաբորատոր հասանելիություն սովորողների նախագծերին։",
+          "en": "Offer mentorship or lab access for student projects.",
+          "ru": "Предложите наставничество или доступ к лаборатории для ученических проектов."
+        }
+      },
+      {
+        "icon": "flask",
+        "title": { "hy": "Կազմակերպություններ", "en": "Organisations", "ru": "Организации" },
+        "text": {
+          "hy": "Աջակցեք սարքավորմամբ կամ ֆինանսավորեք մեկ ճամբարային տեղ։",
+          "en": "Support us with equipment, or fund one place at the camp.",
+          "ru": "Поддержите оборудованием или оплатите одно место в лагере."
+        }
+      }
+    ]
+  },
+
+  "cta": {
+    "title": { "hy": "Խոսե՞նք", "en": "Shall we talk?", "ru": "Поговорим?" },
+    "text": {
+      "hy": "Գրեք մեզ, և մենք կպատասխանենք մի քանի օրվա ընթացքում։",
+      "en": "Write to us and we will reply within a few days.",
+      "ru": "Напишите нам, и мы ответим в течение нескольких дней."
+    },
+    "button": {
+      "route": "about",
+      "label": { "hy": "Կապի տվյալներ", "en": "Contact details", "ru": "Контакты" }
+    }
+  },
+
+  "photo": {
+    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
+    "image": "images/history.jpg",
+    "alt": { "hy": "Ծրագրի պաստառը՝ կազմակերպիչների և հովանավորների նշաններով", "en": "The programme banner, showing the organisers’ and sponsors’ marks", "ru": "Баннер программы с логотипами организаторов и спонсоров" },
+    "caption": { "hy": "Կազմակերպիչներն ու հովանավորները՝ պաստառի ներքևում", "en": "Organisers and sponsors, along the foot of the banner", "ru": "Организаторы и спонсоры — в нижней части баннера" }
+  }
+}

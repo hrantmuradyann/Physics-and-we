@@ -1,0 +1,145 @@
+{
+  "_readme": "HOME PAGE TEXT. Layout lives in sections/home.html — you almost never need to open it. Icon names you can use: atom, orbit, chart, people, flask, bulb, telescope, wave, magnet, calendar.",
+
+  "hero": {
+    "eyebrow": { "hy": "Ֆիզիկան ՈՒ Մենք", "en": "Physics & We", "ru": "Физика и Мы" },
+    "title": {
+      "hy": "Ֆիզիկա իրական աշխարհի համար",
+      "en": "Physics for the Real World",
+      "ru": "Физика для реального мира"
+    },
+    "subtitle": {
+      "hy": "Հետաքրքրասիրությունը վերածում ենք հայտնագործության՝ ինտերակտիվ լաբորատորիաների, ամառային ճամբարների և ուսանողական հետազոտությունների միջոցով։",
+      "en": "We turn curiosity into discovery through interactive labs, summer camps and student research.",
+      "ru": "Мы превращаем любопытство в открытия через интерактивные лаборатории, летние лагеря и студенческие исследования."
+    },
+    "primaryButton": {
+      "route": "camp",
+      "label": { "hy": "Ծանոթանալ ծրագրերին", "en": "Explore Programs", "ru": "Наши программы" }
+    },
+    "secondaryButton": {
+      "route": "labs",
+      "label": { "hy": "Դիտել լաբորատորիաները", "en": "Watch the Labs", "ru": "Смотреть лаборатории" }
+    },
+    "scrollHint": {
+      "hy": "Թերթեք՝ ավելին տեսնելու համար",
+      "en": "Scroll to explore",
+      "ru": "Листайте, чтобы узнать больше"
+    }
+  },
+
+  "stats": [
+    {
+      "number": 666,
+      "suffix": "+",
+      "label": { "hy": "Ոգեշնչված սովորող", "en": "Students Inspired", "ru": "Вдохновлённых учеников" }
+    },
+    {
+      "number": 66,
+      "suffix": "+",
+      "label": { "hy": "Ինտերակտիվ լաբորատորիա", "en": "Interactive Labs", "ru": "Интерактивных лабораторий" }
+    },
+    {
+      "number": 66,
+      "suffix": "",
+      "label": { "hy": "Հետազոտական նախագիծ", "en": "Research Projects", "ru": "Исследовательских проектов" }
+    },
+    {
+      "number": 6,
+      "suffix": "",
+      "label": { "hy": "Գործընկեր դպրոց", "en": "Partner Schools", "ru": "Школ-партнёров" }
+    }
+  ],
+
+  "features": {
+    "eyebrow": { "hy": "Ի՞նչ ենք անում", "en": "What We Do", "ru": "Чем мы занимаемся" },
+    "title": {
+      "hy": "Ծրագրեր, որոնք ֆիզիկան դարձնում են հասկանալի",
+      "en": "Programs that make physics click",
+      "ru": "Программы, с которыми физика становится понятной"
+    },
+    "items": [
+      {
+        "icon": "atom",
+        "route": "camp",
+        "title": { "hy": "Ամառային ճամբար", "en": "Summer Camp", "ru": "Летний лагерь" },
+        "text": {
+          "hy": "Մեկ շաբաթ՝ լի փորձերով, աստղադիտմամբ և թիմային մարտահրավերներով։",
+          "en": "A week packed with experiments, stargazing and team challenges.",
+          "ru": "Неделя, полная экспериментов, наблюдений за звёздами и командных вызовов."
+        }
+      },
+      {
+        "icon": "orbit",
+        "route": "labs",
+        "title": { "hy": "Ինտերակտիվ լաբորատորիաներ", "en": "Interactive Labs", "ru": "Интерактивные лаборатории" },
+        "text": {
+          "hy": "Ֆիզիկայի օրենքները կենդանանում են գործնական, ձեռքով կատարվող փորձերի միջոցով։",
+          "en": "The laws of physics come alive through hands-on, do-it-yourself experiments.",
+          "ru": "Законы физики оживают через практические эксперименты своими руками."
+        }
+      },
+      {
+        "icon": "chart",
+        "route": "research",
+        "title": { "hy": "Հետազոտություններ", "en": "Research & Studies", "ru": "Исследования" },
+        "text": {
+          "hy": "Սովորողներն իրական գիտական նախագծեր են իրականացնում մենթորների հետ։",
+          "en": "Students run real scientific projects alongside mentors.",
+          "ru": "Ученики ведут настоящие научные проекты вместе с наставниками."
+        }
+      },
+      {
+        "icon": "people",
+        "route": "partners",
+        "title": { "hy": "Գործընկերներ", "en": "Partners", "ru": "Партнёры" },
+        "text": {
+          "hy": "Համագործակցում ենք դպրոցների և համալսարանների հետ ամբողջ երկրում։",
+          "en": "We collaborate with schools and universities across the country.",
+          "ru": "Мы сотрудничаем со школами и университетами по всей стране."
+        }
+      }
+    ]
+  },
+
+  "showcase": {
+    "image": "images/mainphoto.jpg",
+    "imageAlt": {
+      "hy": "«Ֆիզիկան ՈՒ Մենք»-ի թիմը՝ խմբական լուսանկար Ճաղկաձորում",
+      "en": "The “Physics and We” team, photographed together in Tsaghkadzor",
+      "ru": "Команда «Физика и Мы» — общая фотография в Цахкадзоре"
+    },
+    "eyebrow": { "hy": "Գիտություն ամեն օր", "en": "Science, Every Day", "ru": "Наука каждый день" },
+    "title": {
+      "hy": "Ինչպես է աշխատում առօրյա տեխնիկան",
+      "en": "How everyday tech works",
+      "ru": "Как работает повседневная техника"
+    },
+    "text": {
+      "hy": "Այն էկրանից, որով կարդում եք սա, մինչև ձեր սենյակի լույսը՝ մենք բացատրում ենք տեխնոլոգիայի հետևում թաքնված ֆիզիկան։",
+      "en": "From the screen you are reading this on to the light in your room — we break down the physics behind the technology you use every day.",
+      "ru": "От экрана, с которого вы это читаете, до света в вашей комнате — мы объясняем физику, скрытую за технологиями."
+    },
+    "button": {
+      "route": "labs",
+      "label": { "hy": "Իմանալ ավելին", "en": "Learn More", "ru": "Узнать больше" }
+    }
+  },
+
+  "cta": {
+    "title": {
+      "hy": "Պատրա՞ստ եք բացահայտել ֆիզիկան մեզ հետ։",
+      "en": "Ready to explore physics with us?",
+      "ru": "Готовы исследовать физику вместе с нами?"
+    },
+    "text": {
+      "hy": "Միացեք մեր հաջորդ հանդիպմանը և սկսեք ձեր բացահայտումների ճանապարհը։",
+      "en": "Join our next session and start your own journey of discovery.",
+      "ru": "Присоединяйтесь к следующей встрече и начните свой путь открытий."
+    },
+    "button": {
+      "route": "camp",
+      "label": { "hy": "Սկսել", "en": "Get Started", "ru": "Начать" }
+    }
+  }
+}

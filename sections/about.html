@@ -1,0 +1,70 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  ABOUT PAGE — layout only.
+  The words are NOT here. They are in  data/about.json .
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ THE LONG TEXT ░░ -->
+<section class="band">
+  <div class="container container--narrow">
+    <p class="eyebrow reveal" data-text="story.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="story.title"></h2>
+    <div class="prose reveal" data-rich="story.text"></div>
+  </div>
+</section>
+
+<!-- ░░ A PHOTOGRAPH ░░ -->
+<section class="photo-band">
+  <div class="container">
+    <figure class="photo reveal">
+      <img data-image="photo.image" data-alt="photo.alt" loading="lazy" decoding="async">
+      <figcaption class="photo__caption" data-text="photo.caption"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ░░ WHAT WE BELIEVE ░░ -->
+<section class="band band--alt">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="values.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="values.title"></h2>
+
+    <div class="grid grid--cards" data-list="values.items">
+      <template>
+        <article class="card reveal">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ HOW TO REACH US ░░ -->
+<section class="band">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="contact.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="contact.title"></h2>
+
+    <div class="grid grid--cards" data-list="contact.items">
+      <template>
+        <article class="card reveal">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,106 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  INTERACTIVE LABS PAGE — layout only.
+
+  The words are NOT here. They are in  data/labs.json .
+
+  There are TWO lists of labs on this page:
+    "simulations"  the interactive ones, that run in the browser. Each card
+                   opens its own page at  ?view=lab&id=<slug> .
+    "cards"        the hands-on ones we bring to a school in person.
+
+  To add or remove either kind you do NOT touch this file — you copy a
+  block inside data/labs.json. A new SIMULATION also needs its two files,
+  js/labs/<slug>.js and data/labs/<slug>.json — see Instructions/LABS-GUIDE.md.
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ THE SIMULATIONS THAT RUN IN THE BROWSER ░░
+     Each card opens  ?view=lab&id=<slug> .  The page it goes to is written
+     here in the layout (data-goto="lab"); only the name of the lab comes
+     from the JSON (data-route-id="slug"). A lab with no slug is dropped.  -->
+<section class="band">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="simulations.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="simulations.title"></h2>
+    <p class="lead lab-intro reveal" data-text="simulations.lead"></p>
+
+    <div class="grid grid--cards" data-list="simulations.items">
+      <template>
+        <a class="card card--link reveal" href="?view=lab" data-goto="lab" data-route-id="slug">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+          <p class="card__meta" data-text="meta"></p>
+          <span class="card__arrow">
+            <span data-ui="openLab"></span>
+          </span>
+        </a>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ THE LABS WE BRING TO A SCHOOL IN PERSON ░░ -->
+<section class="band band--alt">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="classroom.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="classroom.title"></h2>
+
+    <div class="grid grid--cards" data-list="cards">
+      <template>
+        <article class="card reveal">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+          <p class="card__meta" data-text="meta"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ A PHOTOGRAPH ░░ -->
+<section class="photo-band">
+  <div class="container">
+    <figure class="photo reveal">
+      <img data-image="photo.image" data-alt="photo.alt" loading="lazy" decoding="async">
+      <figcaption class="photo__caption" data-text="photo.caption"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ░░ HOW A LAB IS RUN, STEP BY STEP ░░ -->
+<section class="band">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="steps.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="steps.title"></h2>
+
+    <ol class="steps" data-list="steps.items">
+      <template>
+        <li class="step reveal">
+          <h3 class="step__title" data-text="title"></h3>
+          <p class="step__text" data-text="text"></p>
+        </li>
+      </template>
+    </ol>
+  </div>
+</section>
+
+<!-- ░░ CLOSING INVITATION ░░ -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="cta__title" data-text="cta.title"></h2>
+    <p class="cta__text" data-text="cta.text"></p>
+    <a class="btn btn--primary btn--lg" data-route="cta.button.route" data-text="cta.button.label"></a>
+  </div>
+</section>

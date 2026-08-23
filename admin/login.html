@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  The login screen for /admin/.
+
+  This is the ONLY page under /admin/ that can be opened without signing in.
+  The check itself happens on the server (functions/admin/api/session.js) —
+  there is no password anywhere in this file or in the JavaScript it loads,
+  so viewing the source tells an attacker nothing.
+-->
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Մուտք — Physics and We</title>
+  <link rel="icon" href="/images/logo-mark.png" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="login-page">
+  <main class="login">
+    <form id="login-form" class="login__card" autocomplete="on">
+      <img class="login__logo" src="/images/logo-dark.png" alt="Physics and We" width="852" height="204">
+      <h1 class="login__title">Ադմին վահանակ</h1>
+      <p class="login__subtitle">Մուտքագրե՛ք Ձեր տվյալները՝ շարունակելու համար։</p>
+
+      <div class="admin-field">
+        <label for="login-username">Օգտանուն</label>
+        <input id="login-username" name="username" type="text"
+               autocomplete="username" autocapitalize="none" spellcheck="false"
+               required autofocus>
+      </div>
+
+      <div class="admin-field">
+        <label for="login-password">Գաղտնաբառ</label>
+        <input id="login-password" name="password" type="password"
+               autocomplete="current-password" required>
+      </div>
+
+      <div id="login-status" class="admin-status" role="status" aria-live="polite"></div>
+
+      <button type="submit" id="login-submit" class="btn-admin login__submit">Մուտք գործել</button>
+
+      <p class="login__foot"><a href="/">← Դեպի կայք</a></p>
+    </form>
+  </main>
+
+  <script src="/js/admin-login.js"></script>
+</body>
+</html>

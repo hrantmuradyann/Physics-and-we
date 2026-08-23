@@ -1,20 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+  ══════════════════════════════════════════════════════════════════════════════
+   Physics and We — the website
+  ══════════════════════════════════════════════════════════════════════════════
+
+   THERE IS NO PAGE CONTENT IN THIS FILE. Nothing to edit here for normal work.
+   This file only loads the design (css) and the scripts (js).
+
+   WHERE DO I CHANGE ...                        OPEN THIS FILE
+   ----------------------------------------------------------------------------
+   any text, in any language                    data/<page>.json
+   the menu, the footer, the site name          data/site.json
+   a news item                                  the admin page at /admin/
+   the order of the blocks on a page            sections/<page>.html
+   the words of an interactive lab              data/labs/<lab>.json
+   colours, sizes, spacing                      css/site.css
+   ----------------------------------------------------------------------------
+
+   Full instructions, in plain words:  Instructions/EDITING-GUIDE.md
+  ══════════════════════════════════════════════════════════════════════════════
+-->
+<html lang="hy">
 <head>
   <meta charset="UTF-8">
-  <title>Home - Physics and We</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Physics and We</title>
+  <meta name="description" content="Physics and We — interactive labs, a summer camp and student research.">
+
+  <link rel="icon" href="images/logo-mark.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-mark.png">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/labs.css">
 </head>
-<body>
+
+<body class="site home">
+  <!-- The menu is built from data/site.json by js/main.js -->
   <header id="site-header"></header>
 
-  <main>
-    <h1 data-i18n="home_title">Home</h1>
-    <p data-i18n="home_welcome">Welcome to Physics and We.</p>
-  </main>
+  <!-- Each page of the site is loaded into here from the sections folder -->
+  <main id="app"></main>
 
+  <!-- The footer is built from data/site.json by js/main.js -->
   <footer id="site-footer"></footer>
 
+  <script src="js/content.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/anim.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/news.js"></script>
+
+  <!-- The interactive labs. labs.js is the shell every lab runs inside;
+       each file under js/labs/ is one lab and registers itself with it.
+       To add a lab, add one line here. See Instructions/LABS-GUIDE.md. -->
+  <script src="js/labs.js"></script>
+  <script src="js/labs/pendulum.js"></script>
 </body>
 </html>

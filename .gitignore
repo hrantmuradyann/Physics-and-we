@@ -1,0 +1,69 @@
+# ============================================================================
+#  Things that must NEVER be committed.
+#
+#  Rule of thumb: if a file holds a password, a token, or a secret key,
+#  it belongs here — not in the repository. Everything in this repo is
+#  public the moment you push it, and deleting a secret later does NOT
+#  remove it from git history.
+# ============================================================================
+
+# ---- Secrets: local environment variables for `wrangler pages dev` --------
+# .dev.vars holds the admin password hash, the session secret and the GitHub
+# token when you run the site on your own machine. Never commit it.
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# ---- Secrets: generic env files -------------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+
+# ---- Secrets: keys and certificates ---------------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets.json
+credentials.json
+
+# ---- Cloudflare / Wrangler ------------------------------------------------
+.wrangler/
+.mf/
+wrangler.toml.local
+dist/
+.cloudflare/
+
+# ---- Node -----------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+
+# ---- Uploaded news photos (optional) --------------------------------------
+# If you keep photos in the repo, DELETE the next line. If you would rather
+# host them elsewhere and only store URLs, leave it in.
+# images/news/
+
+# ---- Editors --------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- Operating system junk ------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---- Local scratch --------------------------------------------------------
+tmp/
+temp/
+*.log
+*.bak
+news.json.bak

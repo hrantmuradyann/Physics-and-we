@@ -1,0 +1,17 @@
+{
+  "_readme": "!! CAREFUL: THIS FILE IS ONLY THE HEADING OF THE NEWS PAGE. The news items themselves live in news.json in the MAIN project folder (one level up), and the admin panel at /admin/ writes that file automatically. Do not add news items here.",
+
+  "page": {
+    "eyebrow": { "hy": "Թարմ", "en": "Latest", "ru": "Свежее" },
+    "title": {
+      "hy": "Նորություններ և իրադարձություններ",
+      "en": "News & Events",
+      "ru": "Новости и события"
+    },
+    "lead": {
+      "hy": "Գրանցումների մեկնարկ, նոր լաբորատորիաներ, գիտաժողովներ և աստղադիտման երեկոներ։",
+      "en": "Registration openings, new labs, conferences and stargazing evenings.",
+      "ru": "Начало регистраций, новые лаборатории, конференции и вечера наблюдений."
+    }
+  }
+}

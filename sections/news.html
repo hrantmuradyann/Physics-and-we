@@ -1,0 +1,31 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  NEWS PAGE — layout only.
+
+  The heading of this page is in  data/news.json .
+
+  The news items themselves are NOT in this folder. They live in
+  news.json in the main project folder, and the admin page at /admin/
+  writes that file for you. The empty <div id="news-list"> below is where
+  they appear, one card per item: photo, date, title, short summary.
+
+  Clicking a card opens  ?view=post&id=<address>  — that page's layout is
+  sections/post.html .
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ THE FEED (filled in automatically) ░░ -->
+<section class="band band--feed">
+  <div class="container container--feed">
+    <div id="news-list" class="news-list"></div>
+  </div>
+</section>

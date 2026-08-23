@@ -1,0 +1,351 @@
+/* ============================================================================
+   labs.css — the page of one interactive lab.
+
+   The lab itself is drawn on a canvas by JavaScript, so there is very little
+   here: the frame around the canvas, the sliders beside it, the numbers it
+   writes out, and the explanation underneath.
+
+   THE BLOCKS
+     .lab__stage      the canvas and its panel, side by side
+     .lab__frame      the box the canvas sits in (it sets the width)
+     .lab__panel      sliders, readings and buttons
+     .lab-control     one slider with its name and its value
+     .lab-toggle      one on/off switch
+     .lab-readout     one number the lab writes out
+     .lab-chooser     shown at ?view=lab when no lab was named
+
+   Everything is scoped to  body.site , like css/site.css .
+   ========================================================================== */
+
+/* The lab page is a little wider than an article, because the canvas needs
+   the room, but narrower than the full page, so the sliders stay reachable. */
+.container--lab {
+  max-width: 960px;
+}
+
+.band--lab {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  background: var(--dark-bg-3);
+}
+
+/* On the Labs page a short paragraph sits between a section title and the
+   row of cards. The title's own bottom margin is meant for the cards, so it
+   is pulled back in here. */
+.lab-intro {
+  margin: -1.6rem 0 2.3rem;
+}
+
+/* ============================================================================
+   HEADING
+   ========================================================================== */
+.lab__head {
+  margin-bottom: 1.8rem;
+}
+
+/* "← All labs", above the title and again at the end. */
+.lab__back {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  color: var(--dark-accent-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lab__back:hover {
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+.lab__title {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.lab__lead {
+  color: var(--dark-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+/* ============================================================================
+   THE CANVAS AND THE PANEL BESIDE IT
+   ========================================================================== */
+.lab__stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 1.3rem;
+  align-items: start;
+}
+
+.lab__frame {
+  position: relative;
+  min-height: 240px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--dark-line);
+  background:
+    radial-gradient(700px 340px at 50% 0%, rgba(47, 128, 237, 0.14), transparent 62%),
+    linear-gradient(180deg, var(--dark-bg-2), var(--dark-bg));
+  box-shadow: 0 30px 70px -34px rgba(0, 0, 0, 0.9);
+}
+
+.lab__canvas {
+  display: block;
+  width: 100%;
+  /* Without this a drag on a phone scrolls the page instead of moving the
+     thing being dragged. */
+  touch-action: none;
+  cursor: grab;
+}
+
+.lab__canvas:active {
+  cursor: grabbing;
+}
+
+.lab__panel {
+  display: grid;
+  gap: 1.3rem;
+  padding: 1.3rem 1.2rem;
+  border-radius: 18px;
+  border: 1px solid var(--dark-line);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+}
+
+/* ============================================================================
+   SLIDERS
+   ========================================================================== */
+.lab__controls {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.lab-control__label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.lab-control__name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  line-height: 1.3;
+}
+
+/* The live number to the right of the name. Tabular figures stop it from
+   jittering as the digits change. */
+.lab-control__value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--dark-accent-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lab-control__input {
+  width: 100%;
+  height: 1.5rem;
+  accent-color: var(--dark-accent);
+  cursor: pointer;
+}
+
+.lab-control__input:focus-visible {
+  outline: 2px solid var(--dark-accent-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- on / off ---------- */
+.lab-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.lab-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.lab-toggle__mark {
+  flex: none;
+  width: 2.4rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--dark-line);
+  position: relative;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.lab-toggle__mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  background: #fff;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease;
+}
+
+.lab-toggle input:checked + .lab-toggle__mark {
+  background: linear-gradient(135deg, var(--dark-accent), var(--dark-accent-2));
+  border-color: transparent;
+}
+
+.lab-toggle input:checked + .lab-toggle__mark::after {
+  transform: translateY(-50%) translateX(1.05rem);
+}
+
+.lab-toggle input:focus-visible + .lab-toggle__mark {
+  outline: 2px solid var(--dark-accent-soft);
+  outline-offset: 3px;
+}
+
+/* ============================================================================
+   THE NUMBERS THE LAB WRITES OUT
+   ========================================================================== */
+.lab__readouts {
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+.lab-readout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.lab-readout__label {
+  font-size: 0.82rem;
+  color: var(--dark-muted);
+  line-height: 1.35;
+}
+
+.lab-readout__value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   BUTTONS
+   ========================================================================== */
+.lab__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+/* A third size of the shared .btn, small enough for the panel. */
+.btn--sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.86rem;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+/* ============================================================================
+   UNDER THE CANVAS
+   ========================================================================== */
+.lab__hint {
+  margin-top: 1rem;
+  color: var(--dark-muted);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.lab__theory {
+  margin-top: 2.6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+.lab__theory-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.lab__foot {
+  margin-top: 2.4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+.lab__foot .lab__back {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   NO LAB NAMED, OR A NAME WE DO NOT HAVE
+   ========================================================================== */
+.lab-chooser {
+  padding: 1rem 0 2rem;
+}
+
+.lab-chooser__title {
+  font-size: clamp(1.5rem, 3.4vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.8rem;
+}
+
+.lab-chooser__grid {
+  margin-bottom: 2rem;
+}
+
+/* ============================================================================
+   SMALL SCREENS
+   The panel goes underneath the canvas, and the sliders sit two to a row so
+   the whole lab still fits on one screen of a phone.
+   ========================================================================== */
+@media (max-width: 860px) {
+  .lab__stage {
+    grid-template-columns: 1fr;
+  }
+
+  .lab__controls {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+
+  .lab__readouts {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.55rem 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .lab__frame {
+    border-radius: 14px;
+  }
+
+  .lab__panel {
+    padding: 1.1rem 1rem;
+  }
+}

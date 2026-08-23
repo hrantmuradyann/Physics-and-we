@@ -1,0 +1,67 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  RESEARCH PAGE — layout only.
+  The words are NOT here. They are in  data/research.json .
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ THE STUDENT PROJECTS ░░ -->
+<section class="band">
+  <div class="container">
+    <div class="grid grid--cards" data-list="projects">
+      <template>
+        <article class="card reveal">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+          <p class="card__meta" data-text="meta"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ A PHOTOGRAPH ░░ -->
+<section class="photo-band">
+  <div class="container">
+    <figure class="photo reveal">
+      <img data-image="photo.image" data-alt="photo.alt" loading="lazy" decoding="async">
+      <figcaption class="photo__caption" data-text="photo.caption"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ░░ HOW A PROJECT RUNS, STEP BY STEP ░░ -->
+<section class="band band--alt">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="steps.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="steps.title"></h2>
+
+    <ol class="steps" data-list="steps.items">
+      <template>
+        <li class="step reveal">
+          <h3 class="step__title" data-text="title"></h3>
+          <p class="step__text" data-text="text"></p>
+        </li>
+      </template>
+    </ol>
+  </div>
+</section>
+
+<!-- ░░ CLOSING INVITATION ░░ -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="cta__title" data-text="cta.title"></h2>
+    <p class="cta__text" data-text="cta.text"></p>
+    <a class="btn btn--primary btn--lg" data-route="cta.button.route" data-text="cta.button.label"></a>
+  </div>
+</section>

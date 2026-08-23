@@ -1,0 +1,121 @@
+{
+  "_readme": "RESEARCH PAGE TEXT. \"projects\" is the list of student projects — copy a { ... } block to add one.",
+
+  "page": {
+    "eyebrow": { "hy": "Սովորողների աշխատանք", "en": "Student work", "ru": "Работы учеников" },
+    "title": { "hy": "Հետազոտություններ", "en": "Research & Studies", "ru": "Исследования" },
+    "lead": {
+      "hy": "Սովորողներն ընտրում են իրական հարց, աշխատում մենթորի հետ մեկ ուսումնական տարի և ներկայացնում արդյունքը գիտաժողովում։",
+      "en": "Students choose a real question, work with a mentor for a school year and present the result at a conference.",
+      "ru": "Ученики выбирают реальный вопрос, работают с наставником в течение учебного года и представляют результат на конференции."
+    }
+  },
+
+  "projects": [
+    {
+      "icon": "bulb",
+      "title": {
+        "hy": "Արևային վահանակների արդյունավետությունը փոշու պայմաններում",
+        "en": "Solar panel efficiency under dust",
+        "ru": "Эффективность солнечных панелей в условиях пыли"
+      },
+      "text": {
+        "hy": "Չափվել է արտադրողականության անկումը փոշու տարբեր խտությունների դեպքում և առաջարկվել մաքրման ժամանակացույց։",
+        "en": "The team measured how output drops at different dust densities and proposed a cleaning schedule.",
+        "ru": "Команда измерила падение выработки при разной плотности пыли и предложила график очистки."
+      },
+      "meta": { "hy": "2025–2026 · 3 սովորող", "en": "2025–2026 · 3 students", "ru": "2025–2026 · 3 ученика" }
+    },
+    {
+      "icon": "wave",
+      "title": {
+        "hy": "Դասարանի ակուստիկան և հասկանալիությունը",
+        "en": "Classroom acoustics and speech clarity",
+        "ru": "Акустика класса и разборчивость речи"
+      },
+      "text": {
+        "hy": "Ռեվերբերացիայի չափում դպրոցի չորս դասասենյակում և պարզ, էժան լուծումների փորձարկում։",
+        "en": "Reverberation was measured in four classrooms and simple, low-cost fixes were tested.",
+        "ru": "Измерена реверберация в четырёх классах и протестированы простые недорогие решения."
+      },
+      "meta": { "hy": "2025–2026 · 2 սովորող", "en": "2025–2026 · 2 students", "ru": "2025–2026 · 2 ученика" }
+    },
+    {
+      "icon": "telescope",
+      "title": {
+        "hy": "Փոփոխական աստղի պայծառության կորը",
+        "en": "The light curve of a variable star",
+        "ru": "Кривая блеска переменной звезды"
+      },
+      "text": {
+        "hy": "Երեք ամսվա դիտումների հիման վրա կառուցվել է պայծառության կորը և հաշվարկվել պարբերությունը։",
+        "en": "Three months of observations were used to build the light curve and calculate the period.",
+        "ru": "По трём месяцам наблюдений построена кривая блеска и рассчитан период."
+      },
+      "meta": { "hy": "2024–2025 · 4 սովորող", "en": "2024–2025 · 4 students", "ru": "2024–2025 · 4 ученика" }
+    }
+  ],
+
+  "steps": {
+    "eyebrow": { "hy": "Ընթացքը", "en": "The process", "ru": "Процесс" },
+    "title": { "hy": "Հարցից մինչև ներկայացում", "en": "From question to presentation", "ru": "От вопроса до презентации" },
+    "items": [
+      {
+        "title": { "hy": "Հարցի ընտրություն", "en": "Choosing the question", "ru": "Выбор вопроса" },
+        "text": {
+          "hy": "Սեպտեմբերին սովորողն առաջարկում է թեմա, որը հետաքրքիր է իրեն և չափելի է։",
+          "en": "In September the student proposes a topic that interests them and can actually be measured.",
+          "ru": "В сентябре ученик предлагает тему, которая ему интересна и которую можно измерить."
+        }
+      },
+      {
+        "title": { "hy": "Մենթորի հետ", "en": "With a mentor", "ru": "С наставником" },
+        "text": {
+          "hy": "Ամսական հանդիպումներ՝ մեթոդաբանությունը ճշտելու և տվյալները ստուգելու համար։",
+          "en": "Monthly meetings to refine the method and check the data.",
+          "ru": "Ежемесячные встречи, чтобы уточнить методику и проверить данные."
+        }
+      },
+      {
+        "title": { "hy": "Չափումներ", "en": "Measurements", "ru": "Измерения" },
+        "text": {
+          "hy": "Ձմռանը հավաքվում են տվյալները՝ լաբորատորիայում կամ դաշտային պայմաններում։",
+          "en": "Data is collected over the winter, in the lab or in the field.",
+          "ru": "Зимой собираются данные — в лаборатории или в полевых условиях."
+        }
+      },
+      {
+        "title": { "hy": "Ներկայացում", "en": "Presentation", "ru": "Презентация" },
+        "text": {
+          "hy": "Գարնանը՝ զեկույց հանրապետական գիտաժողովում և հրապարակում մեր կայքում։",
+          "en": "In spring: a talk at the national conference and a write-up on our site.",
+          "ru": "Весной — доклад на республиканской конференции и публикация на нашем сайте."
+        }
+      }
+    ]
+  },
+
+  "cta": {
+    "title": {
+      "hy": "Ունեք հա՞րց, որ ուզում եք ուսումնասիրել",
+      "en": "Have a question you want to investigate?",
+      "ru": "Есть вопрос, который вы хотите исследовать?"
+    },
+    "text": {
+      "hy": "Ամեն սեպտեմբեր ընդունում ենք նոր սովորողների։ Գրեք մեզ ձեր գաղափարի մասին։",
+      "en": "We take on new students every September. Write to us about your idea.",
+      "ru": "Каждый сентябрь мы принимаем новых учеников. Напишите нам о своей идее."
+    },
+    "button": {
+      "route": "about",
+      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch", "ru": "Связаться с нами" }
+    }
+  },
+
+  "photo": {
+    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
+    "image": "images/history3.jpg",
+    "alt": { "hy": "Սովորողները հավաքվել են նոութբուքի շուրջ՝ սենսոր փորձարկելիս", "en": "Students gathered around a laptop while testing a sensor", "ru": "Ученики собрались у ноутбука во время испытания датчика" },
+    "caption": { "hy": "Չափումների առաջին արդյունքները՝ ուղիղ եթերում", "en": "The first measurements, read out live", "ru": "Первые измерения — сразу на экране" }
+  }
+}

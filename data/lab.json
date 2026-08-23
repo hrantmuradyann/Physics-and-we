@@ -1,0 +1,3 @@
+{
+  "_readme": "!! CAREFUL: THIS FILE IS ALMOST EMPTY ON PURPOSE. The page of one interactive lab has no text of its own. The words of each lab live in data/labs/<address>.json (one file per lab), and the buttons shared by every lab ('Reset', 'Play', '← All labs') live in data/site.json under 'ui'. See Instructions/LABS-GUIDE.md."
+}

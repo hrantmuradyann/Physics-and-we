@@ -1,11 +1,23 @@
-/* ---------- Base / Reset ---------- */
-* {
+/* ============================================================================
+   style.css — the shared basics: reset, colours, header, footer.
+
+   Used by BOTH the public website and the admin page at /admin/.
+   The look of the public pages is in  css/site.css .
+   ========================================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ---------- The colours and sizes used everywhere -------------------------
+   Change a value here and it changes across the whole site.                */
 :root {
+  /* Light theme — used by the admin page */
   --color-primary: #1a3c6e;
   --color-secondary: #2f80ed;
   --color-accent: #f2994a;
@@ -13,14 +25,26 @@
   --color-bg-alt: #f7f9fc;
   --color-text: #1c1c1c;
   --color-text-light: #666666;
+
+  /* Dark theme — used by every public page (see css/site.css) */
+  --dark-bg: #070b1a;
+  --dark-bg-2: #0b1228;
+  --dark-bg-3: #0a1024;
+  --dark-text: #e8ecf6;
+  --dark-muted: #9aa6c4;
+  --dark-line: rgba(255, 255, 255, 0.08);
+  --dark-accent: #2f80ed;
+  --dark-accent-2: #6f5cff;
+  --dark-accent-soft: #7ea8ff;
+
   --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --max-width: 1100px;
+  --radius: 16px;
+  --radius-sm: 10px;
 }
 
-/* Sticky footer setup: make body fill the full screen height and
-   stack header/main/footer vertically, so footer stays pinned to
-   the bottom even on short pages (see "main" below for the other half) */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -32,6 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -39,24 +64,61 @@ a {
   color: inherit;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
-/* ---------- Header / Nav ---------- */
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+/* A visible outline when moving through the site with the keyboard. */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Header and menu ---------- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1rem 2rem;
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
   flex-wrap: wrap;
 }
 
 .logo {
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo__link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* The mark keeps its proportions; only the height is set, so the header stays
+   the same height whatever the image measures. */
+.logo__img {
+  height: 2rem;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.logo__link:hover .logo__img {
+  opacity: 0.82;
 }
 
 nav ul {
@@ -67,25 +129,23 @@ nav ul {
 
 nav a {
   font-size: 0.95rem;
-  color: white;
+  color: #fff;
   opacity: 0.9;
   display: inline-block;
-  transition: opacity 0.2s ease, transform 0.25s ease, font-size 0.25s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
   opacity: 1;
-  text-decoration: underline;
 }
 
-/* Active page's nav link grows slightly instead of just underlining */
+/* The page you are currently on */
 nav a.current {
-  font-size: 1.1rem;
-  transform: scale(1.08);
-  font-weight: bold;
+  opacity: 1;
+  font-weight: 700;
 }
 
-/* ---------- Language switcher ---------- */
+/* ---------- Language buttons ---------- */
 .lang-switcher {
   display: flex;
   gap: 0.4rem;
@@ -93,39 +153,51 @@ nav a.current {
 
 .lang-switcher button {
   background: none;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid currentColor;
+  color: inherit;
   padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 0.85rem;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.lang-switcher button:hover {
+  opacity: 1;
 }
 
 .lang-switcher button.active-lang {
-  background-color: white;
+  background-color: #fff;
   color: var(--color-primary);
-  font-weight: bold;
+  border-color: #fff;
+  font-weight: 700;
+  opacity: 1;
 }
 
-/* ---------- Main content ---------- */
+/* ---------- One page at a time -------------------------------------------
+   Every page of the site is a .view. The router shows exactly one.        */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+/* ---------- Main area ---------- */
 main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
   width: 100%;
-  /* flex: 1 makes main grow to fill leftover space, pushing footer
-     down to the bottom of the screen on short pages */
-  flex: 1;
+  flex: 1;              /* pushes the footer to the bottom on short pages */
 }
 
 main h1 {
   font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
-}
-
-main p {
-  color: var(--color-text-light);
 }
 
 /* ---------- Footer ---------- */
@@ -137,7 +209,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Small screens ---------- */
 @media (max-width: 640px) {
   header {
     flex-direction: column;

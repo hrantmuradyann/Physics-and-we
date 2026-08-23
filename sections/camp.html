@@ -1,0 +1,84 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  SUMMER CAMP PAGE — layout only.
+  The words are NOT here. They are in  data/camp.json .
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ THE NUMBERS THAT COUNT UP ░░ -->
+<section class="band band--tight">
+  <div class="container">
+    <div class="grid grid--stats" data-list="facts">
+      <template>
+        <div class="stat reveal">
+          <span class="stat__num" data-number="number" data-suffix="suffix">0</span>
+          <span class="stat__label" data-text="label"></span>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ A PHOTOGRAPH ░░ -->
+<section class="photo-band">
+  <div class="container">
+    <figure class="photo reveal">
+      <img data-image="photo.image" data-alt="photo.alt" loading="lazy" decoding="async">
+      <figcaption class="photo__caption" data-text="photo.caption"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ░░ DAY BY DAY ░░ -->
+<section class="band band--alt">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="schedule.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="schedule.title"></h2>
+
+    <ol class="timeline" data-list="schedule.items">
+      <template>
+        <li class="timeline__item reveal">
+          <p class="timeline__label" data-text="label"></p>
+          <h3 class="timeline__title" data-text="title"></h3>
+          <p class="timeline__text" data-text="text"></p>
+        </li>
+      </template>
+    </ol>
+  </div>
+</section>
+
+<!-- ░░ PRACTICAL INFORMATION ░░ -->
+<section class="band">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="info.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="info.title"></h2>
+
+    <div class="grid grid--cards" data-list="info.items">
+      <template>
+        <article class="card reveal">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+        </article>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CLOSING INVITATION ░░ -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="cta__title" data-text="cta.title"></h2>
+    <p class="cta__text" data-text="cta.text"></p>
+    <a class="btn btn--primary btn--lg" data-route="cta.button.route" data-text="cta.button.label"></a>
+  </div>
+</section>

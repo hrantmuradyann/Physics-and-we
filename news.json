@@ -1,0 +1,76 @@
+[
+  {
+    "id": 3,
+    "slug": "students-at-national-conference",
+    "date": "2026-08-10",
+    "image": "images/defolt.jpg",
+    "imageAlt": {
+      "hy": "Սովորողները ներկայացնում են իրենց նախագիծը գիտաժողովում",
+      "en": "Students presenting their project at the conference",
+      "ru": "Ученики представляют свой проект на конференции"
+    },
+    "title": {
+      "hy": "Մեր սովորողները ելույթ ունեցան հանրապետական գիտաժողովում",
+      "en": "Our students presented at the national conference",
+      "ru": "Наши ученики выступили на республиканской конференции"
+    },
+    "excerpt": {
+      "hy": "Երեք թիմ ներկայացրեց օպտիկային և վերականգնվող էներգիային նվիրված հետազոտություններ։",
+      "en": "Three teams presented research projects on optics and renewable energy.",
+      "ru": "Три команды представили исследования по оптике и возобновляемой энергии."
+    },
+    "content": {
+      "hy": "Երեք թիմ ներկայացրեց իրենց հետազոտական նախագծերը՝ նվիրված օպտիկային և վերականգնվող էներգիային։ Շնորհավորում ենք բոլոր մասնակիցներին։\n\nՆախագծերի վրա աշխատանքը տևել է չորս ամիս։ Սովորողներն ինքնուրույն են կառուցել չափիչ սարքերը, հավաքել տվյալները և պատրաստել ներկայացումը։\n\nՀաջորդ փուլը՝ միջազգային գիտաժողովն է, որին պատրաստվում ենք աշնանը։",
+      "en": "Three teams presented their research projects on optics and renewable energy. Congratulations to all participants!\n\nThe work took four months. The students built their own measuring equipment, collected the data and prepared the presentation themselves.\n\nThe next step is the international conference we are preparing for this autumn.",
+      "ru": "Три команды представили свои исследовательские проекты по оптике и возобновляемой энергии. Поздравляем всех участников!\n\nРабота над проектами заняла четыре месяца. Ученики сами собрали измерительные приборы, обработали данные и подготовили выступление.\n\nСледующий шаг — международная конференция, к которой мы готовимся этой осенью."
+    }
+  },
+  {
+    "id": 2,
+    "slug": "new-interactive-optics-lab",
+    "date": "2026-07-15",
+    "image": "images/defolt.jpg",
+    "imageAlt": {
+      "hy": "Ոսպնյակներ և հայելիներ նոր լաբորատորիայում",
+      "en": "Lenses and mirrors in the new laboratory",
+      "ru": "Линзы и зеркала в новой лаборатории"
+    },
+    "title": {
+      "hy": "Բացվեց նոր օպտիկայի ինտերակտիվ լաբորատորիան",
+      "en": "New interactive optics lab is now open",
+      "ru": "Открылась новая интерактивная лаборатория оптики"
+    },
+    "excerpt": {
+      "hy": "Լույսի բեկումն ու անդրադարձումը՝ իրական ոսպնյակներով և հայելիներով։",
+      "en": "Refraction and reflection of light, with real lenses and mirrors.",
+      "ru": "Преломление и отражение света с настоящими линзами и зеркалами."
+    },
+    "content": {
+      "hy": "Այժմ կարող եք ձեռքով փորձարկել լույսի բեկումն ու անդրադարձումը՝ իրական ոսպնյակների և հայելիների միջոցով։\n\nԼաբորատորիան բաց է շաբաթը երեք օր՝ նախապես գրանցվելով։ Խմբերը մինչև 12 հոգի են, որպեսզի բոլորը հասցնեն ինքնուրույն աշխատել։",
+      "en": "You can now explore the refraction and reflection of light hands-on, using real lenses and mirrors.\n\nThe lab is open three days a week, by appointment. Groups are limited to twelve so that everyone gets time at the bench.",
+      "ru": "Теперь вы можете на практике исследовать преломление и отражение света с помощью настоящих линз и зеркал.\n\nЛаборатория работает три дня в неделю по предварительной записи. Группы до двенадцати человек, чтобы каждый успел поработать сам."
+    }
+  },
+  {
+    "id": 1,
+    "slug": "summer-camp-registration-open",
+    "date": "2026-06-01",
+    "image": "",
+    "imageAlt": {},
+    "title": {
+      "hy": "Ամառային ճամբարի գրանցումը մեկնարկել է",
+      "en": "Summer camp registration is open",
+      "ru": "Открыта регистрация в летний лагерь"
+    },
+    "excerpt": {
+      "hy": "Մեկշաբաթյա ծրագիր՝ փորձերով, աստղադիտմամբ և թիմային մարտահրավերներով։",
+      "en": "A one-week programme of experiments, stargazing and team challenges.",
+      "ru": "Недельная программа с экспериментами, наблюдением звёзд и командными вызовами."
+    },
+    "content": {
+      "hy": "Միացե՛ք մեկշաբաթյա ծրագրին՝ լի փորձերով, աստղադիտմամբ և թիմային մարտահրավերներով։ Տեղերի քանակը սահմանափակ է։\n\nԳրանցվելու համար լրացրե՛ք հայտը կայքի «Ամառային ճամբար» բաժնում։",
+      "en": "Join our one-week programme full of experiments, stargazing and team challenges. Places are limited.\n\nTo register, fill in the form on the Summer Camp page.",
+      "ru": "Присоединяйтесь к недельной программе, полной экспериментов, наблюдений за звёздами и командных вызовов. Количество мест ограничено.\n\nЧтобы записаться, заполните форму на странице «Летний лагерь»."
+    }
+  }
+]

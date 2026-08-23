@@ -1,0 +1,1112 @@
+/* ============================================================================
+   site.css — how every public page looks.
+
+   The whole site is dark, and every page is built from the same few blocks,
+   so a new page automatically looks like the rest.
+
+   THE BLOCKS (the class names you see in sections/*.html)
+     .page-head     the big title at the top of an inner page
+     .band          one stripe of the page   (.band--alt = slightly lighter)
+     .grid--cards   a row of cards that wraps by itself
+     .grid--stats   the big numbers that count up
+     .steps         numbered steps, 1 2 3 4
+     .timeline      a vertical list of days / stages
+     .faq           questions that open when clicked
+     .prose         a long text with paragraphs
+     .showcase      a picture next to a text
+     .cta           the closing invitation with a button
+     .post-card     one news item in the feed  (photo, date, title, summary)
+     .post          one news item on its own page
+     .reveal        add to anything to make it fade in when scrolled to
+
+   Everything below is scoped to  body.site  so the admin page stays light.
+   ========================================================================== */
+
+body.site {
+  --header-h: 4.6rem;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* The public pages run edge to edge; .container puts the text back in line. */
+body.site #app {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Inner pages start below the fixed header. The home page does not, because
+   its hero is meant to run underneath it. */
+body.site:not(.home) #app {
+  padding-top: var(--header-h);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.container--narrow {
+  max-width: 780px;
+}
+
+/* ============================================================================
+   HEADER
+   ========================================================================== */
+body.site #site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.1rem 2rem;
+  background: rgba(8, 11, 26, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--dark-line);
+  transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+/* On the home page the header floats over the hero until you scroll. */
+body.site.home #site-header {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 1.3rem 2rem;
+}
+
+body.site.home #site-header.scrolled {
+  background: rgba(8, 11, 26, 0.82);
+  border-bottom-color: var(--dark-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.9);
+  padding: 0.8rem 2rem;
+}
+
+body.site #site-header nav a {
+  color: var(--dark-text);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+body.site #site-header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--dark-accent), var(--dark-accent-2));
+  transition: right 0.28s ease;
+}
+
+body.site #site-header nav a:hover::after,
+body.site #site-header nav a.current::after {
+  right: 0;
+}
+
+body.site #site-header nav a.current {
+  color: #fff;
+}
+
+/* ============================================================================
+   SHARED TEXT STYLES
+   ========================================================================== */
+.eyebrow {
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: var(--dark-accent-soft);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.14;
+  margin: 0.7rem 0 2.4rem;
+  max-width: 24ch;
+}
+
+.lead {
+  color: var(--dark-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+.prose {
+  color: var(--dark-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 62ch;
+}
+
+.prose p + p {
+  margin-top: 1.1rem;
+}
+
+.prose strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.link {
+  color: var(--dark-accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ============================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+              background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--dark-accent), var(--dark-accent-2));
+  box-shadow: 0 12px 34px -10px rgba(47, 128, 237, 0.7);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px -10px rgba(47, 128, 237, 0.85);
+}
+
+.btn--ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.btn--ghost:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn--lg {
+  padding: 1.05rem 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* ============================================================================
+   PAGE HEAD — the title block at the top of every page except home
+   ========================================================================== */
+.page-head {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(900px 460px at 20% 0%, rgba(47, 128, 237, 0.22), transparent 62%),
+    radial-gradient(700px 400px at 88% 20%, rgba(111, 92, 255, 0.18), transparent 60%),
+    linear-gradient(180deg, var(--dark-bg), var(--dark-bg-3));
+}
+
+.page-head__title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0.7rem 0 1.2rem;
+  max-width: 18ch;
+}
+
+/* ============================================================================
+   BANDS — the horizontal stripes a page is made of
+   ========================================================================== */
+.band {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  background: var(--dark-bg-3);
+}
+
+.band--alt {
+  background: var(--dark-bg-2);
+  border-top: 1px solid var(--dark-line);
+  border-bottom: 1px solid var(--dark-line);
+}
+
+.band--tight {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+}
+
+/* ============================================================================
+   GRIDS
+   ========================================================================== */
+.grid {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.grid--cards {
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+}
+
+.grid--stats {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
+
+/* ============================================================================
+   CARDS
+   ========================================================================== */
+.card {
+  position: relative;
+  display: block;
+  padding: 2rem 1.7rem;
+  border-radius: 18px;
+  color: inherit;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--dark-line);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(47, 128, 237, 0.5);
+  box-shadow: 0 26px 55px -22px rgba(0, 0, 0, 0.85);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #9db8ff;
+  background: linear-gradient(135deg, rgba(47, 128, 237, 0.28), rgba(111, 92, 255, 0.22));
+  margin-bottom: 1.2rem;
+}
+
+.card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card__text {
+  color: var(--dark-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.card__meta {
+  margin-top: 1.1rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--dark-accent-soft);
+  opacity: 0.85;
+}
+
+.card__meta--top {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+}
+
+.card__arrow {
+  margin-top: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--dark-accent-soft);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: gap 0.25s ease;
+}
+
+/* The little arrow after "Learn more" is drawn by CSS, not typed in the HTML */
+.card__arrow::after {
+  content: "→";
+  transition: transform 0.25s ease;
+}
+
+.card--link:hover .card__arrow {
+  gap: 0.7rem;
+}
+
+.card--link:hover .card__arrow::after {
+  transform: translateX(3px);
+}
+
+/* ============================================================================
+   BIG NUMBERS
+   ========================================================================== */
+.stat {
+  text-align: center;
+  padding: 1.7rem 1rem;
+  border: 1px solid var(--dark-line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 128, 237, 0.4);
+}
+
+.stat__num {
+  display: block;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff, #9db8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat__label {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--dark-muted);
+  font-size: 0.92rem;
+}
+
+/* ============================================================================
+   NUMBERED STEPS — the 1 2 3 4 is added by CSS, you never type it
+   ========================================================================== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.6rem;
+  counter-reset: step;
+}
+
+.step {
+  counter-increment: step;
+  padding-top: 3.2rem;
+  position: relative;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--dark-accent), var(--dark-accent-2));
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 2.9rem;
+  right: -1.6rem;
+  height: 1px;
+  background: var(--dark-line);
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.45rem;
+}
+
+.step__text {
+  color: var(--dark-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ============================================================================
+   TIMELINE — day by day
+   ========================================================================== */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 1.6rem;
+  padding-left: 1.8rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.32rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: linear-gradient(var(--dark-accent), transparent);
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1.8rem;
+  top: 0.55rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--dark-accent);
+  box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.18);
+}
+
+.timeline__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: var(--dark-accent-soft);
+}
+
+.timeline__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0.25rem 0 0.4rem;
+}
+
+.timeline__text {
+  color: var(--dark-muted);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+/* ============================================================================
+   QUESTIONS THAT OPEN WHEN CLICKED
+   ========================================================================== */
+.faq {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq__item {
+  border: 1px solid var(--dark-line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.faq__item[open] {
+  border-color: rgba(47, 128, 237, 0.45);
+  background: rgba(47, 128, 237, 0.06);
+}
+
+.faq__question {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.15rem 3rem 1.15rem 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.03rem;
+  position: relative;
+}
+
+/* Hide the browser's default triangle and draw our own + sign */
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: "+";
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--dark-accent-soft);
+  transition: transform 0.3s ease;
+}
+
+.faq__item[open] .faq__question::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq__answer {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--dark-muted);
+  line-height: 1.75;
+}
+
+.faq__answer p + p {
+  margin-top: 0.9rem;
+}
+
+/* ============================================================================
+   PICTURE NEXT TO TEXT
+   ========================================================================== */
+.showcase {
+  background: linear-gradient(180deg, var(--dark-bg-2), var(--dark-bg-3));
+  padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+.showcase__inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.showcase__media {
+  position: relative;
+  animation: float 6.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+.showcase__media img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 34px 80px -28px rgba(0, 0, 0, 0.9);
+}
+
+.showcase__media::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(47, 128, 237, 0.55), rgba(111, 92, 255, 0.45));
+  filter: blur(34px);
+  opacity: 0.55;
+}
+
+.showcase__text .lead {
+  margin-bottom: 1.9rem;
+}
+
+/* ============================================================================
+   CLOSING INVITATION
+   ========================================================================== */
+.cta {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  background:
+    radial-gradient(820px 420px at 50% 25%, rgba(47, 128, 237, 0.22), transparent 62%),
+    linear-gradient(180deg, var(--dark-bg-3), var(--dark-bg));
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  left: 50%;
+  top: -25%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(111, 92, 255, 0.18), transparent 60%);
+  filter: blur(10px);
+  animation: pulseGlow 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50%      { opacity: 1;   transform: translateX(-50%) scale(1.12); }
+}
+
+.cta__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.cta__title {
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.14;
+}
+
+.cta__text {
+  color: var(--dark-muted);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================================
+   A PHOTOGRAPH ON ITS OWN
+   One picture, full width of the text column. Used on the inner pages, where
+   there is no room for the picture-next-to-text layout of .showcase.
+   ========================================================================== */
+
+.photo-band {
+  padding: 0 0 clamp(2.5rem, 6vw, 4rem);
+  background: var(--dark-bg-3);
+}
+
+.photo-band--alt {
+  background: var(--dark-bg-2);
+}
+
+.photo {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 34px 80px -34px rgba(0, 0, 0, 0.9);
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Portrait photographs are not cropped to a letterbox — they keep their shape. */
+.photo--tall img {
+  aspect-ratio: 4 / 5;
+  object-position: center 30%;
+}
+
+.photo__caption {
+  padding: 0.85rem 1.3rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--dark-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .photo { border-radius: 14px; }
+  .photo img { aspect-ratio: 4 / 3; }
+}
+
+/* ============================================================================
+   NEWS — the feed and the page of one item
+   (both are filled in from news.json by js/news.js)
+
+   The feed is one narrow column of big cards, like a social feed: photo on
+   top, then the date, the headline and a short summary. Tapping anywhere on
+   a card opens that item's own page.
+   ========================================================================== */
+
+/* A single readable column, narrower than the normal 1100px page. */
+.container--feed {
+  max-width: 720px;
+}
+
+.container--reading {
+  max-width: 760px;
+}
+
+.band--feed {
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.band--article {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  background: var(--dark-bg-3);
+}
+
+.news-list {
+  display: grid;
+  gap: 1.6rem;
+}
+
+/* ---------- One card in the feed ---------- */
+
+.post-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--dark-line);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 128, 237, 0.45);
+  box-shadow: 0 26px 55px -24px rgba(0, 0, 0, 0.85);
+}
+
+/* The whole card is one link, so the tap target is the entire card. */
+.post-card__link {
+  display: block;
+  color: inherit;
+}
+
+.post-card__media {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.post-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.post-card:hover .post-card__media img {
+  transform: scale(1.04);
+}
+
+.post-card__body {
+  padding: 1.5rem 1.7rem 1.7rem;
+}
+
+.post-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-card__date {
+  font-size: 0.78rem;
+  color: var(--dark-accent-soft);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.post-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.28;
+  margin-bottom: 0.6rem;
+}
+
+.post-card__excerpt {
+  color: var(--dark-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.post-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+  color: var(--dark-accent-soft);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: gap 0.25s ease;
+}
+
+.post-card__more::after {
+  content: "→";
+  transition: transform 0.25s ease;
+}
+
+.post-card:hover .post-card__more { gap: 0.7rem; }
+.post-card:hover .post-card__more::after { transform: translateX(3px); }
+
+.news-empty {
+  color: var(--dark-muted);
+  font-style: italic;
+}
+
+/* ============================================================================
+   ONE NEWS ITEM — its own page at  ?view=post&id=...
+   ========================================================================== */
+
+.post__head {
+  margin-bottom: 2rem;
+}
+
+/* "← All news", above the headline and again at the end of the article. */
+.post__back {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  color: var(--dark-accent-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.post__back:hover {
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+.post__date {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--dark-accent-soft);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.post__title {
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.post__lead {
+  color: var(--dark-muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* The big photo at the top of the article. */
+.post__media {
+  margin: 0 0 2.2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 34px 80px -34px rgba(0, 0, 0, 0.9);
+}
+
+.post__media img {
+  width: 100%;
+  display: block;
+}
+
+.post__caption {
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--dark-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.post__body {
+  color: var(--dark-text);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.post__body p + p {
+  margin-top: 1.2rem;
+}
+
+.post__foot {
+  margin-top: 2.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+.post__foot .post__back {
+  margin-bottom: 0;
+}
+
+/* ---------- "More news" under the article ---------- */
+
+.post-related {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--dark-line);
+}
+
+.post-related__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.4rem;
+}
+
+.post-related__grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* Smaller cards down here — this is a footnote, not the main event. */
+.post-related__grid .post-card__media { aspect-ratio: 2 / 1; }
+.post-related__grid .post-card__body  { padding: 1.1rem 1.3rem 1.3rem; }
+.post-related__grid .post-card__title { font-size: 1.1rem; }
+.post-related__grid .post-card__excerpt { font-size: 0.92rem; }
+.post-related__grid .post-card__more { margin-top: 0.8rem; font-size: 0.85rem; }
+
+/* ---------- The address in the URL matches nothing ---------- */
+
+.post-missing {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.post-missing__title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .post-card__body { padding: 1.2rem 1.2rem 1.4rem; }
+  .post-card__title { font-size: 1.2rem; }
+  .post__media { border-radius: 14px; }
+}
+
+/* ============================================================================
+   FOOTER
+   ========================================================================== */
+body.site footer {
+  background: var(--dark-bg);
+  color: var(--dark-muted);
+  border-top: 1px solid var(--dark-line);
+  padding: 2.2rem 1.5rem;
+  display: grid;
+  gap: 0.9rem;
+  justify-items: center;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__links a {
+  font-size: 0.9rem;
+  color: var(--dark-muted);
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #fff;
+}
+
+.footer__text {
+  font-size: 0.88rem;
+}
+
+/* ============================================================================
+   FADE IN WHEN SCROLLED TO
+   The --i number is the position in a row, so cards appear one after another.
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 0.09s);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Shown only if a page fails to load */
+.page__error {
+  padding: 6rem 1.5rem;
+  color: var(--dark-muted);
+  text-align: center;
+}
+
+/* ============================================================================
+   SMALL SCREENS
+   ========================================================================== */
+@media (max-width: 860px) {
+  .showcase__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase__media {
+    order: -1;
+  }
+
+  .step::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* On a phone the menu wraps onto several lines, so a header pinned to the
+     top would cover half the screen. Here it simply scrolls away with the
+     page instead. */
+  body.site #site-header,
+  body.site.home #site-header,
+  body.site.home #site-header.scrolled {
+    position: static;
+    padding: 0.9rem 1.2rem;
+    background: rgba(8, 11, 26, 0.92);
+    border-bottom: 1px solid var(--dark-line);
+    box-shadow: none;
+  }
+
+  body.site.home #site-header {
+    background: transparent;
+    border-bottom-color: transparent;
+  }
+
+  body.site:not(.home) #app {
+    padding-top: 0;
+  }
+
+  .card {
+    padding: 1.7rem 1.4rem;
+  }
+}
+
+/* ============================================================================
+   FOR VISITORS WHO ASKED THEIR DEVICE TO REDUCE MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .showcase__media,
+  .cta::before {
+    animation: none !important;
+  }
+}

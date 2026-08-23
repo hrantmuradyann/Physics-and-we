@@ -1,0 +1,96 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  HOME PAGE — layout only.
+
+  The words are NOT here. They are in  data/home.json .
+  This file only decides which blocks appear and in what order.
+
+  data-text="hero.title"  means: put here the text called "hero" -> "title"
+                          from data/home.json, in the visitor's language.
+
+  To move a block, move the whole <section> ... </section>.
+  To delete a block, delete the whole <section> ... </section>.
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ BIG TITLE WITH THE MOVING STARS ░░ -->
+<section class="hero">
+  <canvas class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__overlay"></div>
+
+  <div class="container hero__content">
+    <p class="eyebrow reveal" data-text="hero.eyebrow"></p>
+    <h1 class="hero__title reveal" data-text="hero.title"></h1>
+    <p class="hero__subtitle reveal" data-text="hero.subtitle"></p>
+
+    <div class="hero__actions reveal">
+      <a class="btn btn--primary" data-route="hero.primaryButton.route" data-text="hero.primaryButton.label"></a>
+      <a class="btn btn--ghost" data-route="hero.secondaryButton.route" data-text="hero.secondaryButton.label"></a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span data-text="hero.scrollHint"></span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ░░ THE FOUR NUMBERS THAT COUNT UP ░░ -->
+<section class="band band--tight">
+  <div class="container">
+    <div class="grid grid--stats" data-list="stats">
+      <template>
+        <div class="stat reveal">
+          <span class="stat__num" data-number="number" data-suffix="suffix">0</span>
+          <span class="stat__label" data-text="label"></span>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ THE FOUR CARDS: WHAT WE DO ░░ -->
+<section class="band band--alt">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="features.eyebrow"></p>
+    <h2 class="section-title reveal" data-text="features.title"></h2>
+
+    <div class="grid grid--cards" data-list="features.items">
+      <template>
+        <a class="card card--link reveal" data-route="route">
+          <span class="card__icon" data-icon="icon"></span>
+          <h3 class="card__title" data-text="title"></h3>
+          <p class="card__text" data-text="text"></p>
+          <span class="card__arrow">
+            <span data-ui="learnMore"></span>
+          </span>
+        </a>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PICTURE + TEXT SIDE BY SIDE ░░ -->
+<section class="showcase">
+  <div class="container showcase__inner">
+    <div class="showcase__media reveal">
+      <img data-image="showcase.image" data-alt="showcase.imageAlt" loading="lazy" decoding="async">
+    </div>
+
+    <div class="showcase__text">
+      <p class="eyebrow reveal" data-text="showcase.eyebrow"></p>
+      <h2 class="section-title reveal" data-text="showcase.title"></h2>
+      <p class="lead reveal" data-text="showcase.text"></p>
+      <a class="btn btn--primary reveal" data-route="showcase.button.route" data-text="showcase.button.label"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CLOSING INVITATION ░░ -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="cta__title" data-text="cta.title"></h2>
+    <p class="cta__text" data-text="cta.text"></p>
+    <a class="btn btn--primary btn--lg" data-route="cta.button.route" data-text="cta.button.label"></a>
+  </div>
+</section>
