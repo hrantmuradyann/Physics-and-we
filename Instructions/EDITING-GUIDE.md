@@ -61,6 +61,35 @@ Open the file for your page. You will see blocks that look like this:
 Every file starts with a `"_readme"` line explaining what that file is for.
 It is a note to you — it never appears on the website.
 
+### The text in asterisks
+
+Most of the site is currently filled with **placeholders** — short notes wrapped
+in asterisks that say what belongs on that line instead of being real text:
+
+```json
+"title": {
+  "hy": "*Ծրագրի անվանումը (1–3 բառ)*",
+  "en": "*Program name (1–3 words)*",
+  "ru": "*Название программы (1–3 слова)*"
+}
+```
+
+Replace the whole value, asterisks included, with the real words — in all three
+languages. Anything still showing up in asterisks on the site has not been
+written yet, so they are also your to-do list.
+
+Some placeholders describe the text (`*One sentence about this program.*`) and
+some show the shape of the answer instead (`*your@email.com*`, `*City, Country*`,
+`*Duration · grades*`) — in that case follow the shape. Where a placeholder
+mentions a length, such as *(1–3 words)*, it is because that line sits somewhere
+narrow and a long answer will not fit.
+
+The four numbers that count up on the home and camp pages are set to `0`. Those
+are numbers rather than text, so they carry no asterisks — the `_readme` line
+just above them explains the three parts of each one.
+
+---
+
 ### Three small formatting tricks
 
 Inside any long text you may use:
