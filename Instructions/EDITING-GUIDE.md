@@ -12,7 +12,7 @@ ________________________________________________________________________________
 
 > **Text lives in the `data` folder. Nothing else.**
 
-If you only want to change words — in Armenian, English or Russian — the `data`
+If you only want to change words — in Armenian or English — the `data`
 folder is the only place you ever open. You never touch `js`, and almost never
 touch `sections` or `css`.
 
@@ -47,15 +47,14 @@ Open the file for your page. You will see blocks that look like this:
 ```json
 "title": {
   "hy": "Ինտերակտիվ լաբորատորիաներ",
-  "en": "Interactive Labs",
-  "ru": "Интерактивные лаборатории"
+  "en": "Interactive Labs"
 }
 ```
 
-- `hy` = Armenian, `en` = English, `ru` = Russian.
+- `hy` = Armenian, `en` = English.
 - **Change only what is between the quotation marks.**
 - Keep the quotation marks, the colons and the commas exactly where they are.
-- All three languages sit next to each other, so a translator can see the
+- Both languages sit next to each other, so a translator can see the
   original and the translation at the same time.
 
 Every file starts with a `"_readme"` line explaining what that file is for.
@@ -69,12 +68,11 @@ in asterisks that say what belongs on that line instead of being real text:
 ```json
 "title": {
   "hy": "*Ծրագրի անվանումը (1–3 բառ)*",
-  "en": "*Program name (1–3 words)*",
-  "ru": "*Название программы (1–3 слова)*"
+  "en": "*Program name (1–3 words)*"
 }
 ```
 
-Replace the whole value, asterisks included, with the real words — in all three
+Replace the whole value, asterisks included, with the real words — in both
 languages. Anything still showing up in asterisks on the site has not been
 written yet, so they are also your to-do list.
 
@@ -123,8 +121,8 @@ Before:
 "cards": [
   {
     "icon": "bulb",
-    "title": { "hy": "Օպտիկա", "en": "Optics", "ru": "Оптика" },
-    "text":  { "hy": "…", "en": "…", "ru": "…" }
+    "title": { "hy": "Օպտիկա", "en": "Optics" },
+    "text":  { "hy": "…", "en": "…" }
   }
 ]
 ```
@@ -135,13 +133,13 @@ After (one new lab added):
 "cards": [
   {
     "icon": "bulb",
-    "title": { "hy": "Օպտիկա", "en": "Optics", "ru": "Оптика" },
-    "text":  { "hy": "…", "en": "…", "ru": "…" }
+    "title": { "hy": "Օպտիկա", "en": "Optics" },
+    "text":  { "hy": "…", "en": "…" }
   },
   {
     "icon": "magnet",
-    "title": { "hy": "Նոր լաբորատորիա", "en": "New lab", "ru": "Новая лаборатория" },
-    "text":  { "hy": "…", "en": "…", "ru": "…" }
+    "title": { "hy": "Նոր լաբորատորիա", "en": "New lab" },
+    "text":  { "hy": "…", "en": "…" }
   }
 ]
 ```
@@ -178,7 +176,7 @@ Three steps:
 
 1. **`data/site.json`** — add an entry to `"nav"`:
    ```json
-   { "route": "library", "label": { "hy": "Գրադարան", "en": "Library", "ru": "Библиотека" } }
+   { "route": "library", "label": { "hy": "Գրադարան", "en": "Library" } }
    ```
 2. **`sections/library.html`** — copy an existing page, for example
    `sections/labs.html`, and rename it. It is already in the right style.
@@ -260,7 +258,7 @@ installation. Deploying means copying the folder to any static host.
 ```
 index.html          the shell: loads the css and js, holds no content
 sections/*.html     one file per page: layout only, no text
-data/*.json         one file per page: text only, all three languages
+data/*.json         one file per page: text only, both languages
 news.json           the news items (written by /admin/, do not hand-edit)
 css/style.css       reset, colours, header, footer (shared with /admin/)
 css/site.css        the look of every public page: the design system

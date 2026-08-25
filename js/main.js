@@ -7,14 +7,14 @@
 (function (global) {
   "use strict";
 
-  var SUPPORTED_LANGS = ["hy", "en", "ru"];
+  var SUPPORTED_LANGS = ["hy", "en"];
   var DEFAULT_LANG = "hy";          // Armenian is the site's main language
 
   // First-time visitors see the main language. Set this to true to instead
   // start in the visitor's own browser language when we support it.
   var PREFER_BROWSER_LANG = false;
 
-  var LANG_BUTTONS = { hy: "ՀՅ", en: "EN", ru: "РУ" };
+  var LANG_BUTTONS = { hy: "ՀՅ", en: "EN" };
 
   var site = null;                  // data/site.json once loaded
   var lang = resolveInitialLang();

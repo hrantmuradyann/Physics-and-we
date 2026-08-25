@@ -1,7 +1,7 @@
 # The admin panel — setup
 
 The admin panel at `/admin/` is where news items are written: title, date,
-photo and text, in three languages. Each item gets its own page on the site.
+photo and text, in both languages. Each item gets its own page on the site.
 
 There are two ways to run it.
 
@@ -67,15 +67,15 @@ accidentally go online with a password everybody knows. Section 3 of
 
 Fill in the form and press **Պահպանել** (Save).
 
-* **Language tabs (ՀՅ / EN / РУ)** — all three languages are held at once and
+* **Language tabs (ՀՅ / EN)** — both languages are held at once and
   saved together. Switching tabs never loses what you typed. A green dot marks
   a language that already has a title.
 * **Photo** — choose a file, or type a path like `images/news/photo.jpg`.
   On your own computer there is nowhere to upload to, so put the picture in the
   `images/news/` folder yourself and type its path. The preview updates as you
   type.
-* **Page address** — filled in automatically from the title (Armenian and
-  Russian letters are transliterated), and you can edit it. This is what
+* **Page address** — filled in automatically from the title (Armenian letters
+  are transliterated), and you can edit it. This is what
   appears in the URL: `?view=post&id=your-address`.
 * **Short description** — one or two sentences, shown on the news feed. Leave
   it empty and the opening of the text is used instead.

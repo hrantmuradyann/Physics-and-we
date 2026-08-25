@@ -16,7 +16,7 @@ import { requireAuth, requireWriteAuth, readJSON, isJSONRequest, json, ghConfigu
 
 const MAX_ITEMS = 300;
 const MAX_BODY_BYTES = 1024 * 1024;         // 1 MB of JSON
-const LANGS = ["hy", "en", "ru"];
+const LANGS = ["hy", "en"];
 
 const LIMITS = {
   title: 300,

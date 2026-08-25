@@ -7,18 +7,15 @@
     "imageAlt": {},
     "title": {
       "hy": "*Այս նորության վերնագիրը։*",
-      "en": "*The headline of this news item.*",
-      "ru": "*Заголовок этой новости.*"
+      "en": "*The headline of this news item.*"
     },
     "excerpt": {
       "hy": "*Մեկ նախադասություն՝ նորության քարտի վրա։*",
-      "en": "*One sentence, shown on the news card.*",
-      "ru": "*Одно предложение для карточки новости.*"
+      "en": "*One sentence, shown on the news card.*"
     },
     "content": {
       "hy": "*Ամբողջ տեքստը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-      "en": "*The full text. Use \\n\\n to start a new paragraph.*",
-      "ru": "*Полный текст. Используйте \\n\\n для нового абзаца.*"
+      "en": "*The full text. Use \\n\\n to start a new paragraph.*"
     }
   }
 ]

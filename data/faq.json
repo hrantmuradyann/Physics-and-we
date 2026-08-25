@@ -2,12 +2,11 @@
   "_readme": "FAQ PAGE TEXT. To add a question, copy one whole { ... } block inside \"questions\". The answer may contain several paragraphs — separate them with a blank line inside the same line of text using \n\n.",
 
   "page": {
-    "eyebrow": { "hy": "Հարց ու պատասխան", "en": "Questions and answers", "ru": "Вопросы и ответы" },
-    "title": { "hy": "Հաճախակի հարցեր", "en": "Frequently Asked Questions", "ru": "Часто задаваемые вопросы" },
+    "eyebrow": { "hy": "Հարց ու պատասխան", "en": "Questions and answers" },
+    "title": { "hy": "Հաճախակի հարցեր", "en": "Frequently Asked Questions" },
     "lead": {
       "hy": "*Մեկ նախադասություն՝ ումից են այս հարցերը։*",
-      "en": "*One sentence: who these questions come from.*",
-      "ru": "*Одно предложение: от кого эти вопросы.*"
+      "en": "*One sentence: who these questions come from.*"
     }
   },
 
@@ -15,75 +14,64 @@
     {
       "q": {
         "hy": "*Հարցը՝ այնպես, ինչպես տալիս են այն։*",
-        "en": "*The question, written the way people ask it.*",
-        "ru": "*Вопрос, сформулированный так, как его задают.*"
+        "en": "*The question, written the way people ask it.*"
       },
       "a": {
         "hy": "*Պատասխանը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-        "en": "*The answer. Use \\n\\n to start a new paragraph.*",
-        "ru": "*Ответ. Используйте \\n\\n для нового абзаца.*"
+        "en": "*The answer. Use \\n\\n to start a new paragraph.*"
       }
     },
     {
       "q": {
         "hy": "*Հարցը՝ այնպես, ինչպես տալիս են այն։*",
-        "en": "*The question, written the way people ask it.*",
-        "ru": "*Вопрос, сформулированный так, как его задают.*"
+        "en": "*The question, written the way people ask it.*"
       },
       "a": {
         "hy": "*Պատասխանը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-        "en": "*The answer. Use \\n\\n to start a new paragraph.*",
-        "ru": "*Ответ. Используйте \\n\\n для нового абзаца.*"
+        "en": "*The answer. Use \\n\\n to start a new paragraph.*"
       }
     },
     {
       "q": {
         "hy": "*Հարցը՝ այնպես, ինչպես տալիս են այն։*",
-        "en": "*The question, written the way people ask it.*",
-        "ru": "*Вопрос, сформулированный так, как его задают.*"
+        "en": "*The question, written the way people ask it.*"
       },
       "a": {
         "hy": "*Պատասխանը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-        "en": "*The answer. Use \\n\\n to start a new paragraph.*",
-        "ru": "*Ответ. Используйте \\n\\n для нового абзаца.*"
+        "en": "*The answer. Use \\n\\n to start a new paragraph.*"
       }
     },
     {
       "q": {
         "hy": "*Հարցը՝ այնպես, ինչպես տալիս են այն։*",
-        "en": "*The question, written the way people ask it.*",
-        "ru": "*Вопрос, сформулированный так, как его задают.*"
+        "en": "*The question, written the way people ask it.*"
       },
       "a": {
         "hy": "*Պատասխանը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-        "en": "*The answer. Use \\n\\n to start a new paragraph.*",
-        "ru": "*Ответ. Используйте \\n\\n для нового абзаца.*"
+        "en": "*The answer. Use \\n\\n to start a new paragraph.*"
       }
     },
     {
       "q": {
         "hy": "*Հարցը՝ այնպես, ինչպես տալիս են այն։*",
-        "en": "*The question, written the way people ask it.*",
-        "ru": "*Вопрос, сформулированный так, как его задают.*"
+        "en": "*The question, written the way people ask it.*"
       },
       "a": {
         "hy": "*Պատասխանը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-        "en": "*The answer. Use \\n\\n to start a new paragraph.*",
-        "ru": "*Ответ. Используйте \\n\\n для нового абзаца.*"
+        "en": "*The answer. Use \\n\\n to start a new paragraph.*"
       }
     }
   ],
 
   "cta": {
-    "title": { "hy": "Չգտա՞ք պատասխանը", "en": "Didn't find your answer?", "ru": "Не нашли ответ?" },
+    "title": { "hy": "Չգտա՞ք պատասխանը", "en": "Didn't find your answer?" },
     "text": {
       "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*",
-      "ru": "*Одно предложение, приглашающее читателя к действию.*"
+      "en": "*One sentence inviting the reader to act.*"
     },
     "button": {
       "route": "about",
-      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch", "ru": "Связаться с нами" }
+      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch" }
     }
   }
 }

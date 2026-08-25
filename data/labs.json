@@ -2,32 +2,28 @@
   "_readme": "LABS PAGE TEXT. Two different lists live here: \"simulations\" are the interactive labs that run in the browser, \"cards\" are the hands-on labs we bring to a school. To add either one, copy a whole { ... } block and change the words. Icons: atom, orbit, chart, people, flask, bulb, telescope, wave, magnet, calendar.",
 
   "page": {
-    "eyebrow": { "hy": "Ձեռքի փորձեր", "en": "Hands-on experiments", "ru": "Практические опыты" },
+    "eyebrow": { "hy": "Ձեռքի փորձեր", "en": "Hands-on experiments" },
     "title": {
       "hy": "Ինտերակտիվ լաբորատորիաներ",
-      "en": "Interactive Labs",
-      "ru": "Интерактивные лаборатории"
+      "en": "Interactive Labs"
     },
     "lead": {
       "hy": "*Մեկ-երկու նախադասություն՝ ինչպիսին է լաբորատորիան։*",
-      "en": "*One or two sentences: what a lab is like.*",
-      "ru": "*Одно-два предложения: как проходит лаборатория.*"
+      "en": "*One or two sentences: what a lab is like.*"
     }
   },
 
   "simulations": {
     "_readme": "THE LABS THAT RUN IN THE BROWSER. 'slug' is the address of the lab: it must match a file in js/labs/ and one in data/labs/ with the same name. An entry with no slug is simply not shown. See Instructions/LABS-GUIDE.md.",
 
-    "eyebrow": { "hy": "Փորձի՛ր հենց հիմա", "en": "Try it right now", "ru": "Попробуйте прямо сейчас" },
+    "eyebrow": { "hy": "Փորձի՛ր հենց հիմա", "en": "Try it right now" },
     "title": {
       "hy": "Ինտերակտիվ սիմուլյացիաներ",
-      "en": "Simulations you can play with",
-      "ru": "Интерактивные симуляции"
+      "en": "Simulations you can play with"
     },
     "lead": {
       "hy": "*Մեկ-երկու նախադասություն բրաուզերի սիմուլյացիաների մասին։*",
-      "en": "*One or two sentences about the simulations in the browser.*",
-      "ru": "*Одно-два предложения о симуляциях в браузере.*"
+      "en": "*One or two sentences about the simulations in the browser.*"
     },
 
     "items": [
@@ -36,145 +32,129 @@
         "icon": "orbit",
         "title": {
           "hy": "Մաթեմատիկական ճոճանակ",
-          "en": "The Simple Pendulum",
-          "ru": "Математический маятник"
+          "en": "The Simple Pendulum"
         },
         "text": {
           "hy": "Ինչի՞ց է կախված ճոճանակի պարբերությունը՝ երկարությունի՞ց, զանգվածի՞ց, թե՞ ամպլիտուդից։ Ստուգե՛ք ինքներդ։",
-          "en": "What does the period of a pendulum depend on — its length, its mass, or how far you pull it? Find out for yourself.",
-          "ru": "От чего зависит период маятника — от длины, от массы или от размаха? Проверьте сами."
+          "en": "What does the period of a pendulum depend on — its length, its mass, or how far you pull it? Find out for yourself."
         },
-        "meta": { "hy": "Մեխանիկա · 7–11 դասարան", "en": "Mechanics · grades 7–11", "ru": "Механика · 7–11 класс" }
+        "meta": { "hy": "Մեխանիկա · 7–11 դասարան", "en": "Mechanics · grades 7–11" }
       },
       {
         "slug": "refraction",
         "icon": "bulb",
         "title": {
           "hy": "Լույսի բեկումը",
-          "en": "Bending Light",
-          "ru": "Преломление света"
+          "en": "Bending Light"
         },
         "text": {
           "hy": "Ինչո՞ւ է ծղոտը կոտրված թվում ջրի բաժակում։ Մեծացրե՛ք անկյունը այնքան, մինչև լույսն ընդհանրապես դադարի դուրս գալ։",
-          "en": "Why does a straw look broken in a glass of water? Open the angle up until the light stops getting out at all.",
-          "ru": "Почему трубочка в стакане воды кажется сломанной? Увеличивайте угол, пока свет вовсе не перестанет выходить."
+          "en": "Why does a straw look broken in a glass of water? Open the angle up until the light stops getting out at all."
         },
-        "meta": { "hy": "Օպտիկա · 8–12 դասարան", "en": "Optics · grades 8–12", "ru": "Оптика · 8–12 класс" }
+        "meta": { "hy": "Օպտիկա · 8–12 դասարան", "en": "Optics · grades 8–12" }
       }
     ]
   },
 
   "classroom": {
     "_readme": "The heading above the labs we bring to a school in person — the ones below are not simulations.",
-    "eyebrow": { "hy": "Դպրոցում", "en": "In the classroom", "ru": "В классе" },
+    "eyebrow": { "hy": "Դպրոցում", "en": "In the classroom" },
     "title": {
       "hy": "Ձեռքի լաբորատորիաներ՝ ձեր դասարանում",
-      "en": "Hands-on labs we bring to your classroom",
-      "ru": "Практические лаборатории у вас в классе"
+      "en": "Hands-on labs we bring to your classroom"
     }
   },
 
   "cards": [
     {
       "icon": "bulb",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     },
     {
       "icon": "magnet",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     },
     {
       "icon": "wave",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     },
     {
       "icon": "atom",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     },
     {
       "icon": "flask",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     },
     {
       "icon": "telescope",
-      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*", "ru": "*Название темы (1–3 слова)*" },
+      "title": { "hy": "*Թեմայի անվանումը (1–3 բառ)*", "en": "*Topic name (1–3 words)*" },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն այս լաբորատորիայի մասին։*",
-        "en": "*One or two sentences about this lab.*",
-        "ru": "*Одно-два предложения об этой лаборатории.*"
+        "en": "*One or two sentences about this lab.*"
       },
-      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*", "ru": "*Длительность · классы*" }
+      "meta": { "hy": "*Տևողություն · դասարաններ*", "en": "*Duration · grades*" }
     }
   ],
 
   "steps": {
-    "eyebrow": { "hy": "Ինչպես է անցնում", "en": "How it works", "ru": "Как это проходит" },
+    "eyebrow": { "hy": "Ինչպես է անցնում", "en": "How it works" },
     "title": {
       "hy": "Մեկ լաբորատորիա՝ չորս քայլով",
-      "en": "One lab, four steps",
-      "ru": "Одна лаборатория — четыре шага"
+      "en": "One lab, four steps"
     },
     "items": [
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       }
     ]
@@ -183,7 +163,7 @@
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
     "image": "images/history2.jpg",
-    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*", "ru": "*Опишите фото для тех, кто его не видит.*" },
-    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*", "ru": "*Одна строка под фотографией.*" }
+    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
   }
 }
