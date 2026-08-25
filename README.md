@@ -8,7 +8,7 @@ Other guides live in the **`Instructions/`** folder:
 |---|---|
 | write or translate **content** (no programming) | `Instructions/EDITING-GUIDE.md` |
 | build an **interactive lab** (a simulation) | `Instructions/LABS-GUIDE.md` |
-| touch the **HTML or CSS** | `Instructions/HTML-CLASSES.md` (in Russian) |
+| touch the **HTML or CSS** | `Instructions/HTML-CLASSES.md` (for whatever reason in Russian) |
 | run the **admin panel** | `Instructions/ADMIN-SETUP.md` |
 | put the site **online** | `Instructions/SECURITY.md` — read before deploying |
 
