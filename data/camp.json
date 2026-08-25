@@ -5,32 +5,33 @@
     "eyebrow": { "hy": "Մեկ շաբաթ", "en": "One week", "ru": "Одна неделя" },
     "title": { "hy": "Ամառային ճամբար", "en": "Summer Camp", "ru": "Летний лагерь" },
     "lead": {
-      "hy": "Յոթ օր՝ փորձերով, աստղադիտմամբ և թիմային մարտահրավերներով։ Առավոտը՝ լաբորատորիա, ցերեկը՝ նախագիծ, երեկոն՝ երկնքի տակ։",
-      "en": "Seven days of experiments, stargazing and team challenges. Labs in the morning, projects in the afternoon, the night sky in the evening.",
-      "ru": "Семь дней экспериментов, наблюдений за звёздами и командных вызовов. Утром — лаборатория, днём — проект, вечером — звёздное небо."
+      "hy": "*Մեկ-երկու նախադասություն՝ ի՞նչ է ճամբարը։*",
+      "en": "*One or two sentences: what the camp is.*",
+      "ru": "*Одно-два предложения: что такое лагерь.*"
     }
   },
 
+  "_readmeFacts": "THE NUMBERS THAT COUNT UP. For each one: \"number\" is the figure itself (digits only, no quotes), \"suffix\" is what follows it — \"+\" or \"%\" or nothing, and \"label\" says what the number counts. Keep the label to 1–3 words: it sits in a narrow column.",
   "facts": [
     {
-      "number": 6,
+      "number": 0,
       "suffix": "",
-      "label": { "hy": "Օր", "en": "Days", "ru": "Дней" }
+      "label": { "hy": "*օր.՝ Օրեր*", "en": "*e.g. Days*", "ru": "*напр. Дней*" }
     },
     {
-      "number": 66,
+      "number": 0,
       "suffix": "",
-      "label": { "hy": "Մասնակից", "en": "Participants", "ru": "Участников" }
+      "label": { "hy": "*օր.՝ Մասնակիցներ*", "en": "*e.g. Participants*", "ru": "*напр. Участников*" }
     },
     {
-      "number": 66,
-      "suffix": "+",
-      "label": { "hy": "Փորձ", "en": "Experiments", "ru": "Экспериментов" }
+      "number": 0,
+      "suffix": "",
+      "label": { "hy": "*օր.՝ Փորձեր*", "en": "*e.g. Experiments*", "ru": "*напр. Экспериментов*" }
     },
     {
-      "number": 6,
+      "number": 0,
       "suffix": "",
-      "label": { "hy": "Մենթոր", "en": "Mentors", "ru": "Наставников" }
+      "label": { "hy": "*օր.՝ Մենթորներ*", "en": "*e.g. Mentors*", "ru": "*напр. Наставников*" }
     }
   ],
 
@@ -39,39 +40,39 @@
     "title": { "hy": "Ինչ է լինում ամեն օր", "en": "What happens each day", "ru": "Что происходит каждый день" },
     "items": [
       {
-        "label": { "hy": "Օր 1", "en": "Day 1", "ru": "День 1" },
-        "title": { "hy": "Ծանոթություն և չափումներ", "en": "Meeting and measuring", "ru": "Знакомство и измерения" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
         "text": {
-          "hy": "Ծանոթանում ենք միմյանց, բաժանվում թիմերի և սովորում ճիշտ չափել ու գրանցել։",
-          "en": "We get to know each other, split into teams and learn how to measure and record properly.",
-          "ru": "Знакомимся, делимся на команды и учимся правильно измерять и записывать."
+          "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
+          "en": "*One sentence about this day.*",
+          "ru": "*Одно предложение об этом дне.*"
         }
       },
       {
-        "label": { "hy": "Օր 2–3", "en": "Days 2–3", "ru": "Дни 2–3" },
-        "title": { "hy": "Մեխանիկա և օպտիկա", "en": "Mechanics and optics", "ru": "Механика и оптика" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
         "text": {
-          "hy": "Երկու լիարժեք լաբորատորիա՝ շարժման օրենքներ և լույսի վարքագիծ։",
-          "en": "Two full labs: the laws of motion and the behaviour of light.",
-          "ru": "Две полноценные лаборатории: законы движения и поведение света."
+          "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
+          "en": "*One sentence about this day.*",
+          "ru": "*Одно предложение об этом дне.*"
         }
       },
       {
-        "label": { "hy": "Օր 4–5", "en": "Days 4–5", "ru": "Дни 4–5" },
-        "title": { "hy": "Թիմային նախագիծ", "en": "Team project", "ru": "Командный проект" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
         "text": {
-          "hy": "Յուրաքանչյուր թիմ ընտրում է հարց և կառուցում իր փորձարկումը մենթորի հետ։",
-          "en": "Each team picks a question and builds its own experiment with a mentor.",
-          "ru": "Каждая команда выбирает вопрос и строит свой эксперимент вместе с наставником."
+          "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
+          "en": "*One sentence about this day.*",
+          "ru": "*Одно предложение об этом дне.*"
         }
       },
       {
-        "label": { "hy": "Օր 6", "en": "Day 6", "ru": "День 6" },
-        "title": { "hy": "Աստղադիտում", "en": "Night at the telescope", "ru": "Ночь у телескопа" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
         "text": {
-          "hy": "Քաղաքից դուրս՝ մութ երկնքի տակ, աստղադիտակներով և քարտեզներով։",
-          "en": "Outside the city, under a dark sky, with telescopes and star charts.",
-          "ru": "За городом, под тёмным небом, с телескопами и картами звёздного неба."
+          "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
+          "en": "*One sentence about this day.*",
+          "ru": "*Одно предложение об этом дне.*"
         }
       }
     ]
@@ -83,29 +84,29 @@
     "items": [
       {
         "icon": "calendar",
-        "title": { "hy": "Երբ", "en": "When", "ru": "Когда" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
         "text": {
-          "hy": "Օգոստոսի 11–14, 2026թ.՝ ԵՊՀ Ծաղկաձորի ուսումնաարտադրական բազայում։",
-          "en": "11–14 August 2026, at the YSU training base in Tsaghkadzor.",
-          "ru": "11–14 августа 2026 года, на учебной базе ЕГУ в Цахкадзоре."
+          "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
+          "en": "*One or two sentences answering it.*",
+          "ru": "*Одно-два предложения с ответом.*"
         }
       },
       {
         "icon": "people",
-        "title": { "hy": "Ում համար", "en": "Who it is for", "ru": "Для кого" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
         "text": {
-          "hy": "7–12 դասարանի սովորողների համար։ Նախնական պատրաստվածություն պարտադիր չէ։",
-          "en": "For students in grades 7–12. No prior preparation is required.",
-          "ru": "Для учеников 7–12 классов. Предварительная подготовка не требуется."
+          "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
+          "en": "*One or two sentences answering it.*",
+          "ru": "*Одно-два предложения с ответом.*"
         }
       },
       {
         "icon": "flask",
-        "title": { "hy": "Ինչ վերցնել", "en": "What to bring", "ru": "Что взять" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
         "text": {
-          "hy": "Տետր, հարմար հագուստ և հետաքրքրասիրություն։ Մնացած ամեն ինչը մերն է։",
-          "en": "A notebook, comfortable clothes and curiosity. Everything else is on us.",
-          "ru": "Тетрадь, удобную одежду и любопытство. Всё остальное — за нами."
+          "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
+          "en": "*One or two sentences answering it.*",
+          "ru": "*Одно-два предложения с ответом.*"
         }
       }
     ]
@@ -114,9 +115,9 @@
   "cta": {
     "title": { "hy": "Գրանցումը բաց է", "en": "Registration is open", "ru": "Регистрация открыта" },
     "text": {
-      "hy": "Տեղերի քանակը սահմանափակ է։ Հետևե՛ք Նորություններին՝ գրանցման հղումը ստանալու համար։",
-      "en": "Places are limited. Follow the News section to get the registration link.",
-      "ru": "Количество мест ограничено. Следите за разделом «Новости», чтобы получить ссылку на регистрацию."
+      "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
+      "en": "*One sentence inviting the reader to act.*",
+      "ru": "*Одно предложение, приглашающее читателя к действию.*"
     },
     "button": {
       "route": "news",
@@ -127,7 +128,7 @@
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
     "image": "images/history5.jpg",
-    "alt": { "hy": "Դասախոսություն ճամբարում՝ լսարանը լի սովորողներով", "en": "A lecture at the camp, the hall full of participants", "ru": "Лекция в лагере, полный зал участников" },
-    "caption": { "hy": "Առավոտյան դասախոսություններ, կեսօրին՝ լաբորատոր աշխատանք", "en": "Lectures in the morning, laboratory work after noon", "ru": "Лекции утром, лабораторная работа после полудня" }
+    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*", "ru": "*Опишите фото для тех, кто его не видит.*" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*", "ru": "*Одна строка под фотографией.*" }
   }
 }

@@ -20,6 +20,10 @@ The whole public site works: home, summer camp, interactive labs, research,
 news, partners, FAQ and about — in **three languages** (Armenian, English,
 Russian), with a shared header, footer and design.
 
+Most of the **words** are still placeholders — short notes in asterisks saying
+what belongs there, in all three languages. Filling them in is a content job,
+not a programming one: see `Instructions/EDITING-GUIDE.md`.
+
 The important thing to understand is **how it is put together**, because it is
 not the usual "one HTML file per page with the text typed into it".
 
@@ -172,7 +176,8 @@ Physics-and-we/
 │   ├── labs.json        → the labs page: "simulations" + "cards"
 │   ├── lab.json         → almost empty on purpose (see the note inside)
 │   ├── labs/            → ONE FILE PER LAB — the words of that lab
-│   │   └── pendulum.json
+│   │   ├── pendulum.json
+│   │   └── refraction.json
 │   ├── research.json
 │   ├── news.json        → only the heading of the news page
 │   ├── partners.json
@@ -195,7 +200,8 @@ Physics-and-we/
 │   ├── news.js          → the news feed and the page of one news item
 │   ├── labs.js          → the shell every interactive lab runs inside
 │   ├── labs/            → ONE FILE PER LAB — the physics of that lab
-│   │   └── pendulum.js
+│   │   ├── pendulum.js
+│   │   └── refraction.js
 │   ├── admin.js         → the admin panel (not loaded by the public site)
 │   └── admin-login.js   → the login screen
 │
