@@ -2,81 +2,75 @@
   "_readme": "ABOUT PAGE TEXT. In \"story\" and other long texts you can use \n\n to start a new paragraph, **bold** to make words bold, and [text](https://link) to make a link.",
 
   "page": {
-    "eyebrow": { "hy": "Ովքեր ենք մենք", "en": "Who we are", "ru": "Кто мы" },
-    "title": { "hy": "Մեր մասին", "en": "About Us", "ru": "О нас" },
+    "eyebrow": { "hy": "Ովքեր ենք մենք", "en": "Who we are" },
+    "title": { "hy": "Մեր մասին", "en": "About Us" },
     "lead": {
       "hy": "*Մեկ-երկու նախադասություն՝ ի՞նչ նախաձեռնություն է սա։*",
-      "en": "*One or two sentences: what the initiative is.*",
-      "ru": "*Одно-два предложения: что это за инициатива.*"
+      "en": "*One or two sentences: what the initiative is.*"
     }
   },
 
   "story": {
-    "eyebrow": { "hy": "Պատմությունը", "en": "Our story", "ru": "Наша история" },
-    "title": { "hy": "*Պատմության բաժնի վերնագիրը (2–5 բառ)*", "en": "*Heading for the story section (2–5 words)*", "ru": "*Заголовок раздела истории (2–5 слов)*" },
+    "eyebrow": { "hy": "Պատմությունը", "en": "Our story" },
+    "title": { "hy": "*Պատմության բաժնի վերնագիրը (2–5 բառ)*", "en": "*Heading for the story section (2–5 words)*" },
     "text": {
       "hy": "*Ձեր պատմությունը։ Նոր պարբերության համար օգտագործե՛ք \\n\\n։*",
-      "en": "*Your story. Use \\n\\n to start a new paragraph.*",
-      "ru": "*Ваша история. Используйте \\n\\n для нового абзаца.*"
+      "en": "*Your story. Use \\n\\n to start a new paragraph.*"
     }
   },
 
   "values": {
-    "eyebrow": { "hy": "Սկզբունքներ", "en": "Principles", "ru": "Принципы" },
-    "title": { "hy": "Ինչին ենք հավատում", "en": "What we believe", "ru": "Во что мы верим" },
+    "eyebrow": { "hy": "Սկզբունքներ", "en": "Principles" },
+    "title": { "hy": "Ինչին ենք հավատում", "en": "What we believe" },
     "items": [
       {
         "icon": "flask",
-        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*", "ru": "*Название принципа (1–3 слова)*" },
+        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն՝ բացատրելով այս սկզբունքը։*",
-          "en": "*One sentence explaining this principle.*",
-          "ru": "*Одно предложение, объясняющее этот принцип.*"
+          "en": "*One sentence explaining this principle.*"
         }
       },
       {
         "icon": "bulb",
-        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*", "ru": "*Название принципа (1–3 слова)*" },
+        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն՝ բացատրելով այս սկզբունքը։*",
-          "en": "*One sentence explaining this principle.*",
-          "ru": "*Одно предложение, объясняющее этот принцип.*"
+          "en": "*One sentence explaining this principle.*"
         }
       },
       {
         "icon": "people",
-        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*", "ru": "*Название принципа (1–3 слова)*" },
+        "title": { "hy": "*Սկզբունքի անվանումը (1–3 բառ)*", "en": "*Principle name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն՝ բացատրելով այս սկզբունքը։*",
-          "en": "*One sentence explaining this principle.*",
-          "ru": "*Одно предложение, объясняющее этот принцип.*"
+          "en": "*One sentence explaining this principle.*"
         }
       }
     ]
   },
 
   "contact": {
-    "eyebrow": { "hy": "Կապ", "en": "Contact", "ru": "Контакты" },
-    "title": { "hy": "Գրեք մեզ", "en": "Write to us", "ru": "Напишите нам" },
+    "eyebrow": { "hy": "Կապ", "en": "Contact" },
+    "title": { "hy": "Գրեք մեզ", "en": "Write to us" },
     "items": [
       {
         "icon": "people",
-        "title": { "hy": "Էլ. փոստ", "en": "Email", "ru": "Эл. почта" },
-        "text": { "hy": "*your@email.com*", "en": "*your@email.com*", "ru": "*your@email.com*" }
+        "title": { "hy": "Էլ. փոստ", "en": "Email" },
+        "text": { "hy": "*your@email.com*", "en": "*your@email.com*" }
       },
       {
         "icon": "calendar",
-        "title": { "hy": "Աշխատանքային ժամեր", "en": "Office hours", "ru": "Часы работы" },
+        "title": { "hy": "Աշխատանքային ժամեր", "en": "Office hours" },
         "text": {
           "hy": "Երկուշաբթի–ուրբաթ, 10:00–18:00",
-          "en": "Monday to Friday, 10:00–18:00",
-          "ru": "Понедельник–пятница, 10:00–18:00"
+          "en": "Monday to Friday, 10:00–18:00"
         }
       },
       {
         "icon": "telescope",
-        "title": { "hy": "Հասցե", "en": "Address", "ru": "Адрес" },
-        "text": { "hy": "*Քաղաք, երկիր*", "en": "*City, Country*", "ru": "*Город, страна*" }
+        "title": { "hy": "Հասցե", "en": "Address" },
+        "text": { "hy": "*Քաղաք, երկիր*", "en": "*City, Country*" }
       }
     ]
   },
@@ -84,7 +78,7 @@
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
     "image": "images/history4.jpg",
-    "alt": { "hy": "Կազմակերպիչները «Ֆիզիկան ՈՒ Մենք»-ի պաստառի կողքին, որի վրա նշված են ծրագրի տարիները", "en": "Organisers beside the “Physics and We” banner showing the years of the programme", "ru": "Организаторы рядом с баннером «Физика и Мы», на котором отмечены годы программы" },
-    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*", "ru": "*Одна строка под фотографией.*" }
+    "alt": { "hy": "Կազմակերպիչները «Ֆիզիկան ՈՒ Մենք»-ի պաստառի կողքին, որի վրա նշված են ծրագրի տարիները", "en": "Organisers beside the “Physics and We” banner showing the years of the programme" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
   }
 }

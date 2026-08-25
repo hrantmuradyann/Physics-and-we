@@ -30,7 +30,7 @@
 (function (global) {
   "use strict";
 
-  var LANGS = ["hy", "en", "ru"];
+  var LANGS = ["hy", "en"];
 
   /* ---------- The icon set -------------------------------------------------
      The names below are what you type in the JSON files, for example

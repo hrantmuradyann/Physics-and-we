@@ -1,52 +1,46 @@
 {
-  "_readme": "THE WORDS OF ONE LAB. The physics is in js/labs/refraction.js — you never need to open it to change the text here. Edit only what is between the quotes. hy = Armenian, en = English, ru = Russian.",
+  "_readme": "THE WORDS OF ONE LAB. The physics is in js/labs/refraction.js — you never need to open it to change the text here. Edit only what is between the quotes. hy = Armenian, en = English.",
 
   "title": {
     "hy": "Լույսի բեկումը",
-    "en": "Bending Light",
-    "ru": "Преломление света"
+    "en": "Bending Light"
   },
 
   "lead": {
     "hy": "Ուղարկե՛ք ճառագայթը ապակու կամ ջրի մեջ և տեսե՛ք, թե ինչպես է այն բեկվում։ Բավական մեծացրե՛ք անկյունը, և լույսը կդադարի ընդհանրապես անցնել։",
-    "en": "Send a beam into glass or water and watch it bend. Open the angle far enough and it stops getting through altogether.",
-    "ru": "Направьте луч в стекло или воду и посмотрите, как он преломляется. Увеличьте угол достаточно — и свет перестанет проходить вовсе."
+    "en": "Send a beam into glass or water and watch it bend. Open the angle far enough and it stops getting through altogether."
   },
 
   "canvasAlt": {
     "hy": "Լույսի ճառագայթ, որը հասնում է երկու նյութերի սահմանին և բաժանվում է անդրադարձած և բեկված ճառագայթների",
-    "en": "A light ray striking the boundary between two materials, splitting into a reflected ray and a bent one",
-    "ru": "Луч света падает на границу двух сред и разделяется на отражённый и преломлённый лучи"
+    "en": "A light ray striking the boundary between two materials, splitting into a reflected ray and a bent one"
   },
 
   "hint": {
     "hy": "Քաշե՛ք ճառագայթը նկարի վերին մասում՝ անկյունը փոխելու համար։",
-    "en": "Drag the beam in the upper half of the picture to change the angle.",
-    "ru": "Потяните луч в верхней части рисунка, чтобы изменить угол."
+    "en": "Drag the beam in the upper half of the picture to change the angle."
   },
 
   "controls": {
-    "angle":     { "hy": "Անկման անկյուն", "en": "Angle of incidence", "ru": "Угол падения" },
-    "n1":        { "hy": "Վերևի միջավայրի ցուցիչը (n₁)", "en": "Refractive index above (n₁)", "ru": "Показатель преломления сверху (n₁)" },
-    "n2":        { "hy": "Ներքևի միջավայրի ցուցիչը (n₂)", "en": "Refractive index below (n₂)", "ru": "Показатель преломления снизу (n₂)" },
-    "reflected": { "hy": "Ցույց տալ անդրադարձած ճառագայթը", "en": "Show the reflected ray", "ru": "Показывать отражённый луч" }
+    "angle":     { "hy": "Անկման անկյուն", "en": "Angle of incidence" },
+    "n1":        { "hy": "Վերևի միջավայրի ցուցիչը (n₁)", "en": "Refractive index above (n₁)" },
+    "n2":        { "hy": "Ներքևի միջավայրի ցուցիչը (n₂)", "en": "Refractive index below (n₂)" },
+    "reflected": { "hy": "Ցույց տալ անդրադարձած ճառագայթը", "en": "Show the reflected ray" }
   },
 
   "readouts": {
-    "refracted": { "hy": "Բեկման անկյուն", "en": "Angle of refraction", "ru": "Угол преломления" },
-    "critical":  { "hy": "Լրիվ անդրադարձման անկյուն", "en": "Critical angle", "ru": "Предельный угол" },
-    "share":     { "hy": "Անդրադարձած մասը", "en": "Share reflected", "ru": "Доля отражения" }
+    "refracted": { "hy": "Բեկման անկյուն", "en": "Angle of refraction" },
+    "critical":  { "hy": "Լրիվ անդրադարձման անկյուն", "en": "Critical angle" },
+    "share":     { "hy": "Անդրադարձած մասը", "en": "Share reflected" }
   },
 
   "theoryTitle": {
     "hy": "Ի՞նչ է կատարվում այստեղ",
-    "en": "What is going on here",
-    "ru": "Что здесь происходит"
+    "en": "What is going on here"
   },
 
   "theory": {
     "hy": "Լույսը փոխում է իր արագությունը, երբ մի միջավայրից անցնում է մյուսը, և հենց այդ փոփոխությունն է բեկում այն։ Թե որքան է միջավայրը դանդաղեցնում լույսը, ցույց է տալիս նրա **բեկման ցուցիչը**՝ n. ներսում լույսը շարժվում է c/n արագությամբ։ Օդինը մոտ 1,00 է, ջրինը՝ 1,33, սովորական ապակունը՝ մոտ 1,50, ադամանդինը՝ 2,42։\n\n**n₁ · sin θ₁ = n₂ · sin θ₂**\n\nՍա Սնելիուսի օրենքն է, և հենց այն է տալիս «Բեկման անկյուն» տողի թիվը։ Նայե՛ք շարժվող կետերին. ավելի խիտ միջավայր անցնելիս դրանք տեսանելիորեն դանդաղում են, իսկ ճառագայթը թեքվում է դեպի նորմալը՝ կետագիծը։ Հակառակ ուղղությամբ՝ դեպի ավելի նոսր միջավայր, այն հեռանում է նորմալից։\n\nԱյժմ n₁-ը դարձրե՛ք n₂-ից մեծ՝ օրինակ ապակուց օդ, և մեծացրե՛ք անկյունը։ Որոշ պահից հետո sin θ₂-ը պետք է մեկից մեծ լիներ, բայց այդպիսի անկյուն գոյություն չունի, ուստի **լույսն ընդհանրապես չի անցնում**։ Այն ամբողջովին վերադառնում է։ Այդ անկյունը կոչվում է **լրիվ ներքին անդրադարձման անկյուն**։ Սա պարզապես հետաքրքրություն չէ. հենց դրա շնորհիվ է օպտիկական մանրաթելը հարյուր կիլոմետր տանում ազդանշանը՝ լույսն ապակե թելի ներսում անդրադարձնելով և դուրս չթողնելով։\n\nՎերջին թիվը ցույց է տալիս, թե լույսի որ մասն է անդրադառնում նույնիսկ այն ժամանակ, երբ կարող է անցնել։ Ուղիղ անկման դեպքում ապակու համար դա ընդամենը մոտ 4% է. այդ պատճառով պատուհանը թափանցիկ է, բայց դրա մեջ երևում է նաև ձեր գունատ արտապատկերը։ Անկյան մեծացմանը զուգընթաց այդ մասը ձգտում է 100%-ի. ահա թե ինչու է լիճը հեռվում հայելի թվում, իսկ ոտքերի տակ՝ ջուր։",
-    "en": "Light changes speed when it crosses from one material into another, and that change of speed is what bends it. How much a material slows light down is its **refractive index**, n: inside it light travels at c/n. Air is about 1.00, water 1.33, ordinary glass about 1.50, diamond 2.42.\n\n**n₁ · sin θ₁ = n₂ · sin θ₂**\n\nThat is Snell's law, and it is the number shown as \"angle of refraction\". Watch the moving dots: they visibly slow down as they cross into the denser material, and the beam tilts towards the normal — the dashed line. Going the other way, into the thinner material, it tilts away from it.\n\nNow make n₁ larger than n₂ — glass into air, say — and open the angle up. Past a certain point sin θ₂ would have to be greater than 1, and no angle can do that, so **nothing gets through at all**. Every bit of the light comes back. That angle is the **critical angle**, and the effect is total internal reflection. It is not a curiosity: it is the reason an optical fibre can carry a signal a hundred kilometres, bouncing light along the inside of a glass thread without ever letting it escape.\n\nThe last number is how much of the light bounces off even when it can get through. At a straight-on hit into glass it is only about 4% — which is why you can see through a window and still catch your own faint reflection in it. As the angle opens out that share climbs towards 100%, which is why a lake looks like a mirror when you look across it, and like water when you look straight down.",
-    "ru": "Свет меняет скорость, переходя из одной среды в другую, и именно это изменение скорости его преломляет. Насколько среда замедляет свет, говорит её **показатель преломления** n: внутри свет идёт со скоростью c/n. У воздуха он около 1,00, у воды 1,33, у обычного стекла около 1,50, у алмаза 2,42.\n\n**n₁ · sin θ₁ = n₂ · sin θ₂**\n\nЭто закон Снеллиуса, и именно он даёт число в строке «Угол преломления». Посмотрите на бегущие точки: переходя в более плотную среду, они заметно замедляются, а луч наклоняется к нормали — к пунктирной линии. В обратную сторону, в менее плотную среду, он отклоняется от неё.\n\nТеперь сделайте n₁ больше n₂ — например, стекло и воздух — и увеличивайте угол. С какого-то момента sin θ₂ должен был бы стать больше единицы, а такого угла не существует, и потому **свет не проходит вовсе**. Он возвращается целиком. Этот угол называют **предельным**, а само явление — полным внутренним отражением. Это не курьёз: именно поэтому оптическое волокно несёт сигнал на сотню километров, отражая свет внутри стеклянной нити и не выпуская его наружу.\n\nПоследнее число — какая доля света отражается даже тогда, когда он может пройти. При падении по нормали для стекла это всего около 4% — поэтому окно прозрачно, но собственное бледное отражение в нём всё же видно. С ростом угла эта доля стремится к 100%: вот почему озеро вдали выглядит зеркалом, а под ногами — водой."
+    "en": "Light changes speed when it crosses from one material into another, and that change of speed is what bends it. How much a material slows light down is its **refractive index**, n: inside it light travels at c/n. Air is about 1.00, water 1.33, ordinary glass about 1.50, diamond 2.42.\n\n**n₁ · sin θ₁ = n₂ · sin θ₂**\n\nThat is Snell's law, and it is the number shown as \"angle of refraction\". Watch the moving dots: they visibly slow down as they cross into the denser material, and the beam tilts towards the normal — the dashed line. Going the other way, into the thinner material, it tilts away from it.\n\nNow make n₁ larger than n₂ — glass into air, say — and open the angle up. Past a certain point sin θ₂ would have to be greater than 1, and no angle can do that, so **nothing gets through at all**. Every bit of the light comes back. That angle is the **critical angle**, and the effect is total internal reflection. It is not a curiosity: it is the reason an optical fibre can carry a signal a hundred kilometres, bouncing light along the inside of a glass thread without ever letting it escape.\n\nThe last number is how much of the light bounces off even when it can get through. At a straight-on hit into glass it is only about 4% — which is why you can see through a window and still catch your own faint reflection in it. As the angle opens out that share climbs towards 100%, which is why a lake looks like a mirror when you look across it, and like water when you look straight down."
   }
 }

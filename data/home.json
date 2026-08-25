@@ -2,29 +2,26 @@
   "_readme": "HOME PAGE TEXT. Layout lives in sections/home.html — you almost never need to open it. Icon names you can use: atom, orbit, chart, people, flask, bulb, telescope, wave, magnet, calendar.",
 
   "hero": {
-    "eyebrow": { "hy": "Ֆիզիկան ՈՒ Մենք", "en": "Physics & We", "ru": "Физика и Мы" },
+    "eyebrow": { "hy": "Ֆիզիկան ՈՒ Մենք", "en": "Physics & We" },
     "title": {
       "hy": "Ամառային ճամբար՝ ուսանողների կողմից ուսանողների և աշակերտների համար",
-      "en": "Summer camp — by students, for students and schoolchildren",
-      "ru": "Летний лагерь — от студентов для студентов и школьников"
+      "en": "Summer camp — by students, for students and schoolchildren"
     },
     "subtitle": {
       "hy": "*Մեկ-երկու նախադասություն վերնագրի տակ՝ ինչով եք զբաղվում։*",
-      "en": "*One or two sentences under the title: what you do.*",
-      "ru": "*Одно-два предложения под заголовком: чем вы занимаетесь.*"
+      "en": "*One or two sentences under the title: what you do.*"
     },
     "primaryButton": {
       "route": "camp",
-      "label": { "hy": "Ծանոթանալ ծրագրերին", "en": "Explore Programs", "ru": "Наши программы" }
+      "label": { "hy": "Ծանոթանալ ծրագրերին", "en": "Explore Programs" }
     },
     "secondaryButton": {
       "route": "labs",
-      "label": { "hy": "Դիտել լաբորատորիաները", "en": "Watch the Labs", "ru": "Смотреть лаборатории" }
+      "label": { "hy": "Դիտել լաբորատորիաները", "en": "Watch the Labs" }
     },
     "scrollHint": {
       "hy": "Թերթեք՝ ավելին տեսնելու համար",
-      "en": "Scroll to explore",
-      "ru": "Листайте, чтобы узнать больше"
+      "en": "Scroll to explore"
     }
   },
 
@@ -33,71 +30,66 @@
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Սովորողներ*", "en": "*e.g. Students taught*", "ru": "*напр. Учеников*" }
+      "label": { "hy": "*օր.՝ Սովորողներ*", "en": "*e.g. Students taught*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Լաբորատորիաներ*", "en": "*e.g. Labs run*", "ru": "*напр. Лабораторий*" }
+      "label": { "hy": "*օր.՝ Լաբորատորիաներ*", "en": "*e.g. Labs run*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Հետազոտություններ*", "en": "*e.g. Research projects*", "ru": "*напр. Исследований*" }
+      "label": { "hy": "*օր.՝ Հետազոտություններ*", "en": "*e.g. Research projects*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Դպրոցներ*", "en": "*e.g. Partner schools*", "ru": "*напр. Школ-партнёров*" }
+      "label": { "hy": "*օր.՝ Դպրոցներ*", "en": "*e.g. Partner schools*" }
     }
   ],
 
   "features": {
-    "eyebrow": { "hy": "Ի՞նչ ենք անում", "en": "What We Do", "ru": "Чем мы занимаемся" },
+    "eyebrow": { "hy": "Ի՞նչ ենք անում", "en": "What We Do" },
     "title": {
       "hy": "Ծրագրեր, որոնք ֆիզիկան դարձնում են հասկանալի",
-      "en": "Programs that make physics click",
-      "ru": "Программы, с которыми физика становится понятной"
+      "en": "Programs that make physics click"
     },
     "items": [
       {
         "icon": "atom",
         "route": "camp",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*", "ru": "*Название программы (1–3 слова)*" },
+        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*",
-          "ru": "*Одно предложение об этой программе.*"
+          "en": "*One sentence about this program.*"
         }
       },
       {
         "icon": "orbit",
         "route": "labs",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*", "ru": "*Название программы (1–3 слова)*" },
+        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*",
-          "ru": "*Одно предложение об этой программе.*"
+          "en": "*One sentence about this program.*"
         }
       },
       {
         "icon": "chart",
         "route": "research",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*", "ru": "*Название программы (1–3 слова)*" },
+        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*",
-          "ru": "*Одно предложение об этой программе.*"
+          "en": "*One sentence about this program.*"
         }
       },
       {
         "icon": "people",
         "route": "partners",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*", "ru": "*Название программы (1–3 слова)*" },
+        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*",
-          "ru": "*Одно предложение об этой программе.*"
+          "en": "*One sentence about this program.*"
         }
       }
     ]
@@ -107,40 +99,35 @@
     "image": "images/mainphoto.jpg",
     "imageAlt": {
       "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*",
-      "en": "*Describe the photo for people who cannot see it.*",
-      "ru": "*Опишите фото для тех, кто его не видит.*"
+      "en": "*Describe the photo for people who cannot see it.*"
     },
-    "eyebrow": { "hy": "Գիտություն ամեն օր", "en": "Science, Every Day", "ru": "Наука каждый день" },
+    "eyebrow": { "hy": "Գիտություն ամեն օր", "en": "Science, Every Day" },
     "title": {
       "hy": "Ինչպես է աշխատում առօրյա տեխնիկան",
-      "en": "How everyday tech works",
-      "ru": "Как работает повседневная техника"
+      "en": "How everyday tech works"
     },
     "text": {
       "hy": "*Երկու-երեք նախադասություն այս թեմայի շուրջ։*",
-      "en": "*Two or three sentences on this topic.*",
-      "ru": "*Два-три предложения по этой теме.*"
+      "en": "*Two or three sentences on this topic.*"
     },
     "button": {
       "route": "labs",
-      "label": { "hy": "Իմանալ ավելին", "en": "Learn More", "ru": "Узнать больше" }
+      "label": { "hy": "Իմանալ ավելին", "en": "Learn More" }
     }
   },
 
   "cta": {
     "title": {
       "hy": "Պատրա՞ստ եք բացահայտել ֆիզիկան մեզ հետ։",
-      "en": "Ready to explore physics with us?",
-      "ru": "Готовы исследовать физику вместе с нами?"
+      "en": "Ready to explore physics with us?"
     },
     "text": {
       "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*",
-      "ru": "*Одно предложение, приглашающее читателя к действию.*"
+      "en": "*One sentence inviting the reader to act.*"
     },
     "button": {
       "route": "camp",
-      "label": { "hy": "Սկսել", "en": "Get Started", "ru": "Начать" }
+      "label": { "hy": "Սկսել", "en": "Get Started" }
     }
   }
 }

@@ -2,12 +2,11 @@
   "_readme": "SUMMER CAMP PAGE TEXT. \"schedule\" is the day-by-day list — copy a { ... } block to add a day.",
 
   "page": {
-    "eyebrow": { "hy": "Մեկ շաբաթ", "en": "One week", "ru": "Одна неделя" },
-    "title": { "hy": "Ամառային ճամբար", "en": "Summer Camp", "ru": "Летний лагерь" },
+    "eyebrow": { "hy": "Մեկ շաբաթ", "en": "One week" },
+    "title": { "hy": "Ամառային ճամբար", "en": "Summer Camp" },
     "lead": {
       "hy": "*Մեկ-երկու նախադասություն՝ ի՞նչ է ճամբարը։*",
-      "en": "*One or two sentences: what the camp is.*",
-      "ru": "*Одно-два предложения: что такое лагерь.*"
+      "en": "*One or two sentences: what the camp is.*"
     }
   },
 
@@ -16,119 +15,111 @@
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Օրեր*", "en": "*e.g. Days*", "ru": "*напр. Дней*" }
+      "label": { "hy": "*օր.՝ Օրեր*", "en": "*e.g. Days*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Մասնակիցներ*", "en": "*e.g. Participants*", "ru": "*напр. Участников*" }
+      "label": { "hy": "*օր.՝ Մասնակիցներ*", "en": "*e.g. Participants*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Փորձեր*", "en": "*e.g. Experiments*", "ru": "*напр. Экспериментов*" }
+      "label": { "hy": "*օր.՝ Փորձեր*", "en": "*e.g. Experiments*" }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Մենթորներ*", "en": "*e.g. Mentors*", "ru": "*напр. Наставников*" }
+      "label": { "hy": "*օր.՝ Մենթորներ*", "en": "*e.g. Mentors*" }
     }
   ],
 
   "schedule": {
-    "eyebrow": { "hy": "Օրերը", "en": "The days", "ru": "Дни" },
-    "title": { "hy": "Ինչ է լինում ամեն օր", "en": "What happens each day", "ru": "Что происходит каждый день" },
+    "eyebrow": { "hy": "Օրերը", "en": "The days" },
+    "title": { "hy": "Ինչ է լինում ամեն օր", "en": "What happens each day" },
     "items": [
       {
-        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
-        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
-          "en": "*One sentence about this day.*",
-          "ru": "*Одно предложение об этом дне.*"
+          "en": "*One sentence about this day.*"
         }
       },
       {
-        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
-        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
-          "en": "*One sentence about this day.*",
-          "ru": "*Одно предложение об этом дне.*"
+          "en": "*One sentence about this day.*"
         }
       },
       {
-        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
-        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
-          "en": "*One sentence about this day.*",
-          "ru": "*Одно предложение об этом дне.*"
+          "en": "*One sentence about this day.*"
         }
       },
       {
-        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*", "ru": "*Номер дня, напр. День 1 или Дни 2–3*" },
-        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*", "ru": "*О чём этот день (2–4 слова)*" },
+        "label": { "hy": "*Օրվա համարը, օր.՝ Օր 1 կամ Օրեր 2–3*", "en": "*Day number, e.g. Day 1 or Days 2–3*" },
+        "title": { "hy": "*Ինչի՞ մասին է այս օրը (2–4 բառ)*", "en": "*What this day is about (2–4 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս օրվա մասին։*",
-          "en": "*One sentence about this day.*",
-          "ru": "*Одно предложение об этом дне.*"
+          "en": "*One sentence about this day.*"
         }
       }
     ]
   },
 
   "info": {
-    "eyebrow": { "hy": "Գործնական", "en": "Practical", "ru": "Практическое" },
-    "title": { "hy": "Ինչ պետք է իմանալ", "en": "What you need to know", "ru": "Что нужно знать" },
+    "eyebrow": { "hy": "Գործնական", "en": "Practical" },
+    "title": { "hy": "Ինչ պետք է իմանալ", "en": "What you need to know" },
     "items": [
       {
         "icon": "calendar",
-        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*" },
         "text": {
           "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
-          "en": "*One or two sentences answering it.*",
-          "ru": "*Одно-два предложения с ответом.*"
+          "en": "*One or two sentences answering it.*"
         }
       },
       {
         "icon": "people",
-        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*" },
         "text": {
           "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
-          "en": "*One or two sentences answering it.*",
-          "ru": "*Одно-два предложения с ответом.*"
+          "en": "*One or two sentences answering it.*"
         }
       },
       {
         "icon": "flask",
-        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*", "ru": "*Короткий заголовок, напр. Когда / Для кого*" },
+        "title": { "hy": "*Կարճ վերնագիր, օր.՝ Երբ / Ում համար*", "en": "*Short heading, e.g. When / Who it is for*" },
         "text": {
           "hy": "*Մեկ-երկու նախադասություն՝ պատասխանով։*",
-          "en": "*One or two sentences answering it.*",
-          "ru": "*Одно-два предложения с ответом.*"
+          "en": "*One or two sentences answering it.*"
         }
       }
     ]
   },
 
   "cta": {
-    "title": { "hy": "Գրանցումը բաց է", "en": "Registration is open", "ru": "Регистрация открыта" },
+    "title": { "hy": "Գրանցումը բաց է", "en": "Registration is open" },
     "text": {
       "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*",
-      "ru": "*Одно предложение, приглашающее читателя к действию.*"
+      "en": "*One sentence inviting the reader to act.*"
     },
     "button": {
       "route": "news",
-      "label": { "hy": "Դիտել նորությունները", "en": "See the news", "ru": "Смотреть новости" }
+      "label": { "hy": "Դիտել նորությունները", "en": "See the news" }
     }
   },
 
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
     "image": "images/history5.jpg",
-    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*", "ru": "*Опишите фото для тех, кто его не видит.*" },
-    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*", "ru": "*Одна строка под фотографией.*" }
+    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
   }
 }

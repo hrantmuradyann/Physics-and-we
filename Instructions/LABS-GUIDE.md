@@ -14,7 +14,7 @@ This guide is for whoever writes the code. If you only want to change the
 > **The physics goes in `js/labs/`. Every word a visitor reads goes in
 > `data/labs/`.**
 
-The site is in three languages. The moment you type `"Reset"` or `"Length"`
+The site is in two languages. The moment you type `"Reset"` or `"Length"`
 into a `.js` file, that lab stops being translatable and the editors can no
 longer fix it without you.
 
@@ -132,7 +132,7 @@ second copy of the lab would share them.
 | `ctx.color` | the site's palette: `accent`, `accent2`, `soft`, `muted`, `text`, `line`, `grid` |
 | `ctx.pointer` | `{ x, y, down, inside }` — in the same pixels as `ctx.w` and `ctx.h` |
 | `ctx.t` | seconds since the lab started |
-| `ctx.lang` | `"hy"`, `"en"` or `"ru"`, if you ever need to know |
+| `ctx.lang` | `"hy"` or `"en"`, if you ever need to know |
 | `ctx.play()`, `ctx.pause()` | start or stop the loop yourself |
 
 ---
@@ -151,7 +151,7 @@ In `data/labs/<name>.json`:
 
 ```json
 "controls": {
-  "length": { "hy": "Թելի երկարություն", "en": "String length", "ru": "Длина нити" }
+  "length": { "hy": "Թելի երկարություն", "en": "String length" }
 }
 ```
 
@@ -166,7 +166,7 @@ readouts: ["period", "angle"]
 
 ```json
 "readouts": {
-  "period": { "hy": "Պարբերություն", "en": "Period", "ru": "Период" }
+  "period": { "hy": "Պարբերություն", "en": "Period" }
 }
 ```
 
@@ -178,7 +178,7 @@ Write to it from `frame` with `ctx.show("period", value.toFixed(2) + " s")`.
 
 ```json
 {
-  "title":       { "hy": "…", "en": "…", "ru": "…" },
+  "title":       { "hy": "…", "en": "…" },
   "lead":        { … },   "canvasAlt": { … },   "hint": { … },
   "theoryTitle": { … },   "theory":    { … },
   "controls":    { "length": { … } },

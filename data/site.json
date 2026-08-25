@@ -1,105 +1,102 @@
 {
-  "_readme": "GLOBAL SETTINGS — the menu, the footer and words that repeat on every page. Edit text between the quotes only. hy = Armenian, en = English, ru = Russian.",
+  "_readme": "GLOBAL SETTINGS — the menu, the footer and words that repeat on every page. Edit text between the quotes only. hy = Armenian, en = English.",
 
   "siteName": "Physics and We",
 
   "nav": [
     {
       "route": "home",
-      "label": { "hy": "Գլխավոր", "en": "Home", "ru": "Главная" }
+      "label": { "hy": "Գլխավոր", "en": "Home" }
     },
     {
       "route": "camp",
-      "label": { "hy": "Ամառային ճամբար", "en": "Summer Camp", "ru": "Летний лагерь" }
+      "label": { "hy": "Ամառային ճամբար", "en": "Summer Camp" }
     },
     {
       "route": "labs",
-      "label": { "hy": "Լաբորատորիաներ", "en": "Interactive Labs", "ru": "Лаборатории" }
+      "label": { "hy": "Լաբորատորիաներ", "en": "Interactive Labs" }
     },
     {
       "route": "research",
-      "label": { "hy": "Հետազոտություններ", "en": "Research", "ru": "Исследования" }
+      "label": { "hy": "Հետազոտություններ", "en": "Research" }
     },
     {
       "route": "news",
-      "label": { "hy": "Նորություններ", "en": "News", "ru": "Новости" }
+      "label": { "hy": "Նորություններ", "en": "News" }
     },
     {
       "route": "partners",
-      "label": { "hy": "Գործընկերներ", "en": "Partners", "ru": "Партнёры" }
+      "label": { "hy": "Գործընկերներ", "en": "Partners" }
     },
     {
       "route": "faq",
-      "label": { "hy": "Հարցեր", "en": "FAQ", "ru": "Вопросы" }
+      "label": { "hy": "Հարցեր", "en": "FAQ" }
     },
     {
       "route": "about",
       "hidden": true,
-      "label": { "hy": "Մեր մասին", "en": "About Us", "ru": "О нас" }
+      "label": { "hy": "Մեր մասին", "en": "About Us" }
     },
     {
       "_readme": "The page of ONE news item. Hidden: it is reached by clicking a news card, never from the menu.",
       "route": "post",
       "hidden": true,
-      "label": { "hy": "Նորություն", "en": "News", "ru": "Новость" }
+      "label": { "hy": "Նորություն", "en": "News" }
     },
     {
       "_readme": "The page of ONE interactive lab. Hidden: it is reached by clicking a simulation card on the Labs page, never from the menu. Removing this line breaks every lab.",
       "route": "lab",
       "hidden": true,
-      "label": { "hy": "Լաբորատորիա", "en": "Lab", "ru": "Лаборатория" }
+      "label": { "hy": "Լաբորատորիա", "en": "Lab" }
     }
   ],
 
   "footer": {
-    "text": { "hy": "© 2026 Ֆիզիկան ՈՒ Մենք", "en": "© 2026 Physics and We", "ru": "© 2026 Физика и Мы" },
+    "text": { "hy": "© 2026 Ֆիզիկան ՈՒ Մենք", "en": "© 2026 Physics and We" },
     "links": [
       {
         "route": "about",
-        "label": { "hy": "Մեր մասին", "en": "About Us", "ru": "О нас" }
+        "label": { "hy": "Մեր մասին", "en": "About Us" }
       },
       {
         "route": "faq",
-        "label": { "hy": "Հաճախակի հարցեր", "en": "FAQ", "ru": "Вопросы и ответы" }
+        "label": { "hy": "Հաճախակի հարցեր", "en": "FAQ" }
       },
       {
         "route": "partners",
-        "label": { "hy": "Գործընկերներ", "en": "Partners", "ru": "Партнёры" }
+        "label": { "hy": "Գործընկերներ", "en": "Partners" }
       }
     ]
   },
 
   "ui": {
     "_readme": "Short words reused across many pages. Change here = changes everywhere.",
-    "learnMore": { "hy": "Իմանալ ավելին", "en": "Learn more", "ru": "Подробнее" },
-    "loading": { "hy": "Բեռնվում է…", "en": "Loading…", "ru": "Загрузка…" },
+    "learnMore": { "hy": "Իմանալ ավելին", "en": "Learn more" },
+    "loading": { "hy": "Բեռնվում է…", "en": "Loading…" },
     "loadError": {
       "hy": "Բովանդակությունը չհաջողվեց բեռնել։ Թարմացրե՛ք էջը։",
-      "en": "This content could not be loaded. Please refresh the page.",
-      "ru": "Не удалось загрузить содержимое. Обновите страницу."
+      "en": "This content could not be loaded. Please refresh the page."
     },
-    "newsEmpty": { "hy": "Դեռ նորություններ չկան։", "en": "No news yet.", "ru": "Пока новостей нет." },
+    "newsEmpty": { "hy": "Դեռ նորություններ չկան։", "en": "No news yet." },
 
-    "readMore": { "hy": "Կարդալ ամբողջը", "en": "Read more", "ru": "Читать далее" },
-    "backToNews": { "hy": "← Բոլոր նորությունները", "en": "← All news", "ru": "← Все новости" },
-    "moreNews": { "hy": "Այլ նորություններ", "en": "More news", "ru": "Другие новости" },
+    "readMore": { "hy": "Կարդալ ամբողջը", "en": "Read more" },
+    "backToNews": { "hy": "← Բոլոր նորությունները", "en": "← All news" },
+    "moreNews": { "hy": "Այլ նորություններ", "en": "More news" },
     "postMissing": {
       "hy": "Այդ նորությունը այլևս գոյություն չունի։",
-      "en": "This news item no longer exists.",
-      "ru": "Этой новости больше нет."
+      "en": "This news item no longer exists."
     },
 
     "_readmeLabs": "The buttons of the interactive labs. They are here, not in the lab files, because every lab uses the same ones.",
-    "openLab": { "hy": "Բացել լաբորատորիան", "en": "Open the lab", "ru": "Открыть лабораторию" },
-    "backToLabs": { "hy": "← Բոլոր լաբորատորիաները", "en": "← All labs", "ru": "← Все лаборатории" },
-    "labPlay": { "hy": "Մեկնարկ", "en": "Play", "ru": "Пуск" },
-    "labPause": { "hy": "Դադար", "en": "Pause", "ru": "Пауза" },
-    "labReset": { "hy": "Սկզբից", "en": "Reset", "ru": "Сначала" },
-    "labChoose": { "hy": "Ընտրե՛ք լաբորատորիա", "en": "Choose a lab", "ru": "Выберите лабораторию" },
+    "openLab": { "hy": "Բացել լաբորատորիան", "en": "Open the lab" },
+    "backToLabs": { "hy": "← Բոլոր լաբորատորիաները", "en": "← All labs" },
+    "labPlay": { "hy": "Մեկնարկ", "en": "Play" },
+    "labPause": { "hy": "Դադար", "en": "Pause" },
+    "labReset": { "hy": "Սկզբից", "en": "Reset" },
+    "labChoose": { "hy": "Ընտրե՛ք լաբորատորիա", "en": "Choose a lab" },
     "labMissing": {
       "hy": "Այդ լաբորատորիան գոյություն չունի։",
-      "en": "That lab does not exist.",
-      "ru": "Такой лаборатории нет."
+      "en": "That lab does not exist."
     }
   }
 }

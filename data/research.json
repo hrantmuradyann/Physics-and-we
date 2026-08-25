@@ -2,12 +2,11 @@
   "_readme": "RESEARCH PAGE TEXT. \"projects\" is the list of student projects — copy a { ... } block to add one.",
 
   "page": {
-    "eyebrow": { "hy": "Սովորողների աշխատանք", "en": "Student work", "ru": "Работы учеников" },
-    "title": { "hy": "Հետազոտություններ", "en": "Research & Studies", "ru": "Исследования" },
+    "eyebrow": { "hy": "Սովորողների աշխատանք", "en": "Student work" },
+    "title": { "hy": "Հետազոտություններ", "en": "Research & Studies" },
     "lead": {
       "hy": "*Մեկ-երկու նախադասություն՝ ինչպես են կազմակերպվում սովորողների հետազոտությունները։*",
-      "en": "*One or two sentences: how student research works here.*",
-      "ru": "*Одно-два предложения: как здесь устроены исследования учеников.*"
+      "en": "*One or two sentences: how student research works here.*"
     }
   },
 
@@ -16,80 +15,70 @@
       "icon": "bulb",
       "title": {
         "hy": "*Նախագծի վերնագիրը*",
-        "en": "*Project title*",
-        "ru": "*Название проекта*"
+        "en": "*Project title*"
       },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն՝ ինչ արեցին սովորողները։*",
-        "en": "*One or two sentences: what the students did.*",
-        "ru": "*Одно-два предложения: что сделали ученики.*"
+        "en": "*One or two sentences: what the students did.*"
       },
-      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*", "ru": "*Год · число учеников*" }
+      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*" }
     },
     {
       "icon": "wave",
       "title": {
         "hy": "*Նախագծի վերնագիրը*",
-        "en": "*Project title*",
-        "ru": "*Название проекта*"
+        "en": "*Project title*"
       },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն՝ ինչ արեցին սովորողները։*",
-        "en": "*One or two sentences: what the students did.*",
-        "ru": "*Одно-два предложения: что сделали ученики.*"
+        "en": "*One or two sentences: what the students did.*"
       },
-      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*", "ru": "*Год · число учеников*" }
+      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*" }
     },
     {
       "icon": "telescope",
       "title": {
         "hy": "*Նախագծի վերնագիրը*",
-        "en": "*Project title*",
-        "ru": "*Название проекта*"
+        "en": "*Project title*"
       },
       "text": {
         "hy": "*Մեկ-երկու նախադասություն՝ ինչ արեցին սովորողները։*",
-        "en": "*One or two sentences: what the students did.*",
-        "ru": "*Одно-два предложения: что сделали ученики.*"
+        "en": "*One or two sentences: what the students did.*"
       },
-      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*", "ru": "*Год · число учеников*" }
+      "meta": { "hy": "*Տարի · սովորողների թիվը*", "en": "*Year · number of students*" }
     }
   ],
 
   "steps": {
-    "eyebrow": { "hy": "Ընթացքը", "en": "The process", "ru": "Процесс" },
-    "title": { "hy": "Հարցից մինչև ներկայացում", "en": "From question to presentation", "ru": "От вопроса до презентации" },
+    "eyebrow": { "hy": "Ընթացքը", "en": "The process" },
+    "title": { "hy": "Հարցից մինչև ներկայացում", "en": "From question to presentation" },
     "items": [
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       },
       {
-        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*", "ru": "*Название шага (1–3 слова)*" },
+        "title": { "hy": "*Քայլի անվանումը (1–3 բառ)*", "en": "*Step name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս քայլի մասին։*",
-          "en": "*One sentence about this step.*",
-          "ru": "*Одно предложение об этом шаге.*"
+          "en": "*One sentence about this step.*"
         }
       }
     ]
@@ -98,24 +87,22 @@
   "cta": {
     "title": {
       "hy": "Ունեք հա՞րց, որ ուզում եք ուսումնասիրել",
-      "en": "Have a question you want to investigate?",
-      "ru": "Есть вопрос, который вы хотите исследовать?"
+      "en": "Have a question you want to investigate?"
     },
     "text": {
       "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*",
-      "ru": "*Одно предложение, приглашающее читателя к действию.*"
+      "en": "*One sentence inviting the reader to act.*"
     },
     "button": {
       "route": "about",
-      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch", "ru": "Связаться с нами" }
+      "label": { "hy": "Կապ մեզ հետ", "en": "Get in touch" }
     }
   },
 
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
     "image": "images/history3.jpg",
-    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*", "ru": "*Опишите фото для тех, кто его не видит.*" },
-    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*", "ru": "*Одна строка под фотографией.*" }
+    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
   }
 }

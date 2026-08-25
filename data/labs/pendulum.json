@@ -1,53 +1,47 @@
 {
-  "_readme": "THE WORDS OF ONE LAB. The physics is in js/labs/pendulum.js — you never need to open it to change the text here. Edit only what is between the quotes. hy = Armenian, en = English, ru = Russian.",
+  "_readme": "THE WORDS OF ONE LAB. The physics is in js/labs/pendulum.js — you never need to open it to change the text here. Edit only what is between the quotes. hy = Armenian, en = English.",
 
   "title": {
     "hy": "Մաթեմատիկական ճոճանակ",
-    "en": "The Simple Pendulum",
-    "ru": "Математический маятник"
+    "en": "The Simple Pendulum"
   },
 
   "lead": {
     "hy": "Փոխե՛ք թելի երկարությունը և ձգողականությունը, և տեսե՛ք, թե ինչպես է փոխվում տատանման պարբերությունը։",
-    "en": "Change the length of the string and the strength of gravity, and watch what happens to the period of the swing.",
-    "ru": "Меняйте длину нити и силу тяжести и смотрите, как меняется период колебаний."
+    "en": "Change the length of the string and the strength of gravity, and watch what happens to the period of the swing."
   },
 
   "canvasAlt": {
     "hy": "Ճոճվող ճոճանակ և նրա անկյան գրաֆիկը՝ ժամանակից կախված",
-    "en": "A swinging pendulum, with a graph of its angle over time",
-    "ru": "Качающийся маятник и график его угла во времени"
+    "en": "A swinging pendulum, with a graph of its angle over time"
   },
 
   "hint": {
     "hy": "Քաշե՛ք գնդիկը մկնիկով կամ մատով և բա՛ց թողեք։",
-    "en": "Drag the bob with the mouse or your finger, then let go.",
-    "ru": "Потяните груз мышью или пальцем и отпустите."
+    "en": "Drag the bob with the mouse or your finger, then let go."
   },
 
   "controls": {
-    "length":  { "hy": "Թելի երկարություն", "en": "String length", "ru": "Длина нити" },
-    "gravity": { "hy": "Ձգողականության արագացում", "en": "Gravity", "ru": "Ускорение свободного падения" },
-    "damping": { "hy": "Մարում (օդի դիմադրություն)", "en": "Damping (air resistance)", "ru": "Затухание (сопротивление воздуха)" },
-    "trail":   { "hy": "Ցույց տալ հետագիծը", "en": "Show the trail", "ru": "Показывать след" }
+    "length":  { "hy": "Թելի երկարություն", "en": "String length" },
+    "gravity": { "hy": "Ձգողականության արագացում", "en": "Gravity" },
+    "damping": { "hy": "Մարում (օդի դիմադրություն)", "en": "Damping (air resistance)" },
+    "trail":   { "hy": "Ցույց տալ հետագիծը", "en": "Show the trail" }
   },
 
   "readouts": {
-    "measured":  { "hy": "Չափված պարբերություն", "en": "Measured period", "ru": "Измеренный период" },
-    "theory":    { "hy": "Բանաձևով պարբերություն", "en": "Period by the formula", "ru": "Период по формуле" },
-    "angle":     { "hy": "Ընթացիկ անկյուն", "en": "Angle now", "ru": "Текущий угол" },
-    "amplitude": { "hy": "Ամպլիտուդ", "en": "Amplitude", "ru": "Амплитуда" }
+    "measured":  { "hy": "Չափված պարբերություն", "en": "Measured period" },
+    "theory":    { "hy": "Բանաձևով պարբերություն", "en": "Period by the formula" },
+    "angle":     { "hy": "Ընթացիկ անկյուն", "en": "Angle now" },
+    "amplitude": { "hy": "Ամպլիտուդ", "en": "Amplitude" }
   },
 
   "theoryTitle": {
     "hy": "Ի՞նչ է կատարվում այստեղ",
-    "en": "What is going on here",
-    "ru": "Что здесь происходит"
+    "en": "What is going on here"
   },
 
   "theory": {
     "hy": "Փոքր տատանումների դեպքում ճոճանակի պարբերությունը կախված է **միայն թելի երկարությունից և ձգողականությունից**։ Այն կախված չէ ո՛չ գնդիկի զանգվածից, ո՛չ էլ նրանից, թե որքան հեռու եք քաշել գնդիկը։\n\n**T = 2π √(L / g)**\n\nՍա հենց այն թիվն է, որը գրված է «Բանաձևով պարբերություն» տողում։ Մյուս թիվը չափվում է այնպես, ինչպես իրական փորձի ժամանակ. ծրագիրը վայրկյանաչափում է, թե որքան ժամանակում է գնդիկը երկու անգամ նույն ուղղությամբ անցնում ամենացածր կետով։\n\nՔաշե՛ք գնդիկը շատ հեռու և համեմատե՛ք երկու թիվը։ Մոտավորապես 20°-ից հետո դրանք սկսում են տարբերվել։ Սխալը սիմուլյացիայինը չէ. բանաձևը լուռ ենթադրում է, որ sin θ ≈ θ, իսկ մեծ անկյունների դեպքում դա այլևս ճիշտ չէ։\n\nԱվելացրե՛ք մարումը և նայե՛ք գրաֆիկին. տատանումները փոքրանում են, բայց պարբերությունը գրեթե չի փոխվում։ Հենց դրա համար է ճոճանակը դարեր շարունակ ժամացույցների սիրտը եղել։",
-    "en": "For small swings, the period of a pendulum depends **only on the length of the string and on gravity**. It does not depend on the mass of the bob, and it does not depend on how far you pull it aside.\n\n**T = 2π √(L / g)**\n\nThat is the number shown as \"period by the formula\". The other number is measured the way a real experiment measures it: the simulation times how long the bob takes to pass through the lowest point twice in the same direction.\n\nPull the bob far to one side and compare the two. Past roughly 20° they start to drift apart. Nothing is wrong with the simulation — the formula quietly assumes that sin θ ≈ θ, and at large angles that is simply no longer true.\n\nNow raise the damping and watch the graph. The swings get smaller, but the period barely changes. That is exactly why a pendulum was the heart of every clock for three hundred years.",
-    "ru": "При малых колебаниях период маятника зависит **только от длины нити и от силы тяжести**. Он не зависит ни от массы груза, ни от того, насколько сильно вы его отклонили.\n\n**T = 2π √(L / g)**\n\nИменно это число показано в строке «Период по формуле». Второе число измеряется так же, как в настоящем опыте: программа засекает, за какое время груз дважды проходит нижнюю точку в одну и ту же сторону.\n\nОтклоните груз посильнее и сравните два числа. Примерно после 20° они начинают расходиться. Дело не в ошибке симуляции — формула молча предполагает, что sin θ ≈ θ, а при больших углах это уже неверно.\n\nТеперь увеличьте затухание и посмотрите на график. Размах уменьшается, а период почти не меняется. Именно поэтому маятник триста лет оставался сердцем любых часов."
+    "en": "For small swings, the period of a pendulum depends **only on the length of the string and on gravity**. It does not depend on the mass of the bob, and it does not depend on how far you pull it aside.\n\n**T = 2π √(L / g)**\n\nThat is the number shown as \"period by the formula\". The other number is measured the way a real experiment measures it: the simulation times how long the bob takes to pass through the lowest point twice in the same direction.\n\nPull the bob far to one side and compare the two. Past roughly 20° they start to drift apart. Nothing is wrong with the simulation — the formula quietly assumes that sin θ ≈ θ, and at large angles that is simply no longer true.\n\nNow raise the damping and watch the graph. The swings get smaller, but the period barely changes. That is exactly why a pendulum was the heart of every clock for three hundred years."
   }
 }

@@ -8,7 +8,7 @@ Other guides live in the **`Instructions/`** folder:
 |---|---|
 | write or translate **content** (no programming) | `Instructions/EDITING-GUIDE.md` |
 | build an **interactive lab** (a simulation) | `Instructions/LABS-GUIDE.md` |
-| touch the **HTML or CSS** | `Instructions/HTML-CLASSES.md` (for whatever reason in Russian) |
+| touch the **HTML or CSS** | `Instructions/HTML-CLASSES.md` |
 | run the **admin panel** | `Instructions/ADMIN-SETUP.md` |
 | put the site **online** | `Instructions/SECURITY.md` — read before deploying |
 
@@ -17,11 +17,11 @@ Other guides live in the **`Instructions/`** folder:
 ## 1. What's built so far
 
 The whole public site works: home, summer camp, interactive labs, research,
-news, partners, FAQ and about — in **three languages** (Armenian, English,
-Russian), with a shared header, footer and design.
+news, partners, FAQ and about — in **two languages** (Armenian and
+English), with a shared header, footer and design.
 
 Most of the **words** are still placeholders — short notes in asterisks saying
-what belongs there, in all three languages. Filling them in is a content job,
+what belongs there, in both languages. Filling them in is a content job,
 not a programming one: see `Instructions/EDITING-GUIDE.md`.
 
 The important thing to understand is **how it is put together**, because it is
@@ -60,7 +60,7 @@ data/faq.json        the WORDS   — hy / en / ru, no markup
 
 **Why it is done this way:** the people writing the content never open HTML,
 never need to know what a `<div>` is, and cannot break the layout. They open one
-JSON file, change the words in three languages, and that is it. Several people
+JSON file, change the words in both languages, and that is it. Several people
 can work on different pages at the same time without touching the same file.
 
 ### How a page actually appears, step by step
@@ -169,7 +169,7 @@ Physics-and-we/
 │   ├── faq.html
 │   └── about.html
 │
-├── data/                → ONE FILE PER PAGE — text only, all 3 languages
+├── data/                → ONE FILE PER PAGE — text only, both languages
 │   ├── site.json        → the menu, the footer, words shared by every page
 │   ├── home.json
 │   ├── camp.json
@@ -221,17 +221,16 @@ Physics-and-we/
 ### The three folders that matter
 
 **`data/` — the text.** One file per page. Every piece of text is an object with
-the three languages side by side:
+both languages side by side:
 
 ```json
 "title": {
   "hy": "Ինտերակտիվ լաբորատորիաներ",
-  "en": "Interactive Labs",
-  "ru": "Интерактивные лаборатории"
+  "en": "Interactive Labs"
 }
 ```
 
-There is no separate `en.json` / `hy.json` / `ru.json`, and no
+There is no separate `en.json` / `hy.json`, and no
 `translations.json`. A translator opens the page they are translating and sees
 the original right next to the empty line they need to fill. A value that is
 missing is **hidden** on the site rather than shown as an empty box, so a
@@ -292,7 +291,7 @@ Keep CSS in the CSS files: no `style="..."` attributes in the HTML, and no
 
 1. Add an entry to `"nav"` in `data/site.json`:
    ```json
-   { "route": "library", "label": { "hy": "Գրադարան", "en": "Library", "ru": "Библиотека" } }
+   { "route": "library", "label": { "hy": "Գրադարան", "en": "Library" } }
    ```
 2. Create `sections/library.html` — copy an existing page as a starting point.
 3. Create `data/library.json` with the text.
@@ -615,7 +614,7 @@ Good:
 ```
 git commit -m "Add age-based track routing to camp registration form"
 git commit -m "Fix nav bar overlapping on mobile screens"
-git commit -m "Translate About page into Armenian and Russian"
+git commit -m "Translate About page into Armenian"
 ```
 
 Rule of thumb: if someone read only your commit messages (never opened the code), they should roughly understand what happened to the project over time.

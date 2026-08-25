@@ -16,7 +16,7 @@
 
    ONE LAB IS TWO FILES
      js/labs/pendulum.js      the physics   — registers itself here
-     data/labs/pendulum.json  the words     — in Armenian, English, Russian
+     data/labs/pendulum.json  the words     — in Armenian and English
 
    Both are found by the same name, which is also what appears in the address:
        ?view=lab&id=pendulum
