@@ -12,6 +12,11 @@ Other guides live in the **`Instructions/`** folder:
 | run the **admin panel** | `Instructions/ADMIN-SETUP.md` |
 | put the site **online** | `Instructions/SECURITY.md` — read before deploying |
 
+There is also a **`CLAUDE.md`** in the project root — a technical map written for AI
+coding assistants (architecture, file layout, conventions, gotchas). If your
+change affects the architecture, file layout, or conventions, please update it
+too, so it doesn't go stale.
+
 ---
 
 ## 1. What's built so far
