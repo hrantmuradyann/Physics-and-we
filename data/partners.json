@@ -1,5 +1,5 @@
 {
-  "_readme": "PARTNERS PAGE TEXT. \"partners\" is the list of organisations — copy a { ... } block to add one. \"name\" is written the same way in every language, so it is one plain line, not hy/en/ru. The list below was read off the programme banner in images/history4.jpg — please check every line and correct anything that is wrong.",
+  "_readme": "PARTNERS PAGE TEXT. \"partners\" is the list of organisations — copy a { ... } block to add one. Each one shows a logo and the name under it, nothing else. \"name\" is written the same way in every language, so it is one plain line, not hy/en. \"logo\" is a picture file inside images/ — put the file there and write its name here. Keep names short: they must fit on one line.",
 
   "page": {
     "eyebrow": { "hy": "Միասին", "en": "Together" },
@@ -12,121 +12,42 @@
 
   "partners": [
     {
-      "name": "YSU SPIE & OPTICA Student Chapter",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "name": "YSU SPIE Student Chapter",
+      "logo": "images/ysu-spie-chapter.jpeg"
     },
     {
       "name": "OPTICA IPR Armenia Student Chapter",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/optica-ipr.jpeg"
+    },
+    {
+      "name": "YSO",
+      "logo": "images/yso.jpeg"
     },
     {
       "name": "Yerevan State University",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/ysu.jpg"
     },
     {
       "name": "OPTICA",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
-    },
-    {
-      "name": "SPIE",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/optica.png"
     },
     {
       "name": "Thorlabs",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/thorlabs.webp"
     },
     {
       "name": "ARCS.ai",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/arcs-ai.jpeg"
     },
     {
-      "name": "Photonics & Artificial Intelligence Laboratories",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "name": "Photonics & AI Laboratories",
+      "logo": "images/photonics-ai-labs.jpeg"
     },
     {
       "name": "Advanced Technologies Group",
-      "role": { "hy": "*Կազմակերպիչ / Հովանավոր / Համալսարան*", "en": "*Organiser / Sponsor / University*" },
-      "text": {
-        "hy": "*Մեկ նախադասություն այս գործընկերոջ մասին։*",
-        "en": "*One sentence about this partner.*"
-      }
+      "logo": "images/advanced-tech-group.png"
     }
   ],
-
-  "become": {
-    "eyebrow": { "hy": "Միանալ", "en": "Join in" },
-    "title": { "hy": "Դարձեք գործընկեր", "en": "Become a partner" },
-    "items": [
-      {
-        "icon": "people",
-        "title": { "hy": "*Ում համար է սա (1–2 բառ)*", "en": "*Who this is for (1–2 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն՝ ինչով կարող են օգնել։*",
-          "en": "*One sentence on how they can help.*"
-        }
-      },
-      {
-        "icon": "chart",
-        "title": { "hy": "*Ում համար է սա (1–2 բառ)*", "en": "*Who this is for (1–2 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն՝ ինչով կարող են օգնել։*",
-          "en": "*One sentence on how they can help.*"
-        }
-      },
-      {
-        "icon": "flask",
-        "title": { "hy": "*Ում համար է սա (1–2 բառ)*", "en": "*Who this is for (1–2 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն՝ ինչով կարող են օգնել։*",
-          "en": "*One sentence on how they can help.*"
-        }
-      }
-    ]
-  },
-
-  "cta": {
-    "title": { "hy": "Խոսե՞նք", "en": "Shall we talk?" },
-    "text": {
-      "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*"
-    },
-    "button": {
-      "route": "about",
-      "label": { "hy": "Կապի տվյալներ", "en": "Contact details" }
-    }
-  },
 
   "photo": {
     "_readme": "The photograph on this page. Put the file in images/ and write its name here.",

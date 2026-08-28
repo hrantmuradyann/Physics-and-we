@@ -21,6 +21,8 @@
      data-route-id="slug"         ...to ONE thing on that page, e.g. one
                                   lab. The page itself is written in the
                                   layout: data-goto="lab"
+     data-link="link"             turn it into a link to a website outside
+                                  this site; it opens in a new tab
      data-number="number"         a number that counts up when scrolled to
      data-ui="learnMore"          a word shared by all pages (data/site.json)
 
@@ -211,6 +213,16 @@
         el.setAttribute("href", "?view=" + encodeURIComponent(route) +
                                 "&id=" + encodeURIComponent(id));
       }
+    });
+
+    // 7c. A link to a page outside this site (e.g. a social media page).
+    //     No data-goto here on purpose: the router must NOT catch this click.
+    each(root, "[data-link]", function (el) {
+      var url = inLang(valueAt(data, el.getAttribute("data-link")), lang);
+      if (!/^(https?:|mailto:)/i.test(url)) return dropOrEmpty(el);
+      el.setAttribute("href", url);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
     });
 
     // 8. Numbers that count up (the animation lives in js/anim.js).

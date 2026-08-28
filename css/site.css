@@ -264,6 +264,12 @@ body.site #site-header nav a.current {
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 }
 
+/* One card on its own, centred — used by the "what we do" band on the home page */
+.grid--single {
+  grid-template-columns: minmax(0, 780px);
+  justify-content: center;
+}
+
 .grid--stats {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.4rem;
@@ -289,6 +295,53 @@ body.site #site-header nav a.current {
   transform: translateY(-6px);
   border-color: rgba(47, 128, 237, 0.5);
   box-shadow: 0 26px 55px -22px rgba(0, 0, 0, 0.85);
+}
+
+/* The single, larger card of the "what we do" band */
+.card--single {
+  padding: 2.6rem 2.4rem;
+}
+
+.card--single .card__title {
+  font-size: 1.5rem;
+}
+
+.card--single .card__text {
+  font-size: 1.05rem;
+}
+
+/* Partner cards: a logo with the organisation name under it, nothing else,
+   three per row. The name always stays on ONE line — it shrinks a little on a
+   narrower window so the longest of them keeps fitting the column. */
+.card--partner {
+  padding: 1.7rem 1.2rem;
+  text-align: center;
+}
+
+.card--partner .card__title {
+  font-size: clamp(0.8rem, 1.5vw, 1.05rem);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+/* Partner logos: mixed shapes, all drawn on white, so each one gets a white
+   tile of the same size and is scaled to fit inside it. */
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  margin-bottom: 1.1rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 13px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card__icon {
@@ -1090,7 +1143,8 @@ body.site footer {
     padding-top: 0;
   }
 
-  .card {
+  .card,
+  .card--single {
     padding: 1.7rem 1.4rem;
   }
 }
