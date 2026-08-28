@@ -19,10 +19,11 @@
   <div class="container">
     <div class="grid grid--cards" data-list="partners">
       <template>
-        <article class="card reveal">
-          <p class="card__meta card__meta--top" data-text="role"></p>
+        <article class="card card--partner reveal">
+          <span class="partner-logo">
+            <img data-image="logo" data-alt="name" loading="lazy" decoding="async">
+          </span>
           <h3 class="card__title" data-text="name"></h3>
-          <p class="card__text" data-text="text"></p>
         </article>
       </template>
     </div>
@@ -36,32 +37,5 @@
       <img data-image="photo.image" data-alt="photo.alt" loading="lazy" decoding="async">
       <figcaption class="photo__caption" data-text="photo.caption"></figcaption>
      </figure>
-  </div>
-</section>
-
-<!-- ░░ HOW TO JOIN ░░ -->
-<section class="band band--alt">
-  <div class="container">
-    <p class="eyebrow reveal" data-text="become.eyebrow"></p>
-    <h2 class="section-title reveal" data-text="become.title"></h2>
-
-    <div class="grid grid--cards" data-list="become.items">
-      <template>
-        <article class="card reveal">
-          <span class="card__icon" data-icon="icon"></span>
-          <h3 class="card__title" data-text="title"></h3>
-          <p class="card__text" data-text="text"></p>
-        </article>
-      </template>
-    </div>
-  </div>
-</section>
-
-<!-- ░░ CLOSING INVITATION ░░ -->
-<section class="cta">
-  <div class="container cta__inner reveal">
-    <h2 class="cta__title" data-text="cta.title"></h2>
-    <p class="cta__text" data-text="cta.text"></p>
-    <a class="btn btn--primary btn--lg" data-route="cta.button.route" data-text="cta.button.label"></a>
   </div>
 </section>

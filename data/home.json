@@ -55,37 +55,10 @@
       "hy": "Ծրագրեր, որոնք ֆիզիկան դարձնում են հասկանալի",
       "en": "Programs that make physics click"
     },
+    "_readmeItems": "\"link\" is a full web address (https://...). It opens in a new tab when the card is clicked.",
     "items": [
       {
-        "icon": "atom",
-        "route": "camp",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*"
-        }
-      },
-      {
-        "icon": "orbit",
-        "route": "labs",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*"
-        }
-      },
-      {
-        "icon": "chart",
-        "route": "research",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
-        "text": {
-          "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*"
-        }
-      },
-      {
-        "icon": "people",
-        "route": "partners",
+        "link": "https://www.facebook.com/Physics.and.We/",
         "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",

@@ -27,6 +27,7 @@ Physics and We: a bilingual (Armenian `hy` / English `en`) static website for a 
 | `data-image` / `data-alt` | image src + alt text |
 | `data-route="button.route"` | turns element into a link to another page/route |
 | `data-route-id="slug"` | links to one specific item on that route (a lab, a news post) |
+| `data-link="link"` | turns the element into a link to a website outside this site (opens in a new tab) |
 | `data-number="number"` | number that counts up when scrolled into view (`js/anim.js`) |
 | `data-ui="learnMore"` | pulls a shared short string from `data/site.json` (`ui` block) |
 
