@@ -22,7 +22,9 @@
                                   lab. The page itself is written in the
                                   layout: data-goto="lab"
      data-link="link"             turn it into a link to a website outside
-                                  this site; it opens in a new tab
+                                  this site; it opens in a new tab. With
+                                  data-keep the wording stays visible even
+                                  while the address is still missing
      data-number="number"         a number that counts up when scrolled to
      data-ui="learnMore"          a word shared by all pages (data/site.json)
 
@@ -219,7 +221,15 @@
     //     No data-goto here on purpose: the router must NOT catch this click.
     each(root, "[data-link]", function (el) {
       var url = inLang(valueAt(data, el.getAttribute("data-link")), lang);
-      if (!/^(https?:|mailto:)/i.test(url)) return dropOrEmpty(el);
+      if (!/^(https?:|mailto:)/i.test(url)) {
+        // No address yet. Marked data-keep, the wording stays on the page as
+        // a plain, unclickable button; otherwise the whole link goes away.
+        if (el.hasAttribute("data-keep")) {
+          el.removeAttribute("href");
+          return;
+        }
+        return dropOrEmpty(el);
+      }
       el.setAttribute("href", url);
       el.setAttribute("target", "_blank");
       el.setAttribute("rel", "noopener noreferrer");

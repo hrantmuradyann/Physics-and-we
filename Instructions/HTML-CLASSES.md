@@ -29,6 +29,7 @@ A class in the markup is only a name that CSS uses to find the element.
 13. [The day-by-day list `.timeline`](#13-the-day-by-day-list-timeline)
 14. [Questions and answers `.faq`](#14-questions-and-answers-faq)
 15. [A picture beside text `.showcase`](#15-a-picture-beside-text-showcase)
+15b. [The story rows `.story-year`](#15b-the-story-rows-story-year)
 16. [The closing invitation `.cta`](#16-the-closing-invitation-cta)
 17. [The opening screen of the home page `.hero`](#17-the-opening-screen-of-the-home-page-hero)
 18. [News: the feed and the item page](#18-news-the-feed-post-card-and-the-item-page-post)
@@ -380,7 +381,7 @@ A page is built from horizontal bands. Alternating `.band` / `.band--alt` gives 
 | `.card__title` | The card heading: white, 1.2rem, bold (700). | [css/site.css:310](css/site.css#L310) |
 | `.card__text` | The description: grey-blue `#9aa6c4`, 0.95rem, line height 1.65. | [css/site.css:318](css/site.css#L318) |
 | `.card__meta` | The small caption at the bottom (for example "grade 10 · 2 hours"): 0.82rem, light blue, slightly transparent, 1.1rem of space above it. | [css/site.css:324](css/site.css#L324) |
-| `.card__meta--top` | The same caption, but **above** the heading, in CAPITALS, smaller still (0.72rem) with wide `letter-spacing`. Used on the partners page for the role. | [css/site.css:332](css/site.css#L332) |
+| `.card__meta--top` | The same caption, but **above** the heading, in CAPITALS, smaller still (0.72rem) with wide `letter-spacing`. Used on the sponsors page for the role. | [css/site.css:332](css/site.css#L332) |
 | `.card__arrow` | The "Learn more →" line. Light blue, semi-bold. The `→` arrow is **not written in the HTML** — CSS draws it with `::after`. On hovering the card the gap between the text and the arrow grows from 0.4 to 0.7rem, and the arrow itself slides 3 px to the right. | [css/site.css:340](css/site.css#L340) |
 
 ```css
@@ -514,6 +515,29 @@ Built on the standard `<details>` / `<summary>` tags — **without a single line
 .showcase__inner { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; }
 .showcase__media { animation: float 6.5s ease-in-out infinite; }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+```
+
+---
+
+## 15b. The story rows `.story-year`
+
+Used only on the **our story** page: one row per year, the picture changing
+side every second year.
+
+| Class | How it looks | CSS |
+|---|---|---|
+| `.story` | The column holding all the years, with a big 3–5.5rem gap between them. It is the `data-list="years"` host, so it also keeps the `<template>` — that is why the rule below counts with `nth-of-type`, not `nth-child`. | [css/site.css:684](css/site.css#L684) |
+| `.story-year` | One year: two equal columns (picture, text), vertically centred. Below 860 px it becomes a single column with the picture on top. | [css/site.css:689](css/site.css#L689) |
+| `.story-year__media` | The frame the picture sits in: 4:3, 18 px rounding. While that year has no picture yet it is an empty **dashed** frame; as soon as `image` in `data/story.json` is filled in, the frame turns into an ordinary photo border with a deep shadow. | [css/site.css:702](css/site.css#L702) |
+| `.story-year__media img` | Fills the frame (`object-fit: cover`). An `<img>` with no file named is hidden, which is what leaves the empty frame visible. | [css/site.css:717](css/site.css#L717) |
+| `.story-year__text` | The year, the heading, the text and the album button. | — |
+| `.story-year__link` | The button linking to that year's photo album, 1.6rem below the text. It disappears by itself while the address in `data/story.json` is still empty. | [css/site.css:712](css/site.css#L712) |
+
+```css
+.story-year { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+.story-year:nth-of-type(even) .story-year__media { order: 2; }   /* picture on the right */
+.story-year__media { border: 2px dashed rgba(255,255,255,.22); }  /* empty frame */
+.story-year__media:has(img[src]) { border: 1px solid rgba(255,255,255,.12); }  /* has a photo */
 ```
 
 ---
@@ -780,7 +804,7 @@ Classes are responsible for **the look**, and `data-*` attributes for **the cont
 | `data-number="number"` + `data-suffix="suffix"` | A number that counts up from zero when scrolled to, plus whatever follows it (`+`, `%`). |
 | `data-ui="learnMore"` | A word shared by every page (taken from `data/site.json`). |
 | `data-goto="labs"` | Set by the script; [js/router.js](js/router.js) uses it to catch the click and change page without a reload. |
-| `data-keep` | Keep the wrapper visible even when there is no text for it in the JSON. |
+| `data-keep` | Keep the wrapper visible even when there is no text for it in the JSON. On a `data-link` the wording stays visible too, as a button that does nothing until the address is written in — that is how the photo-album buttons on the our story page work. |
 
 If there is no text in the JSON for an element, the script **hides it by itself** so no empty holes are left on the page ([js/content.js:242](js/content.js#L242)).
 

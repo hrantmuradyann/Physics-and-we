@@ -27,6 +27,8 @@ touch `sections` or `css`.
 | the words of one **interactive lab** | `data/labs/<lab>.json` |
 | the **summer camp** page | `data/camp.json` |
 | the **research** page | `data/research.json` |
+| the **our story** page (year by year) | `data/story.json` |
+| the **sponsors** page | `data/sponsors.json` |
 | the **partners** page | `data/partners.json` |
 | the **FAQ** questions and answers | `data/faq.json` |
 | the **about us** page | `data/about.json` |
@@ -243,7 +245,7 @@ without getting in each other's way:
 | Labs coordinator | `data/labs.json` |
 | Camp coordinator | `data/camp.json` |x
 | Research mentor | `data/research.json` |
-| Partnerships | `data/partners.json` |
+| Partnerships | `data/sponsors.json`, `data/partners.json` |
 | Anyone, via the admin page | news items |
 | Translator | the `en` and `ru` lines in every `data/*.json` |
 | Whoever maintains the site | `data/site.json`, `sections/`, `css/`, `js/` |

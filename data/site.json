@@ -13,6 +13,10 @@
       "label": { "hy": "Ամառային ճամբար", "en": "Summer Camp" }
     },
     {
+      "route": "story",
+      "label": { "hy": "Մեր պատմությունը", "en": "Our Story" }
+    },
+    {
       "route": "labs",
       "label": { "hy": "Լաբորատորիաներ", "en": "Interactive Labs" }
     },
@@ -23,6 +27,10 @@
     {
       "route": "news",
       "label": { "hy": "Նորություններ", "en": "News" }
+    },
+    {
+      "route": "sponsors",
+      "label": { "hy": "Հովանավորներ", "en": "Sponsors" }
     },
     {
       "route": "partners",
@@ -63,8 +71,8 @@
         "label": { "hy": "Հաճախակի հարցեր", "en": "FAQ" }
       },
       {
-        "route": "partners",
-        "label": { "hy": "Գործընկերներ", "en": "Partners" }
+        "route": "sponsors",
+        "label": { "hy": "Հովանավորներ", "en": "Sponsors" }
       }
     ]
   },
@@ -78,6 +86,7 @@
       "en": "This content could not be loaded. Please refresh the page."
     },
     "newsEmpty": { "hy": "Դեռ նորություններ չկան։", "en": "No news yet." },
+    "photoAlbum": { "hy": "Լուսանկարները", "en": "Photos" },
 
     "readMore": { "hy": "Կարդալ ամբողջը", "en": "Read more" },
     "backToNews": { "hy": "← Բոլոր նորությունները", "en": "← All news" },

@@ -1,0 +1,53 @@
+{
+  "_readme": "SPONSORS PAGE TEXT. \"sponsors\" is the list of organisations — copy a { ... } block to add one. Each one shows a logo and the name under it, nothing else. \"name\" is written the same way in every language, so it is one plain line, not hy/en. \"logo\" is a picture file inside images/ — put the file there and write its name here. Keep names short: they must fit on one line.",
+
+  "page": {
+    "title": { "hy": "Մեր հովանավորները", "en": "Our Sponsors" }
+  },
+
+  "sponsors": [
+    {
+      "name": "YSU SPIE Student Chapter",
+      "logo": "images/ysu-spie-chapter.jpeg"
+    },
+    {
+      "name": "OPTICA IPR Armenia Student Chapter",
+      "logo": "images/optica-ipr.jpeg"
+    },
+    {
+      "name": "YSO",
+      "logo": "images/yso.jpeg"
+    },
+    {
+      "name": "Yerevan State University",
+      "logo": "images/ysu.jpg"
+    },
+    {
+      "name": "OPTICA",
+      "logo": "images/optica.png"
+    },
+    {
+      "name": "Thorlabs",
+      "logo": "images/thorlabs.webp"
+    },
+    {
+      "name": "ARCS.ai",
+      "logo": "images/arcs-ai.jpeg"
+    },
+    {
+      "name": "Photonics & AI Laboratories",
+      "logo": "images/photonics-ai-labs.jpeg"
+    },
+    {
+      "name": "Advanced Technologies Group",
+      "logo": "images/advanced-tech-group.png"
+    }
+  ],
+
+  "photo": {
+    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
+    "image": "images/history.jpg",
+    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*" },
+    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
+  }
+}

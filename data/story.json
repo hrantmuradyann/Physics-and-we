@@ -1,0 +1,92 @@
+{
+  "_readme": "OUR STORY PAGE TEXT. \"years\" is the list of years — copy a { ... } block to add one; they show up in the order written here, newest year first. \"image\" is one picture file inside images/ — put the file there and write its name here. While it is empty (\"\") the page shows an empty frame in its place, so you can see where the photograph will go. \"link\" is the Google Drive album with that year's photos: while it is empty the button is shown but does nothing.",
+
+  "page": {
+    "eyebrow": { "hy": "Տարեցտարի", "en": "Year by year" },
+    "title": { "hy": "Մեր պատմությունը", "en": "Our Story" },
+    "lead": {
+      "hy": "*Մեկ-երկու նախադասություն՝ ինչպես սկսվեց և ուր հասավ ծրագիրը։*",
+      "en": "*One or two sentences: how the programme started and where it is now.*"
+    }
+  },
+
+  "years": [
+    {
+      "year": "2026",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2026 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2026.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": "https://drive.google.com/drive/folders/1aQtwHVCw5pyZB2_eMJ2t4e8hoGaVlIpq?usp=drive_link"
+    },
+    {
+      "year": "2025",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2025 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2025.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2024 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2024.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    },
+    {
+      "year": "2023",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2023 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2023.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2022 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2022.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2021 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2021.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    },
+    {
+      "year": "2016",
+      "title": { "hy": "*Կարճ վերնագիր այդ տարվա համար*", "en": "*Short title for this year*" },
+      "text": {
+        "hy": "*Մեկ-երկու պարբերություն՝ ինչ արեցինք 2016 թվականին։*",
+        "en": "*One or two paragraphs: what we did in 2016.*"
+      },
+      "image": "",
+      "imageAlt": { "hy": "*Նկարագրե՛ք լուսանկարը։*", "en": "*Describe the photo.*" },
+      "link": ""
+    }
+  ]
+}

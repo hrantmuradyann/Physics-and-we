@@ -22,7 +22,7 @@ too, so it doesn't go stale.
 ## 1. What's built so far
 
 The whole public site works: home, summer camp, interactive labs, research,
-news, partners, FAQ and about — in **two languages** (Armenian and
+news, sponsors, partners, FAQ and about — in **two languages** (Armenian and
 English), with a shared header, footer and design.
 
 Most of the **words** are still placeholders — short notes in asterisks saying
@@ -165,12 +165,14 @@ Physics-and-we/
 ├── sections/            → ONE FILE PER PAGE — layout only, no text
 │   ├── home.html
 │   ├── camp.html
+│   ├── story.html       → our story, one block per year
 │   ├── labs.html        → the list of labs (both kinds)
 │   ├── lab.html         → ONE interactive lab, on its own page
 │   ├── research.html
 │   ├── news.html        → the news feed
 │   ├── post.html        → ONE news item, on its own page
-│   ├── partners.html
+│   ├── sponsors.html
+│   ├── partners.html    → only a title for now
 │   ├── faq.html
 │   └── about.html
 │
@@ -178,6 +180,7 @@ Physics-and-we/
 │   ├── site.json        → the menu, the footer, words shared by every page
 │   ├── home.json
 │   ├── camp.json
+│   ├── story.json       → our story: the list of years
 │   ├── labs.json        → the labs page: "simulations" + "cards"
 │   ├── lab.json         → almost empty on purpose (see the note inside)
 │   ├── labs/            → ONE FILE PER LAB — the words of that lab
@@ -185,6 +188,7 @@ Physics-and-we/
 │   │   └── refraction.json
 │   ├── research.json
 │   ├── news.json        → only the heading of the news page
+│   ├── sponsors.json
 │   ├── partners.json
 │   ├── faq.json
 │   └── about.json
