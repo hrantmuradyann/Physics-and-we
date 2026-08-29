@@ -42,12 +42,5 @@
       "name": "Advanced Technologies Group",
       "logo": "images/advanced-tech-group.png"
     }
-  ],
-
-  "photo": {
-    "_readme": "The photograph on this page. Put the file in images/ and write its name here.",
-    "image": "images/history.jpg",
-    "alt": { "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*", "en": "*Describe the photo for people who cannot see it.*" },
-    "caption": { "hy": "*Մեկ տող՝ լուսանկարի տակ։*", "en": "*One line shown under the photo.*" }
-  }
+  ]
 }
