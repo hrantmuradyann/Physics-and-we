@@ -1,0 +1,35 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  OUR STORY PAGE — layout only.
+  The words are NOT here. They are in  data/story.json .
+  One block per year: a photograph, the text, and a link to the photo album.
+  ══════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ░░ PAGE TITLE ░░ -->
+<header class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal" data-text="page.eyebrow"></p>
+    <h1 class="page-head__title reveal" data-text="page.title"></h1>
+    <p class="lead reveal" data-text="page.lead"></p>
+  </div>
+</header>
+
+<!-- ░░ YEAR BY YEAR ░░ -->
+<section class="band">
+  <div class="container story" data-list="years">
+    <template>
+      <article class="story-year reveal">
+        <div class="story-year__media">
+          <img data-image="image" data-alt="imageAlt" loading="lazy" decoding="async">
+        </div>
+        <div class="story-year__text">
+          <p class="eyebrow" data-text="year"></p>
+          <h2 class="section-title" data-text="title"></h2>
+          <div class="prose" data-rich="text"></div>
+          <a class="btn btn--ghost story-year__link" data-link="link" data-keep data-ui="photoAlbum"></a>
+        </div>
+      </article>
+    </template>
+  </div>
+</section>

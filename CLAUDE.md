@@ -6,7 +6,7 @@ Technical map of this repo for Claude Code (or any AI agent) starting a fresh se
 
 ## What this is
 
-Physics and We: a bilingual (Armenian `hy` / English `en`) static website for a physics-education program — home, summer camp, interactive labs, research, news, partners, FAQ, about. **No framework, no build step, no `package.json`/`node_modules`.** Plain HTML/CSS/JS, deployed as-is to **Cloudflare Pages**. Local dev: `npx wrangler pages dev .` (required for `/admin/` — see "Local dev" below).
+Physics and We: a bilingual (Armenian `hy` / English `en`) static website for a physics-education program — home, summer camp, our story, interactive labs, research, news, sponsors, partners, FAQ, about. **No framework, no build step, no `package.json`/`node_modules`.** Plain HTML/CSS/JS, deployed as-is to **Cloudflare Pages**. Local dev: `npx wrangler pages dev .` (required for `/admin/` — see "Local dev" below).
 
 ## Architecture
 
@@ -27,7 +27,7 @@ Physics and We: a bilingual (Armenian `hy` / English `en`) static website for a 
 | `data-image` / `data-alt` | image src + alt text |
 | `data-route="button.route"` | turns element into a link to another page/route |
 | `data-route-id="slug"` | links to one specific item on that route (a lab, a news post) |
-| `data-link="link"` | turns the element into a link to a website outside this site (opens in a new tab) |
+| `data-link="link"` | turns the element into a link to a website outside this site (opens in a new tab); empty value removes the element, unless it is marked `data-keep`, which leaves the wording as an inert button |
 | `data-number="number"` | number that counts up when scrolled into view (`js/anim.js`) |
 | `data-ui="learnMore"` | pulls a shared short string from `data/site.json` (`ui` block) |
 
@@ -54,6 +54,9 @@ data/news.json           only the news PAGE heading text — hand-edit this one
 Instructions/            human docs (see "Pointers" below)
 sections/*.html          one layout fragment per page (no text, no <script> effect)
 data/*.json              one text file per page (bilingual, no markup); data/site.json = nav/footer/shared UI strings
+data/story.json          our story: the "years" list (text + one photo + photo-album link each)
+data/sponsors.json       sponsor logo grid (was data/partners.json before the rename)
+data/partners.json       the new, near-empty partners page — title only for now
 data/labs.json           lab registry: simulations.items[].slug must match js/labs/<slug>.js + data/labs/<slug>.json
 data/labs/*.json         per-lab text (pendulum, refraction)
 

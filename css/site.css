@@ -677,6 +677,74 @@ body.site #site-header nav a.current {
 }
 
 /* ============================================================================
+   OUR STORY — ONE ROW PER YEAR
+   Same picture treatment as the showcase above; the picture changes side on
+   every second year.
+   ========================================================================== */
+.story {
+  display: grid;
+  gap: clamp(3rem, 7vw, 5.5rem);
+}
+
+.story-year {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.story-year:nth-of-type(even) .story-year__media {
+  order: 2;
+}
+
+/* An empty frame while "image" in data/story.json is still empty, so it is
+   obvious where the photograph of that year goes. */
+.story-year__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  border: 2px dashed rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+/* Once the year has a picture, the frame becomes the ordinary photo border. */
+.story-year__media:has(img[src]) {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: none;
+  box-shadow: 0 34px 80px -28px rgba(0, 0, 0, 0.9);
+}
+
+.story-year__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* No file named yet: nothing to show inside the frame. */
+.story-year__media img:not([src]) {
+  display: none;
+}
+
+.story-year__text .section-title {
+  margin-bottom: 1.1rem;
+}
+
+.story-year__link {
+  margin-top: 1.6rem;
+}
+
+/* The album button while the address in data/story.json is still empty: it is
+   shown, so you can see where it will be, but it plainly does nothing yet. */
+.story-year__link:not([href]) {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* ============================================================================
    CLOSING INVITATION
    ========================================================================== */
 .cta {
@@ -1112,6 +1180,16 @@ body.site footer {
   }
 
   .showcase__media {
+    order: -1;
+  }
+
+  .story-year {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stacked, the picture always comes first — including on the even rows,
+     where it sits on the right on a wide screen. */
+  .story-year:nth-of-type(even) .story-year__media {
     order: -1;
   }
 
