@@ -140,7 +140,7 @@ So writing a lab means writing physics and words. Nothing else.
 ## 2. Project structure
 
 ```
-Physics-and-we/
+physics-and-we/
 ├── index.html           → the shell. Loads css + js, contains no text
 ├── README.md            → this file
 ├── news.json            → the news items (written by /admin/, not by hand)
@@ -371,7 +371,7 @@ Mac's terminal app is literally called **Terminal**. Open it via Spotlight: pres
 
 You'll see a prompt like:
 ```
-(base) Hrants-MacBook-Pro:Physics-and-we hrant$
+(base) Hrants-MacBook-Pro:physics-and-we hrant$
 ```
 That's just: `(base)` = a Python environment indicator (from Anaconda, ignore it), your computer's name, your **current folder**, your username, then `$` marks where you type.
 
@@ -381,7 +381,7 @@ Windows' built-in terminals (Command Prompt, PowerShell) use different commands 
 
 Open it via the Start menu: type `Git Bash`, press Enter. You'll see a similar prompt:
 ```
-hrant@DESKTOP-XXXX MINGW64 ~/Desktop/Physics-and-we
+hrant@DESKTOP-XXXX MINGW64 ~/Desktop/physics-and-we
 $
 ```
 Same idea — type commands, press Enter, `$` marks where you type. Every command in this README works the same way in Git Bash as it does in Mac Terminal.
@@ -415,11 +415,11 @@ Same idea — type commands, press Enter, `$` marks where you type. Every comman
 
 **Getting into the project folder:** wherever you saved/cloned it, use `cd` to navigate there. On Mac, if it's on your Desktop:
 ```bash
-cd Desktop/Physics-and-we
+cd Desktop/physics-and-we
 ```
 On Windows Git Bash, your Desktop is usually reached the same way:
 ```bash
-cd Desktop/Physics-and-we
+cd Desktop/physics-and-we
 ```
 If `cd` says "No such file or directory," run `ls` first to see what's actually in your current folder, and navigate step by step until you find it.
 
@@ -492,11 +492,11 @@ If vim ever opens and you're unsure what state you're in, `Esc` then `:q!` then 
 
 ### First time (cloning the repo)
 ```bash
-git clone https://github.com/hrantmuradyann/Physics-and-we.git
-cd Physics-and-we
+git clone https://github.com/hrantmuradyann/physics-and-we.git
+cd physics-and-we
 ```
 
-**What `git clone` actually does:** it creates a brand new folder on your computer, named after the repo (`Physics-and-we`), in whatever directory you ran the command from. Inside that new folder, it downloads the entire project — every file, plus the complete commit history and every branch that exists on GitHub. You only need to run `clone` **once ever**, on each computer you work from. After that, you use `git pull` to get updates into that same folder — running `clone` again would try to create the folder a second time and fail (or duplicate it) since it already exists.
+**What `git clone` actually does:** it creates a brand new folder on your computer, named after the repo (`physics-and-we`), in whatever directory you ran the command from. Inside that new folder, it downloads the entire project — every file, plus the complete commit history and every branch that exists on GitHub. You only need to run `clone` **once ever**, on each computer you work from. After that, you use `git pull` to get updates into that same folder — running `clone` again would try to create the folder a second time and fail (or duplicate it) since it already exists.
 
 
 ### Every time you start working
@@ -538,7 +538,7 @@ Stop the server anytime with `Ctrl + C` in that terminal window.
 
 Terminal is only needed for the **Git commands** — `clone`, `pull`, `checkout`, `add`, `commit`, `push` — not for actually writing or editing your HTML/CSS/JS. Most people do their real editing in a proper code editor like **VS Code**, and only switch to Terminal for the Git steps. A normal working session looks like this:
 
-1. Open your project folder in VS Code: `File → Open Folder` → select `Physics-and-we`
+1. Open your project folder in VS Code: `File → Open Folder` → select `physics-and-we`
 2. Make sure you've already pulled the latest `main` and created your branch (Terminal, as above)
 3. Edit your files in VS Code — full syntax highlighting, autocomplete, much easier to read/write than editing directly in Terminal
 4. Save normally (`Cmd + S` / `Ctrl + S`)
@@ -653,7 +653,7 @@ If you're genuinely the only person who will ever touch a specific branch and yo
 
 `feature/site-shell` is the name of the Git **branch** where the site's foundation (layout, nav, footer, base styles, language switching) was built. You can view its exact state on GitHub here:
 
-https://github.com/hrantmuradyann/Physics-and-we/tree/feature/site-shell
+https://github.com/hrantmuradyann/physics-and-we/tree/feature/site-shell
 
 A **branch** is a full, independent copy of the project at a specific point in time — created from whatever branch you were on when you ran `git checkout -b`. Every new feature (registration, submissions, labs, student portal, admin panel) will live on its own branch, following the same pattern:
 
