@@ -1,56 +1,77 @@
 {
   "_readme": "HOME PAGE TEXT. Layout lives in sections/home.html — you almost never need to open it. Icon names you can use: atom, orbit, chart, people, flask, bulb, telescope, wave, magnet, calendar.",
-
   "hero": {
-    "eyebrow": { "hy": "Ֆիզիկան ՈՒ Մենք", "en": "Physics & We" },
+    "eyebrow": {
+      "hy": "Ֆիզիկան ՈՒ Մենք",
+      "en": "Physics & We"
+    },
     "title": {
-      "hy": "Ամառային ճամբար՝ ուսանողների կողմից ուսանողների և աշակերտների համար",
-      "en": "Summer camp — by students, for students and schoolchildren"
+      "hy": "Ամառային ճամբար՝ ուսանողներից`գիտությանը",
+      "en": "Summer camp — by students, for students"
     },
     "subtitle": {
-      "hy": "*Մեկ-երկու նախադասություն վերնագրի տակ՝ ինչով եք զբաղվում։*",
-      "en": "*One or two sentences under the title: what you do.*"
+      "hy": "Արե՛ք ձեր առաջին քայլերը գիտության մեջ՝ դուրս գալով դասագրքերից, դասարաններից ու դասախոսություններից, և թույլ տվե՛ք մեզ ուղեկցել ձեզ դեպի գիտության գեղեցկությունը։",
+      "en": "Take your first steps into science by going out of textbooks, classrooms, and lectures, and let us guide you to the beauty of science"
     },
     "primaryButton": {
       "route": "camp",
-      "label": { "hy": "Ծանոթանալ ծրագրերին", "en": "Explore Programs" }
+      "label": {
+        "hy": "Ծանոթանալ ծրագրերին",
+        "en": "Explore Programs"
+      }
     },
     "secondaryButton": {
       "route": "labs",
-      "label": { "hy": "Դիտել լաբորատորիաները", "en": "Watch the Labs" }
+      "label": {
+        "hy": "Դիտել լաբորատորիաները",
+        "en": "Watch the Labs"
+      }
     },
     "scrollHint": {
       "hy": "Թերթեք՝ ավելին տեսնելու համար",
       "en": "Scroll to explore"
     }
   },
-
   "_readmeStats": "THE NUMBERS THAT COUNT UP. For each one: \"number\" is the figure itself (digits only, no quotes), \"suffix\" is what follows it — \"+\" or \"%\" or nothing, and \"label\" says what the number counts. Keep the label to 1–3 words: it sits in a narrow column.",
   "stats": [
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Սովորողներ*", "en": "*e.g. Students taught*" }
+      "label": {
+        "hy": "Qani chambara exel",
+        "en": "Qani chambara exel"
+      }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Լաբորատորիաներ*", "en": "*e.g. Labs run*" }
+      "label": {
+        "hy": "Qani marda grancvel",
+        "en": "*e.g. Labs run*"
+      }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Հետազոտություններ*", "en": "*e.g. Research projects*" }
+      "label": {
+        "hy": "Qani marda ance",
+        "en": "Qani marda ancel"
+      }
     },
     {
       "number": 0,
       "suffix": "",
-      "label": { "hy": "*օր.՝ Դպրոցներ*", "en": "*e.g. Partner schools*" }
+      "label": {
+        "hy": "*օր.՝ Դպրոցներ*",
+        "en": "Partner Schools"
+      }
     }
   ],
-
   "features": {
-    "eyebrow": { "hy": "Ի՞նչ ենք անում", "en": "What We Do" },
+    "eyebrow": {
+      "hy": "Ի՞նչ ենք անում",
+      "en": "What We Do"
+    },
     "title": {
       "hy": "Ծրագրեր, որոնք ֆիզիկան դարձնում են հասկանալի",
       "en": "Programs that make physics click"
@@ -59,36 +80,97 @@
     "items": [
       {
         "link": "https://www.facebook.com/Physics.and.We/",
-        "title": { "hy": "*Ծրագրի անվանումը (1–3 բառ)*", "en": "*Program name (1–3 words)*" },
+        "title": {
+          "hy": "stex klini mer govazdy1*",
+          "en": "stex klini mer govazdy1"
+        },
         "text": {
           "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
-          "en": "*One sentence about this program.*"
+          "en": ""
+        }
+      },
+      {
+        "link": "https://www.facebook.com/Physics.and.We/",
+        "title": {
+          "hy": "stex klini mer govazdy2*",
+          "en": "stex klini mer govazdy2"
+        },
+        "text": {
+          "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
+          "en": ""
+        }
+      },
+      {
+        "link": "https://www.facebook.com/Physics.and.We/",
+        "title": {
+          "hy": "stex klini mer govazdy3",
+          "en": "stex klini mer govazdy3"
+        },
+        "text": {
+          "hy": "*Մեկ նախադասություն այս ծրագրի մասին։*",
+          "en": ""
         }
       }
     ]
   },
-
   "showcase": {
-    "image": "images/mainphoto.jpg",
-    "imageAlt": {
-      "hy": "*Նկարագրե՛ք լուսանկարը նրանց համար, ովքեր չեն տեսնում այն։*",
-      "en": "*Describe the photo for people who cannot see it.*"
-    },
-    "eyebrow": { "hy": "Գիտություն ամեն օր", "en": "Science, Every Day" },
-    "title": {
-      "hy": "Ինչպես է աշխատում առօրյա տեխնիկան",
-      "en": "How everyday tech works"
-    },
-    "text": {
-      "hy": "*Երկու-երեք նախադասություն այս թեմայի շուրջ։*",
-      "en": "*Two or three sentences on this topic.*"
-    },
-    "button": {
-      "route": "labs",
-      "label": { "hy": "Իմանալ ավելին", "en": "Learn More" }
+    "_readmeGallery": "THE PHOTO GALLERY. \"heading\" is the big centered title above all three frames. Each of the three \"groups\" is one frame: \"label\" is the small caption above that frame, and \"images\" is its own list of photos — it shows the first one, then cycles through the rest once every 10 seconds. Add, remove, or reorder file paths inside any group's \"images\" list freely; a group with only one photo just shows that photo without rotating.",
+    "gallery": {
+      "heading": {
+        "hy": "Ուսանողներ Ու Մենք",
+        "en": "Students & We"
+      },
+      "groups": [
+        {
+          "label": {
+            "hy": "Նախագծեր",
+            "en": "Projects"
+          },
+          "alt": {
+            "hy": "Ուսանողներն աշխատում են ֆիզիկայի փորձի վրա",
+            "en": "Students working on a physics experiment"
+          },
+          "images": [
+            "images/ashx1.JPG",
+            "images/ashx2.jpg",
+            "images/12ds.JPG",
+            "images/12ds2.jpg",
+            "images/1kurs.jpg"
+          ]
+        },
+        {
+          "label": {
+            "hy": "Մենք",
+            "en": "We"
+          },
+          "alt": {
+            "hy": "Ֆիզիկան ու մենք ճամբարի մասնակիցների խմբային լուսանկար",
+            "en": "Group photo of Physics & We camp participants"
+          },
+          "images": [
+            "images/yndh1.JPG",
+            "images/yndh2.JPG"
+          ]
+        },
+        {
+          "label": {
+            "hy": "Ուսանողներ Ու Մենք",
+            "en": "Students & We"
+          },
+          "alt": {
+            "hy": "Ուսանողներն անց են կացնում ժամանակ միասին ճամբարում",
+            "en": "Students spending time together at camp"
+          },
+          "images": [
+            "images/dst1.JPG",
+            "images/lavjam1.JPG",
+            "images/lavjam2.jpg",
+            "images/11ds.JPG"
+          ]
+        }
+      ]
     }
   },
-
   "cta": {
     "title": {
       "hy": "Պատրա՞ստ եք բացահայտել ֆիզիկան մեզ հետ։",
@@ -96,11 +178,14 @@
     },
     "text": {
       "hy": "*Մեկ նախադասություն՝ ընթերցողին գործի հրավիրելու համար։*",
-      "en": "*One sentence inviting the reader to act.*"
+      "en": "Your next physics breakthrough starts here — come build it with us."
     },
     "button": {
       "route": "camp",
-      "label": { "hy": "Սկսել", "en": "Get Started" }
+      "label": {
+        "hy": "Սկսել",
+        "en": "Get Started"
+      }
     }
   }
 }
