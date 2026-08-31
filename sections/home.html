@@ -71,16 +71,31 @@
 
 <!-- ░░ PICTURE + TEXT SIDE BY SIDE ░░ -->
 <section class="showcase">
-  <div class="container showcase__inner">
-    <div class="showcase__media reveal">
-      <img data-image="showcase.image" data-alt="showcase.imageAlt" loading="lazy" decoding="async">
-    </div>
+  <div class="container">
+    <h2 class="showcase__gallery-heading reveal" data-text="showcase.gallery.heading"></h2>
 
-    <div class="showcase__text">
-      <p class="eyebrow reveal" data-text="showcase.eyebrow"></p>
-      <h2 class="section-title reveal" data-text="showcase.title"></h2>
-      <p class="lead reveal" data-text="showcase.text"></p>
-      <a class="btn btn--primary reveal" data-route="showcase.button.route" data-text="showcase.button.label"></a>
+    <div class="showcase__gallery">
+      <div class="showcase__gallery-item reveal" data-gallery-group="0">
+        <p class="showcase__gallery-label"></p>
+        <div class="showcase__gallery-frame">
+          <img class="showcase__gallery-img showcase__gallery-img--a" loading="lazy" decoding="async" alt="">
+          <img class="showcase__gallery-img showcase__gallery-img--b" loading="lazy" decoding="async" alt="" aria-hidden="true">
+        </div>
+      </div>
+      <div class="showcase__gallery-item reveal" data-gallery-group="1">
+        <p class="showcase__gallery-label"></p>
+        <div class="showcase__gallery-frame">
+          <img class="showcase__gallery-img showcase__gallery-img--a" loading="lazy" decoding="async" alt="">
+          <img class="showcase__gallery-img showcase__gallery-img--b" loading="lazy" decoding="async" alt="" aria-hidden="true">
+        </div>
+      </div>
+      <div class="showcase__gallery-item reveal" data-gallery-group="2">
+        <p class="showcase__gallery-label"></p>
+        <div class="showcase__gallery-frame">
+          <img class="showcase__gallery-img showcase__gallery-img--a" loading="lazy" decoding="async" alt="">
+          <img class="showcase__gallery-img showcase__gallery-img--b" loading="lazy" decoding="async" alt="" aria-hidden="true">
+        </div>
+      </div>
     </div>
   </div>
 </section>

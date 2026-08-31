@@ -264,10 +264,11 @@ body.site #site-header nav a.current {
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 }
 
-/* One card on its own, centred — used by the "what we do" band on the home page */
+/* One card on its own, left-aligned with the heading above it —
+   used by the "what we do" band on the home page */
 .grid--single {
   grid-template-columns: minmax(0, 780px);
-  justify-content: center;
+  justify-content: start;
 }
 
 .grid--stats {
@@ -636,44 +637,180 @@ body.site #site-header nav a.current {
   padding: clamp(4rem, 9vw, 7rem) 0;
 }
 
-.showcase__inner {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+/* Centered heading above the three photo frames. */
+.showcase__gallery-heading {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin: 0 0 clamp(2.2rem, 5vw, 3.4rem);
 }
 
-.showcase__media {
+/* Three photo frames, each with its own caption, each cycling through its
+   own list of pictures — see startGalleryRotation() in js/home.js. Every
+   frame holds two stacked <img> tags ("a" underneath, "b" on top); we
+   crossfade "b" in and out to change the picture without a hard cut. */
+.showcase__gallery {
+  display: flex;
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.showcase__gallery-item {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.showcase__gallery-label {
+  text-align: center;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.8rem;
+}
+
+.showcase__gallery-frame {
   position: relative;
-  animation: float 6.5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-14px); }
-}
-
-.showcase__media img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 34px 80px -28px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 24px 55px -24px rgba(0, 0, 0, 0.9);
+  background: var(--dark-bg-3);
 }
 
-.showcase__media::after {
-  content: "";
+.showcase__gallery-img {
   position: absolute;
-  inset: -3px;
-  z-index: -1;
-  border-radius: 22px;
-  background: linear-gradient(135deg, rgba(47, 128, 237, 0.55), rgba(111, 92, 255, 0.45));
-  filter: blur(34px);
-  opacity: 0.55;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* "cover" so every frame stays a uniform size and shape no matter what
+     aspect ratio the source photo is — portrait and landscape photos both
+     fill the frame edge-to-edge, with the edges of the photo cropped
+     rather than leaving empty space (letterboxing) around it. */
+  object-fit: cover;
+  display: block;
 }
 
-.showcase__text .lead {
-  margin-bottom: 1.9rem;
+.showcase__gallery-img--b {
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.showcase__gallery-img--b.is-visible {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .showcase__gallery {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+/* A slight zoom on hover signals that a photo is clickable */
+.showcase__gallery-frame--clickable {
+  cursor: pointer;
+}
+
+.showcase__gallery-frame--clickable .showcase__gallery-img {
+  transition: transform 0.5s ease, opacity 1.1s ease;
+}
+
+.showcase__gallery-frame--clickable:hover .showcase__gallery-img--a,
+.showcase__gallery-frame--clickable:hover .showcase__gallery-img--b.is-visible {
+  transform: scale(1.04);
+}
+
+/* ============================================================================
+   FULLSCREEN PHOTO VIEWER — opens when a gallery photo is clicked, see
+   openLightbox() in js/home.js. Pages through every photo in the gallery,
+   not just the frame you clicked.
+   ========================================================================== */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 7, 16, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  padding: 2rem;
+}
+
+.gallery-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-lightbox__stage {
+  max-width: min(90vw, 1100px);
+  max-height: 86vh;
+}
+
+.gallery-lightbox__img {
+  display: block;
+  max-width: 100%;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.9);
+}
+
+.gallery-lightbox__close,
+.gallery-lightbox__nav {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.gallery-lightbox__close:hover,
+.gallery-lightbox__nav:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.gallery-lightbox__close {
+  top: 1.4rem;
+  right: 1.4rem;
+  width: 42px;
+  height: 42px;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.gallery-lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  font-size: 1.8rem;
+}
+
+.gallery-lightbox__nav--prev { left: 1.4rem; }
+.gallery-lightbox__nav--next { right: 1.4rem; }
+
+/* Stop the page behind the viewer from scrolling while it's open */
+body.gallery-lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .gallery-lightbox { padding: 1rem; }
+  .gallery-lightbox__nav { width: 44px; height: 44px; font-size: 1.5rem; }
+  .gallery-lightbox__nav--prev { left: 0.5rem; }
+  .gallery-lightbox__nav--next { right: 0.5rem; }
 }
 
 /* ============================================================================
@@ -1175,14 +1312,6 @@ body.site footer {
    SMALL SCREENS
    ========================================================================== */
 @media (max-width: 860px) {
-  .showcase__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .showcase__media {
-    order: -1;
-  }
-
   .story-year {
     grid-template-columns: 1fr;
   }
@@ -1237,7 +1366,6 @@ body.site footer {
     transition: none;
   }
 
-  .showcase__media,
   .cta::before {
     animation: none !important;
   }
